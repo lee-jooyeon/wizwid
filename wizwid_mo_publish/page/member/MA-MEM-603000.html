@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html lang="utf-8">
+<head>
+	<title>WizWid</title>
+	<meta name="title" content="">
+	<meta name="keywords" content="WizWid">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=0,maximum-scale=1.0, user-scalable=0, viewport-fit=cover">
+	<meta name="format-detection" content="telephone=no, address=no, email=no" />
+	<meta name="HandheldFriendly" content="true">
+	<link rel="stylesheet" type="text/css" href="../../css/common.css" />
+	<script type="text/javascript" src="../../js/jquery-2.0.3.min.js"></script>
+	<script type="text/javascript" src="../../js/vimeo.js"></script> <!-- 220613 추가 || 비메오js 추가 -->
+	<script type="text/javascript" src="../../js/pub.js"></script>
+</head>
+<body>
+<div id="wrap">
+	<header class="mhead_02">
+		<h2>회원가입</h2>
+		<div class="back_page">이전</div>
+	</header>
+	
+	<div id="contents">
+		<!-- 회원 -->
+		<div class="member">
+			<!-- 회원가입 정보입력 -->
+			<div class="join_step">
+				<!-- 간편 회원 가입일 경우 class(step) 영역 삭제 -->
+				<ul class="step">
+					<li class="on">step1</li>
+					<li class="on">step2</li>
+					<li class="on">step3</li>
+					<li>step4</li>
+				</ul>
+				
+				<h3>사용할 아이디와 <br/>비밀번호를 입력해주세요.</h3>
+				<div class="input_box">
+					<ul>
+						<li><input type="text" placeholder="아이디" /> <span class="input_text_del">내용삭제</span></li>
+						<li>
+							<input type="password" placeholder="비밀번호" /> <span class="input_text_del">내용삭제</span><span class="input_pw_view01">비밀번호 보이기</span>
+							<p class="error_msg">비밀번호를 입력해주세요.</p>
+						</li>
+						<li><input type="password" placeholder="비밀번호 확인" /> <span class="input_text_del">내용삭제</span><span class="input_pw_view01">비밀번호 보이기</span>
+							<p class="error_msg">비밀번호가 일치하지 않습니다.</p>
+							<p class="info_msg">비밀번호는 영문, 숫자, 특수문자 포함 8-16자 이내로 설정해주세요.</p>
+						</li>
+					</ul>
+				</div>
+				
+				<div class="email_box">
+					<h4>(선택) 정보수신을 위한 이메일을 입력해주세요.</h4>
+					<div class="email_input"><input type="text" placeholder="이메일" /> <span class="input_text_del">내용삭제</span></div>
+				</div>
+				
+				<div class="btn_area">
+					<button class="btn_gray01 dim">다음 단계</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+</body>
+</html>

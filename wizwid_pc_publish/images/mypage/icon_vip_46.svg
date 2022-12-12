@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="46" height="56" viewBox="0 0 46 56">
+    <g transform="translate(-54 -205)">
+        <rect data-name="Rectangle 1680" width="46" height="56" rx="4" transform="translate(54 205)" style="fill:#5b3fac"/>
+        <text transform="translate(77 223)" style="font-size:7px;font-family:RedHatDisplay-Regular,Red Hat Display;letter-spacing:.04em;fill:#fff"><tspan x="-5.73" y="0">VIP</tspan></text>
+        <path data-name="Path 1320" d="m302.131 72.19-5.612-13.882h3.689l3.946 10.332 4.026-10.332h3.55l-5.693 13.882z" transform="translate(-227.519 178.516)" style="fill:#fff"/>
+    </g>
+</svg>

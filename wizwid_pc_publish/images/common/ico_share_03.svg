@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="27.57" height="30.872" viewBox="0 0 27.57 30.872">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #000;
+        stroke-width: 1.5px;
+      }
+    </style>
+  </defs>
+  <g id="_share" data-name="*share" transform="translate(0.75 0.75)">
+    <ellipse id="타원_232" data-name="타원 232" class="cls-1" cx="4.07" cy="4.07" rx="4.07" ry="4.07" transform="translate(0 10.712)"/>
+    <ellipse id="타원_233" data-name="타원 233" class="cls-1" cx="4.07" cy="4.07" rx="4.07" ry="4.07" transform="translate(17.93)"/>
+    <ellipse id="타원_234" data-name="타원 234" class="cls-1" cx="4.07" cy="4.07" rx="4.07" ry="4.07" transform="translate(17.93 21.233)"/>
+    <line id="선_633" data-name="선 633" class="cls-1" y1="6.258" x2="11.215" transform="translate(7.436 6.302)"/>
+    <line id="선_634" data-name="선 634" class="cls-1" x2="10.928" y2="6.572" transform="translate(7.721 16.501)"/>
+  </g>
+</svg>

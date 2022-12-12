@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50">
+    <defs>
+        <clipPath id="alv89820da">
+            <path data-name="Rectangle 1917" style="fill:none" d="M0 0h34.281v20.395H0z"/>
+        </clipPath>
+    </defs>
+    <g data-name="*IC_slow">
+        <g data-name="Ellipse 278" style="stroke:#000;fill:none">
+            <circle cx="25" cy="25" r="25" style="stroke:none"/>
+            <circle cx="25" cy="25" r="24.5" style="fill:none"/>
+        </g>
+        <g data-name="Group 1602">
+            <g data-name="Group 1568" transform="translate(7.859 13.35)" style="clip-path:url(#alv89820da)">
+                <path data-name="Path 1527" d="M17.219 17.675a3.741 3.741 0 0 1-2.335-.685 5.34 5.34 0 0 1-1.391-1.766 2.417 2.417 0 0 1 3.425-1.486c.782.326 1.3.99 2.16 1.389a9.3 9.3 0 0 0 1.839.624 5.313 5.313 0 0 1-3.698 1.924z" transform="translate(-3.596 -2.007)" style="stroke-linecap:round;stroke-linejoin:round;stroke:#000;fill:none"/>
+                <path data-name="Path 1528" d="M16.586 15.615a4.84 4.84 0 0 0-5.125.415" transform="translate(-3.161 -2.158)" style="stroke-linecap:round;stroke-linejoin:round;stroke:#000;fill:none"/>
+                <path data-name="Path 1529" d="M8.446 15.9.677 21.332c-.361.253-.132.719.353.719h32.428c.486 0 .715-.467.353-.719L26.042 15.9 17.6 9.987a.646.646 0 0 0-.707 0l-1.573 1.1" transform="translate(-.104 -2.053)" style="stroke-linecap:round;stroke-linejoin:round;stroke:#000;fill:none"/>
+                <path data-name="Path 1530" d="M18.671 2.849A2.349 2.349 0 1 1 21.02 5.2v2.35" transform="translate(-3.88 -.104)" style="stroke-linecap:round;stroke-linejoin:round;stroke:#000;fill:none"/>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="utf-8">
+<head>
+	<title>WizWid</title>
+	<meta name="title" content="">
+	<meta name="keywords" content="WizWid">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=0,maximum-scale=1.0, user-scalable=0, viewport-fit=cover">
+	<meta name="format-detection" content="telephone=no, address=no, email=no" />
+	<meta name="HandheldFriendly" content="true">
+	<link rel="stylesheet" type="text/css" href="../../css/swiper.min.css" />
+	<link rel="stylesheet" type="text/css" href="../../css/common.css" />
+	<script type="text/javascript" src="../../js/jquery-2.0.3.min.js"></script>
+	<script type="text/javascript" src="../../js/swiper.min.js"></script>
+	<script type="text/javascript" src="../../js/vimeo.js"></script> <!-- 220613 추가 || 비메오js 추가 -->
+	<script type="text/javascript" src="../../js/pub.js"></script>
+</head>
+<body>
+<div id="wrap">
+	<header class="mhead_01">
+		<div class="title01">EDITORIAL</div>
+		<div class="back_page">이전</div>
+		<div class="search_box">
+			<button>검색</button>
+		</div>
+		<div class="shopping_cart">
+			<span class="count">8</span>
+		</div>
+	</header>
+	
+	<!-- 컨텐츠 시작 -->
+	<div id="contents">
+
+		<div class="editorial_wrap">
+			<!-- 혜택 탭 -->
+			<!-- <div class="text_rolling_tab01">
+				<ul>
+					<li class="on"><a href="#none">ALL</a></li> 
+					<li><a href="#none">TREND ISSUE</a></li>
+					<li><a href="#none">LOOKBOOK</a></li>
+					<li><a href="#none">DESIGNERS</a></li>
+					<li><a href="#none">INFLUENCER</a></li>
+					<li><a href="#none">CLUB G</a></li>
+				</ul>
+			</div> -->
+
+			<div class="text_rolling_tab01">
+				<ul id="tabs">
+					<li class="on"><a href="javascript:undefined;" onclick="fn_tabChange('');">ALL</a></li>
+					<li id="trndTp_TRND_ISSUE"> <a href="javascript:undefined;" onclick="fn_tabChange('TRND_ISSUE');">TREND ISSUE</a></li>
+					<li id="trndTp_LKBUK"> <a href="javascript:undefined;" onclick="fn_tabChange('LKBUK');">Look Book</a></li>
+					<li id="trndTp_DSGRS" class=""> <a href="javascript:undefined;" onclick="fn_tabChange('DSGRS');">DESIGNERS</a></li>
+					<li id="trndTp_INFLNCR" class=""> <a href="javascript:undefined;" onclick="fn_tabChange('INFLNCR');">INFLUENCER</a></li>
+					<li id="trndTp_CLUB_GLF"> <a href="javascript:undefined;" onclick="fn_tabChange('CLUB_GLF');">CLUB GOLF</a></li>
+				</ul>
+			</div>
+
+			<!-- 검색 옵션 -->
+			<div class="search_option">
+				<div class="total_count"><span>2,039</span> 개</div>
+			</div>
+			
+			<!-- 프로모션 리스트 -->
+			<div class="editorial_list">
+				<ul>
+					<li>
+						<a href="#none">
+							<div class="img01">
+								<img src="../../images/promotion/img_promo_list01.jpg" alt="" />
+							</div>
+							<div class="editorial_info">
+								<div class="title01">NEW SEASON 22SS RACHEL COX</div>
+								<div class="sub_title01">순간을 담은 벤시몽의 이번 컬렉션.<br/>인플루언서 잉화,그녀가 입는 옷은 뭔가 달라도 다르죠.</div>
+								<div class="type">
+									<span class="name">TREND ISSUE</span>
+								</div>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="#none">
+							<div class="img01">
+								<img src="../../images/promotion/img_promo_list02.jpg" alt="" />
+							</div>
+							<div class="editorial_info">
+								<div class="title01">EAT & DRINK BETTER, W&P</div>
+								<div class="sub_title01">점점 날이 풀리고 야외활동이 많아지면서 더 중요해진 수분보충!</div>
+								<div class="type">
+									<span class="name">TREND ISSUE</span>
+								</div>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="#none">
+							<div class="img01">
+								<img src="../../images/promotion/img_promo_list01.jpg" alt="" />
+							</div>
+							<div class="editorial_info">
+								<div class="title01">데님의 절대적강자 PLAC</div>
+								<div class="sub_title01">국내를 대표하는 컨템퍼러리 데님 브랜드, 플랙 우먼라인이 위즈위드에 컴백했습니다. 국내를 대표하는 컨템퍼러리 데님 브랜드, 플랙 우먼라인이 위즈위드에 컴백했습니다.</div>
+								<div class="type">
+									<span class="name">TREND ISSUE</span>
+								</div>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="#none">
+							<div class="img01">
+								<img src="../../images/promotion/img_promo_list02.jpg" alt="" />
+							</div>
+							<div class="editorial_info">
+								<div class="title01">EAT & DRINK BETTER, W&P</div>
+								<div class="sub_title01">점점 날이 풀리고 야외활동이 많아지면서 더 중요해진 수분보충!</div>
+								<div class="type">
+									<span class="name">TREND ISSUE</span>
+								</div>
+							</div>
+						</a>
+					</li>
+				</ul>
+
+				<div class="btn_more">더보기 <span class="num">2</span> / <span class="total_num">8</span></div>
+			</div>
+		</div>
+
+	</div>
+</div>
+
+<script>
+	sub.scroll_tab_event(); 
+</script>
+
+</body>
+</html>

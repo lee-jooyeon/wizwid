@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="utf-8">
+<head>
+	<title>WizWid</title>
+	<meta name="title" content="">
+	<meta name="keywords" content="WizWid">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=0,maximum-scale=1.0, user-scalable=0, viewport-fit=cover">
+	<meta name="format-detection" content="telephone=no, address=no, email=no" />
+	<meta name="HandheldFriendly" content="true">
+	<link rel="stylesheet" type="text/css" href="../../css/swiper.min.css" />
+	<link rel="stylesheet" type="text/css" href="../../css/common.css" />	
+	<script type="text/javascript" src="../../js/jquery-2.0.3.min.js"></script>
+	<script type="text/javascript" src="../../js/swiper.min.js"></script>
+	<script type="text/javascript" src="../../js/vimeo.js"></script> <!-- 22.06.09 추가 || 비메오 스크립트 추가 -->
+	<script type="text/javascript" src="../../js/pub.js"></script>
+</head>
+<body>
+<div id="wrap">
+	<style>
+		h1 {
+			padding: 20px;
+		}
+		xmp {
+			margin: 0;
+			font-size: 14px;
+			font-family: 'Red Hat Display', 'Spoqa Han Sans Neo', 'sans-serif';
+			line-height: 22px;
+		}
+	</style>
+	 <div class="sample-guide">
+		<h1>팝업 가이드</h1>
+		<xmp>
+		1. 팝업 호출 방법
+			- 자동실행 : <button data-target="layer_test">팝업실행</button> 
+						<a herf="javascript:void(0);" data-target="layer_test">팝업실행</a>
+			* data-target 이름은 팝업ID와 동일
+
+			- 함수로 open 실행 : popup.openPopup('레이어ID');
+			- 함수로 close 실행 : popup.closePopup('레이어ID');
+		
+		2. callback함수가 필요할 경우 : popup.callBackPop('버튼ID','레이어ID', callback함수);
+			- 버튼ID => callback함수가 실행되어야 하는 버튼 ID
+			- 레이어ID => callback함수가 실행되는 버튼이 포함되어있는 레이어ID
+			- callback함수 => 실행될 함수로
+		
+		3. 팝업 노출 뒤 다른 팝업이 실행될 경우
+			순서 1. popup.openPopup('레이어ID')
+			순서 2. popup.callBackPop('버튼ID','레이어ID', callback함수);
+			순서 2-2. 호출할 callback 함수에 popup.openPopup('레이어ID')를 사용
+					 * 해당 popup.openPopup('레이어ID')의 '레이어ID'는 새로 노출할 팝업 이름
+		
+		
+		</xmp>
+	</div>
+
+	<div style="padding:20px;margin-top:50px;">
+        <button class="btn_black01" data-target="testPopup01" style="margin-bottom:20px;">팝업 띄우기</button>
+		<button class="btn_black01" data-target="testPopup02" style="margin-bottom:20px;">팝업 띄우기</button>
+		<button class="btn_black01" data-target="testPopup03" style="margin-bottom:20px;">팝업 띄우기</button>
+		<a class="btn_black01" data-target="testPopup03" style="margin-bottom:20px; display: block; text-align: center; line-height: 50px;">a태그 팝업 띄우기</a>
+		<div class="btn_black01" data-target="testPopup03" style="margin-bottom:20px; text-align: center; line-height: 50px;">div태그 팝업 띄우기</div>
+	</div>
+
+	<!-- 팝업 -->
+	<div id="testPopup01" class="layer_md360_popup">
+		<div class="cont01">
+			<h3>제목</h3>
+			<div class="text01">
+				내용
+			</div>
+			<div class="btn_area">
+				<button class="btn_gray01">오늘 하루 안보기</button>
+				<button class="btn_black01">닫기</button>
+			</div>
+		</div>
+	</div>
+
+	<!-- 팝업 -->
+	<div id="testPopup02" class="layer_md500_popup">
+		<div class="close_pop">창닫기</div>
+		<div class="cont01">
+			<h3>당첨을 축하드립니다.</h3>
+			<div class="event_pop">
+				<div class="gift_box">
+					<div class="img_box acthng">현물 당첨</div>
+				</div>
+				<p class="info_msg">이벤트 경품 수령과 관련된 자세한 사항은 ‘꼭 확인해주세요’ 를 참고해 주세요.</p>
+				<div class="btn_area01">
+					<button class="btn_black01">쇼핑하러 가기</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- 팝업 -->
+	<div id="testPopup03" class="layer_md800_popup">
+		<div class="close_pop">창닫기</div>
+		<div class="cont01" >
+			<h3>배송지 등록</h3>
+
+            <ul class="delivery_form type01">
+                <li>
+                    <span class="head01">배송지명 <span class="symbol">*</span></span>
+                    <div class="input_box">
+                        <input type="text"/> <span class="input_text_del">내용삭제</span> 
+                    </div>
+                </li>
+                <li>
+                    <span class="head01">받는 분 <span class="symbol">*</span></span>
+                    <div class="input_box">
+                        <input type="text"/> <span class="input_text_del">내용삭제</span> 
+                    </div>
+                </li>
+                <li>
+                    <span class="head01">휴대폰번호 <span class="symbol">*</span></span>
+                    <div class="input_box">
+                        <input type="text"/> <span class="input_text_del">내용삭제</span> 
+                    </div>
+                </li>
+                <li>
+                    <span class="head01">배송주소 <span class="symbol">*</span></span>
+                    <div class="zip_code">
+                        <span><input type="text" disabled /></span> <button class="btn_black_s01">우편번호</button>
+                        <span><input type="text" disabled /></span>
+                        <div class="input_box">
+                            <input type="text"/> <span class="input_text_del">내용삭제</span> 
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <span class="head01 type01">개인통관<br/>고유부호</span>
+                    <div class="input_box">
+                        <input type="text" placeholder="개인통관 고유부호 (P로 시작하는 13자리)"> <span class="input_text_del">내용삭제</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="check_area">
+                        <span class="checkbox01"><input type="checkbox" id="check_delivery" /><label for="check_delivery">기본 배송지로 설정</lable></span>
+                    </div>
+                </li>
+            </ul>
+			
+			<div class="btn_area01">
+                <button class="btn_gray01">취소</button>
+				<button class="btn_black01">저장</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script>
+</script>
+</body>
+</html>

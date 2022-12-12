@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+    <defs>
+        <clipPath id="gs9lvvx4ba">
+            <path data-name="Rectangle 1572" style="fill:none" d="M0 0h20v20H0z"/>
+        </clipPath>
+    </defs>
+    <g data-name="*radio_활성">
+        <g data-name="Mask Group 1" style="clip-path:url(#gs9lvvx4ba)">
+            <circle data-name="Ellipse 207" cx="10" cy="10" r="10"/>
+            <circle data-name="Ellipse 208" cx="4.545" cy="4.545" r="4.545" transform="translate(5.455 5.455)" style="fill:#fff"/>
+        </g>
+    </g>
+</svg>

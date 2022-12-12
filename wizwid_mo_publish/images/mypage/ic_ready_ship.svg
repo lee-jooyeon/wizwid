@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60">
+    <path data-name="Rectangle 1838" style="opacity:.4;fill:none" d="M0 0h60v60H0z"/>
+    <g data-name="Group 1217">
+        <path data-name="Path 1172" d="M22.75 23.051h14.525v19.824h7.475V12.646L22.75.875l-22 11.771v30.229h7.475V23.051H22.75" transform="translate(7.25 8.125)" style="stroke-miterlimit:10;stroke-width:1.5px;fill:#fff;stroke:#000"/>
+        <path data-name="Line 596" transform="translate(25 22.5)" style="stroke:#1bd9ba;stroke-miterlimit:10;stroke-width:1.5px;fill:none" d="M0 0h10"/>
+    </g>
+    <path data-name="Rectangle 1894" transform="translate(25 41.826)" style="stroke-miterlimit:10;stroke-width:1.5px;fill:#fff;stroke:#000" d="M0 0h10v8.174H0z"/>
+</svg>

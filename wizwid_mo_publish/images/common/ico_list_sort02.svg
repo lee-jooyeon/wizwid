@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17">
+  <g id="_ic_view2" data-name="*ic_view2" transform="translate(-339 -228)">
+    <rect id="Rectangle_2125" data-name="Rectangle 2125" width="17" height="17" transform="translate(339 228)" fill="none"/>
+    <g id="Group_1872" data-name="Group 1872" transform="translate(586.5 -109) rotate(90)">
+      <g id="Rectangle_2120" data-name="Rectangle 2120" transform="translate(339 230.5)" fill="#fff" stroke="#000" stroke-width="1">
+        <rect width="10" height="13" stroke="none"/>
+        <rect x="0.5" y="0.5" width="9" height="12" fill="none"/>
+      </g>
+      <g id="Rectangle_94" data-name="Rectangle 94" transform="translate(352 230.5) rotate(90)" fill="none" stroke="#000" stroke-width="1">
+        <rect width="13" height="1" stroke="none"/>
+        <rect x="0.5" y="0.5" width="12" fill="none"/>
+      </g>
+    </g>
+  </g>
+</svg>

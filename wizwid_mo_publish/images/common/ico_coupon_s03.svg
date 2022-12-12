@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="90" height="66" viewBox="0 0 90 66">
+    <path data-name="사각형 1611" style="fill:#f8f8f8" d="M0 0h90v66H0z"/>
+    <path data-name="사각형 2030" transform="translate(22 10)" style="opacity:.5;fill:none" d="M0 0h46v46H0z"/>
+    <path data-name="패스 1632" d="m175.2 37.164-.373-5.711a.412.412 0 0 0-.425-.446h-5.818v-1.829a6.463 6.463 0 1 0-12.91 0v1.829h-5.818a.412.412 0 0 0-.425.446l-.373 5.711-2.345 25.788a.872.872 0 0 0 .085.357c.042.089.212.134.3.134h30.024a.325.325 0 0 0 .3-.134.5.5 0 0 0 .085-.357zm-18.676-7.986a5.613 5.613 0 1 1 11.211 0v1.829h-11.208zm-8.918 33.373 2.3-25.3.373-5.354h5.393v3.926a.432.432 0 1 0 .849 0V31.9h11.211v3.926a.426.426 0 1 0 .849 0V31.9h5.393l.373 5.354 2.3 25.3z" transform="translate(-117.526 -10.942)" style="stroke-width:.1px;stroke:#000"/>
+    <g data-name="타원 309" transform="translate(36.348 24.132)" style="stroke-width:1.3px;fill:#fff;stroke:#00bab4">
+        <circle cx="2.045" cy="2.045" r="2.045" style="stroke:none"/>
+        <circle cx="2.045" cy="2.045" r="1.395" style="fill:none"/>
+    </g>
+    <g data-name="타원 310" transform="translate(48.866 24.132)" style="stroke-width:1.3px;fill:#fff;stroke:#00bab4">
+        <circle cx="2.045" cy="2.045" r="2.045" style="stroke:none"/>
+        <circle cx="2.045" cy="2.045" r="1.395" style="fill:none"/>
+    </g>
+    <path data-name="선 1052" transform="translate(29.864 45.409)" style="stroke-width:1.3px;stroke:#000;fill:none" d="M0 0h29.455"/>
+</svg>

@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="utf-8">
+<head>
+	<title>WizWid</title>
+	<meta name="title" content="">
+	<meta name="keywords" content="WizWid">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=0,maximum-scale=1.0, user-scalable=0, viewport-fit=cover">
+	<meta name="format-detection" content="telephone=no, address=no, email=no" />
+	<meta name="HandheldFriendly" content="true">
+	<link rel="stylesheet" type="text/css" href="../../css/swiper.min.css" />
+	<link rel="stylesheet" type="text/css" href="../../css/common.css" />	
+	<script type="text/javascript" src="../../js/jquery-2.0.3.min.js"></script>
+	<script type="text/javascript" src="../../js/swiper.min.js"></script>
+	<script type="text/javascript" src="../../js/vimeo.js"></script> <!-- 22.06.09 추가 || 비메오 스크립트 추가 -->
+	<script type="text/javascript" src="../../js/pub.js"></script>
+</head>
+<body>
+<div id="wrap">
+	<header>
+		<div class="head_banner">
+			<div class="img01">
+				<a href="#none"><img src="../../images/common/top_banner_01.jpg" alt="" /></a>
+			</div>
+		</div>
+		<div class="header_box">
+			<h1><a href="#none"><span>로고</span></a></h1>
+			<div class="top_section">
+				<div class="search_box">
+					<input type="text" />
+					<button>검색</button>
+				</div>
+				<ul class="utility">
+					<li><a href="#none"><span class="login">로그인</span></a></li>
+					<li><a href="#none"><span class="mypage">마이페이지</span></a></li>
+					<li><a href="#none"><span class="history">최근본 상품</span></a></li>
+					<li><a href="#none"><span class="shopping_cart">장바구니<span class="num">8</span></span></a></li>
+				</ul>
+			</div>
+			
+			<!-- 메뉴 영역 -->
+			<div class="gnb_section">
+				<!-- 한글일경우 <span class="kor"> -->
+				<ul class="gnb_left">
+					<li><a href="#none">NEW</a></li>
+					<li><a href="#none">BEST</a></li>
+					<li><a href="#none">SALE</a></li>
+					<li><a href="#none">WOMEN</a></li>
+					<li><a href="#none">MEN</a></li>
+					<li><a href="#none">LIFE</a></li>
+					<li><a href="#none">ACTIVE</a></li>
+				</ul>
+				<ul class="gnb_right">
+					<li><a href="#none">GLOBAL</a></li>
+					<li><a href="#none">CLUB G</a></li>
+					<li>
+						<span class="more">더보기</span>
+						<ul>
+							<li><a href="#none">S PROJECT</a></li>
+							<li><a href="#none">EDITORIAL</a></li>
+							<li><a href="#none"><span class="kor">기획전</span></a></li>
+							<li><a href="#none"><span class="kor">브랜드</span></a></li>
+							<li><a href="#none"><span class="kor">리뷰</span></a></li>
+							<li><a href="#none"><span class="kor">혜택</span></a></li>
+						</ul>
+					</li>
+				</ul>
+				<div class="promotion"><a href="#none"><span class="kor">#발렌타인 기프트</span></a></div>
+				<!-- 한글일경우 <span class="kor"> end -->
+			</div>
+		</div>
+	</header>
+	
+	<!-- 컨텐츠 시작 -->
+	<div id="contents" class="contents_mypage">
+		<!-- 유저 정보 -->
+		<div class="user_section">
+			<div class="user_level vip">
+				<!-- <img src="../../images/mypage/ico_level_01.svg" alt="vip" /> -->
+				<span class="name"><span class="lv01">VIP</span>김영희님 </span>
+			</div>
+			<ul class="user_info">
+				<li>쿠폰<br/><strong>30</strong></li>
+				<li>적립금<br/><strong>65,000</strong></li>
+				<li>주문배송<br/><strong>6</strong></li>
+				<li>취소/교환/반품<br/><strong>30</strong></li>
+			</ul>
+		</div>
+
+		<!-- 마이페이지 레이아웃 -->
+		<div class="mypage_layout">
+			<div class="mypage_lnb">
+				<h2>MYPAGE</h2>
+				<h3>나의 쇼핑정보</h3>
+				<ul class="lnb">
+					<li class="on"><a href="#none">주문배송조회</a></li>
+					<li><a href="#none">취소/교환/반품 내역</a></li>
+					<li><a href="#none">재입고 알림신청</a></li>
+					<li><a href="#none">상품 리뷰</a></li>
+					<li><a href="#none">장바구니</a></li>
+					<li><a href="#none">관심상품</a></li>
+					<li><a href="#none">최근 본 상품</a></li>
+					<li><a href="#none">영수증 발행/조회</a></li>
+				</ul>
+
+				<h3>나의 계정정보</h3>
+				<ul class="lnb">
+					<li><a href="#none">회원정보 수정</a></li>
+					<li><a href="#none">회원혜택</a></li>
+					<li><a href="#none">적립금</a></li>
+					<li><a href="#none">쿠폰</a></li>
+					<li><a href="#none">이벤트 참여현황</a></li>
+				</ul>
+
+				<h3>고객센터</h3>
+				<ul class="lnb">
+					<li><a href="#none">1 : 1 문의</a></li>
+					<li><a href="#none">상품 Q&A</a></li>
+					<li><a href="#none">FAQ</a></li>
+					<li><a href="#none">공지사항</a></li>
+				</ul>
+			</div>
+
+			<div class="mypage_section">
+				<h3>주문상세내역</h3>
+
+				<!-- 상세 주문번호 -->
+				<div class="detail_oreder_num">
+					<ul>
+                        <li>주문일자  2022년 1월 10일</li>
+                        <li>주문번호  85789568763542</li>
+						<li>고객센터 생성주문</li>
+                    </ul>
+					<button class="one_qna">1:1문의</button>
+				</div>
+								
+				<!-- 쇼핑 리스트 -->
+				<div class="order_table">
+					<table>
+						<colgroup>
+							<col width="*" />
+							<col width="15.5%" />
+							<col width="15.5%" />
+							<col width="15.5%" />
+						</colgroup>
+						<thead>
+							<tr>
+								<th class="txt-c">상품정보</th>
+								<th>배송비</th>
+								<th>주문상태</th>
+								<th>상태변경</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>
+									<div class="order_product">
+										<div class="shop_info">
+											<div class="img_box">
+												<a href="#none">
+													<img src="../../images/order/img_shopping_01.jpg" alt="">
+												</a>
+											</div>
+											<div class="product_info">
+												<div class="brand"><a href="#none">KENTROYAL</a></div>
+												<div class="p_name"><a href="#none">[켄트로얄] 친환경 초극세모 칫솔 프로소프트 12개입</a></div>
+												<div class="price">
+													<a href="#none">
+														<span class="price01">349,800<span>원</span></span>
+													</a>
+												</div>
+												<div class="option">
+													<a href="#none">옵션 : RED / EM LARGE (+5,000) <span>수량 : 1</span> </a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</td>
+								<td rowspan="3">
+									<div class="delivery_info">
+										<div class="text01">무료배송</div>
+										<div class="text01">국내배송</div>
+									</div>
+								</td>
+								<td rowspan="3">
+									<div class="order_status_info">
+										<div class="text01">입금대기</div>
+									</div>
+								</td>
+								<td rowspan="3">
+									<div class="state">
+										<div class="btn01">
+											<button class="btn_black_s01">주문취소</button>
+										</div>
+									</div>
+								</td>
+							</tr>
+							<tr class="bundle">
+								<td>
+									<div class="order_product">
+										<div class="shop_info">
+											<div class="img_box">
+												<a href="#none">
+													<img src="../../images/order/img_shopping_01.jpg" alt="">
+												</a>
+											</div>
+											<div class="product_info">
+												<div class="brand"><a href="#none">KENTROYAL</a></div>
+												<div class="p_name"><a href="#none">[켄트로얄] 친환경 초극세모 칫솔 프로소프트 12개입</a></div>
+												<div class="price">
+													<a href="#none">
+														<span class="price01">349,800<span>원</span></span>
+													</a>
+												</div>
+												<div class="option">
+													<a href="#none">옵션 : RED / EM LARGE (+5,000) <span>수량 : 1</span> </a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</td>
+								<!-- <td>
+									<div class="delivery_info">
+										<div class="text01">무료배송</div>
+										<div class="text01">국내배송</div>
+									</div>
+								</td>
+								<td>
+									<div class="order_status_info">
+										<div class="text01">입금대기</div>
+									</div>
+								</td> -->
+							</tr>
+							<tr class="bundle">
+								<td>
+									<div class="order_product">
+										<div class="shop_info">
+											<div class="img_box">
+												<a href="#none">
+													<img src="../../images/order/img_shopping_01.jpg" alt="">
+												</a>
+											</div>
+											<div class="product_info">
+												<div class="brand"><a href="#none">KENTROYAL</a></div>
+												<div class="p_name"><a href="#none">[켄트로얄] 친환경 초극세모 칫솔 프로소프트 12개입</a></div>
+												<div class="price">
+													<a href="#none">
+														<span class="price01">349,800<span>원</span></span>
+													</a>
+												</div>
+												<div class="option">
+													<a href="#none">옵션 : RED / EM LARGE (+5,000) <span>수량 : 1</span> </a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</td>
+								<!-- <td>
+									<div class="delivery_info">
+										<div class="text01">무료배송</div>
+										<div class="text01">국내배송</div>
+									</div>
+								</td>
+								<td>
+									<div class="order_status_info">
+										<div class="text01">입금대기</div>
+									</div>
+								</td> -->
+							</tr>
+							<tr>
+								<td>
+									<div class="order_product">
+										<div class="shop_info">
+											<div class="img_box">
+												<a href="#none">
+													<img src="../../images/order/img_shopping_01.jpg" alt="">
+												</a>
+											</div>
+											<div class="product_info">
+												<div class="brand"><a href="#none">KENTROYAL</a></div>
+												<div class="p_name"><a href="#none">[켄트로얄] 친환경 초극세모 칫솔 프로소프트 12개입</a></div>
+												<div class="price">
+													<a href="#none">
+														<span class="price01">349,800<span>원</span></span>
+													</a>
+												</div>
+												<div class="option">
+													<a href="#none">옵션 : RED / EM LARGE (+5,000) <span>수량 : 1</span> </a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</td>
+								<td>
+									<div class="delivery_info">
+										<div class="text01">무료배송</div>
+										<div class="text01">국내배송</div>
+									</div>
+								</td>
+								<td>
+									<div class="order_status_info">
+										<div class="text01">배송완료</div>
+										<div class="text02"><a href="#">배송조회</a></div>
+									</div>
+								</td>
+								<td>
+									<div class="state">
+										<div class="btn01">
+											<button class="btn_gray_s01">교환신청</button>
+										</div>
+										<div class="btn01">
+											<button class="btn_gray_s01">반품신청</button>
+										</div>
+										<div class="btn01">
+											<button class="btn_black_s01">리뷰쓰기</button>
+										</div>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<div class="order_product">
+										<div class="shop_info">
+											<div class="img_box">
+												<a href="#none">
+													<img src="../../images/order/img_shopping_01.jpg" alt="">
+												</a>
+											</div>
+											<div class="product_info">
+												<div class="brand"><a href="#none">KENTROYAL</a></div>
+												<div class="p_name"><a href="#none">[켄트로얄] 친환경 초극세모 칫솔 프로소프트 12개입</a></div>
+												<div class="price">
+													<a href="#none">
+														<span class="price01">349,800<span>원</span></span>
+													</a>
+												</div>
+												<div class="option">
+													<a href="#none">옵션 : RED / EM LARGE (+5,000) <span>수량 : 1</span> </a>
+												</div>
+												<div class="discount">
+													<a href="#none"><span>묶음할인혜택 : 5000원</span></a>
+													<a href="#none"><span>사은품</span></a>
+													<a href="#none" class="custom_order">
+														<span>주문제작</span>
+														<div class="custom_order_term">
+															주문제작 소요일:7일
+															<div class="btn_close">닫기</div>
+														</div>
+													</a>													
+												</div>												
+											</div>
+										</div>
+									</div>
+								</td>
+								<td>
+									<div class="count_box">
+										<div class="delivery_info">
+											<div class="price01">3,000원</div>
+											<div class="text01">해외배송</div>
+											<div class="text02">예약상품 (3월9일<br/> 출고예정)</div>
+											<div class="discount"><a href="#none"><span>사은품</span></a></div>
+										</div>
+									</div>
+								</td>
+								<td>
+									<div class="order_status_info">
+										<div class="text01">결제완료</div>
+									</div>
+								</td>
+								<td>
+									<div class="state">
+										<div class="btn01">
+											<button class="btn_black_s01">주문취소</button>
+										</div>
+									</div>
+								</td>
+							</tr>	
+							<tr>
+								<td>
+									<div class="order_product">
+										<div class="shop_info">
+											<div class="img_box">
+												<a href="#none">
+													<img src="../../images/order/img_shopping_01.jpg" alt="">
+													<span class="flag">SET</span>
+												</a>
+											</div>
+											<div class="product_info">
+												<div class="brand"><a href="#none">KENTROYAL</a></div>
+												<div class="p_name"><a href="#none">[켄트로얄] 친환경 초극세모 칫솔 프로소프트 12개입 </a></div>
+												<div class="price">
+													<a href="#none">
+														<span class="price01">349,800<span>원</span></span>
+													</a>
+												</div>
+											</div>
+										</div>				
+										<div class="set_option">
+											<div class="head01">세트구성 1</div>
+											<div class="set_info">
+												<div class="p_name">나이키 데이브레이크 4종</div>
+												<div class="option">옵션 : RED / EM LARGE (+5,000원)</div>
+											</div>
+										</div>
+										<div class="set_option">
+											<div class="head01">세트구성 2</div>
+											<div class="set_info">
+												<div class="p_name">나이키 데이브레이크 4종</div>
+												<div class="option">옵션 : RED / EM LARGE (+5,000원)</div>
+											</div>
+										</div>
+									</div>
+								</td>
+								<td>
+									<div class="count_box">
+										<div class="delivery_info">
+											<div class="text01">무료배송</div>
+											<div class="text01">국내배송</div>
+											<div class="text02">무료배송 쿠폰사용</div>
+										</div>
+									</div>
+								</td>
+								<td>
+									<div class="order_status_info">
+										<div class="text01">배송완료</div>
+										<div class="text02"><a href="#">배송조회</a></div>
+									</div>
+								</td>
+								<td>
+									<div class="state">
+										<div class="btn01">
+											<button class="btn_gray_s01">교환신청</button>
+										</div>
+										<div class="btn01">
+											<button class="btn_gray_s01">반품신청</button>
+										</div>
+									</div>
+								</td>
+							</tr>																		
+						</tbody>
+					</table>
+				</div>
+
+				<!-- 구매자정보 -->				
+				<div class="order_section">
+					<!-- 220523 수정 || 텍스트 변경 (구매자 정보 -> 주문자 정보) -->
+					<h3>주문자 정보</h3>					
+					<div class="buyer">
+						<ul>
+							<li>
+								<span class="buyer_tit">주문자</span>
+								<span>홍길동</span>
+							</li>
+							<li>
+								<span class="buyer_tit">휴대폰번호</span>
+								<span>010-5645-5675</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<!-- 배송지 정보 -->
+				<div class="order_section">
+					<h3>배송지 정보</h3>			
+					<button class="change_btn">변경</button>
+
+					<div class="shipping_address">
+						<ul>
+							<li>
+								<span class="head01">받는사람</span>
+								<div class="text01">홍길동</div>
+							</li>
+							<li>
+								<span class="head01">휴대폰번호</span>
+								<div class="text01">010-5645-5675</div>
+							</li>
+							<li>
+								<span class="head01">주소</span>
+								<div class="text01">(09090) 서울시 강남구 영동대로 785  삼안빌딩 6F 215(09090) 서울시 강남구 영동대로 785  삼안빌딩 6F 215</div>
+							</li>
+							<li>
+								<span class="head01">개인통관고유부호</span>
+								<div class="text01">P123456789012</div>
+							</li>
+							<li>
+								<span class="head01">배송요청사항</span>
+								<div class="text01">경비실에 맡겨주세요</div>
+							</li>
+						</ul>						
+					</div>
+				</div>
+
+				<!-- 결제 정보 -->				
+				<div class="order_section">
+					<h3>결제 정보</h3>
+					<button class="change_btn">변경</button>
+					
+					<div class="order_info_list">
+						<div class="info_area">
+							<div class="info_box price">
+								<div class="align-box space price-total"><strong>주문금액</strong><span>374,000</span>원</div>
+								<ul>
+									<li>
+										<span class="head01">상품금액</span>
+										<div class="text02"><span class="num01">374,000</span> 원</div>
+									</li>
+									<li>
+										<span class="head01">배송비</span>
+										<div class="text02"><span class="num01">0</span> 원</div>
+									</li>									
+								</ul>
+							</div>
+							<div class="info_box price">
+								<div class="align-box space price-total orange_txt"><strong>할인금액</strong><span>-78,000</span>원</div>
+								<ul>
+									<li>
+										<span class="head01">쿠폰 할인</span>
+										<div class="text02 orange_txt"><span class="num02">374,000</span> 원</div>
+									</li>
+									<li>
+										<span class="head01">적립금 사용</span>
+										<div class="text02 orange_txt"><span class="num02">0</span> 원</div>
+									</li>									
+								</ul>
+							</div>
+							
+							<div class="info_box price">
+								<div class="align-box space price-total"><strong>결제금액</strong><span>296,000</span>원</div>
+								<ul>
+									<li>
+										<span class="head01">[신용카드] 현대카드]</span>
+										<div class="text02"><span class="num01">296,000</span> 원</div>
+									</li>
+									<li>
+										<span class="head01">결제일시 2022.11.29 16:17</span>
+									</li>									
+								</ul>
+							</div>
+						</div>						
+					</div>
+				</div>
+
+				<div class="btn_order_detail">
+					<button class="btn_gray01">영수증 발급</button>
+					<button class="btn_gray01">영수증 보기</button>
+					<button class="btn_black01">목록</button>
+				</div>
+
+			</div>
+		</div>
+	</div>
+	
+	<footer>
+		대기중
+	</footer>
+</div>
+<script>
+	sub.mypage_event(); //마이페이지내 이벤트
+</script>
+</body>
+</html>

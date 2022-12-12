@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17">
+    <g data-name="*ic_view2">
+        <path data-name="Rectangle 2125" style="fill:none" d="M0 0h17v17H0z"/>
+        <g data-name="Group 1873">
+            <g data-name="Rectangle 2120" style="fill:#fff;stroke:#000">
+                <path style="stroke:none" d="M0 0h5.5v5.5H0z" transform="translate(4 2)"/>
+                <path style="fill:none" d="M.5.5H5V5H.5z" transform="translate(4 2)"/>
+            </g>
+            <g data-name="Rectangle 2123" style="fill:#fff;stroke:#000">
+                <path style="stroke:none" d="M0 0h5.5v5.5H0z" transform="translate(4 9.5)"/>
+                <path style="fill:none" d="M.5.5H5V5H.5z" transform="translate(4 9.5)"/>
+            </g>
+            <g data-name="Rectangle 2121" style="fill:#fff;stroke:#000">
+                <path style="stroke:none" d="M0 0h5.5v5.5H0z" transform="translate(11.5 2)"/>
+                <path style="fill:none" d="M.5.5H5V5H.5z" transform="translate(11.5 2)"/>
+            </g>
+            <g data-name="Rectangle 2122" style="fill:#fff;stroke:#000">
+                <path style="stroke:none" d="M0 0h5.5v5.5H0z" transform="translate(11.5 9.5)"/>
+                <path style="fill:none" d="M.5.5H5V5H.5z" transform="translate(11.5 9.5)"/>
+            </g>
+        </g>
+    </g>
+</svg>

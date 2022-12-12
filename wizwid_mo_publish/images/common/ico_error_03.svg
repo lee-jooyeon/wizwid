@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
+    <g data-name="*check">
+        <g data-name="타원 227" style="stroke:#000;stroke-width:2px;fill:#fff;stroke-miterlimit:10">
+            <circle cx="20" cy="20" r="20" style="stroke:none"/>
+            <circle cx="20" cy="20" r="19" style="fill:none"/>
+        </g>
+        <g data-name="!">
+            <path data-name="패스 757" d="m123.337 1671.109 5.968 5.611 10.032-10.26" transform="translate(-110.937 -1651.661)" style="stroke-linecap:round;fill:none;stroke:#000;stroke-width:2px"/>
+        </g>
+    </g>
+</svg>

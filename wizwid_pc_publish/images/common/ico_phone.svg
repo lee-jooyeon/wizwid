@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="130" height="90" viewBox="0 0 130 90">
+    <path data-name="Rectangle 1611" style="fill:#f8f8f8" d="M0 0h130v90H0z"/>
+    <path data-name="Rectangle 2028" transform="translate(33 13)" style="opacity:.5;fill:none" d="M0 0h65v65H0z"/>
+    <g data-name="Group 1172" transform="translate(47.128 14)">
+        <g data-name="Rectangle 1673" style="stroke-width:1.5px;stroke:#000;fill:none">
+            <rect width="35.743" height="62.004" rx="3" style="stroke:none"/>
+            <rect x=".75" y=".75" width="34.243" height="60.504" rx="2.25" style="fill:none"/>
+        </g>
+        <path data-name="Rectangle 1674" d="M0 8.295h35.743v1.5H0z"/>
+        <path data-name="Rectangle 1679" d="M0 51.332h35.743v1.5H0z"/>
+        <rect data-name="Rectangle 1676" width="2.559" height="2.188" rx="1" transform="translate(16.592 55.709)"/>
+        <rect data-name="Rectangle 2022" width="4.559" height="1.188" rx=".594" transform="translate(15.592 3.709)"/>
+    </g>
+    <path data-name="Path 1165" d="m29.671 23.826 4.429 4.64 9-8.558" transform="translate(29.115 19.61)" style="stroke:#00bab4;stroke-miterlimit:10;stroke-width:1.8px;fill:none"/>
+    <g data-name="Group 1560">
+        <path data-name="Line 1049" transform="translate(38 36)" style="stroke-linecap:round;stroke-width:1.2px;stroke:#000;fill:none" d="m0 0 2.722 3"/>
+        <path data-name="Line 1050" transform="translate(38 50.154)" style="stroke-linecap:round;stroke-width:1.2px;stroke:#000;fill:none" d="m0 3 2.722-3"/>
+        <path data-name="Line 1051" transform="translate(36 44.577)" style="stroke-linecap:round;stroke-width:1.2px;stroke:#000;fill:none" d="M0 0h4"/>
+    </g>
+    <g data-name="Group 1561">
+        <path data-name="Line 1049" transform="translate(89 36)" style="stroke-linecap:round;stroke-width:1.2px;stroke:#000;fill:none" d="M2.722 0 0 3"/>
+        <path data-name="Line 1050" transform="translate(89 50.154)" style="stroke-linecap:round;stroke-width:1.2px;stroke:#000;fill:none" d="M2.722 3 0 0"/>
+        <path data-name="Line 1051" transform="translate(89.722 44.577)" style="stroke-linecap:round;stroke-width:1.2px;stroke:#000;fill:none" d="M4 0H0"/>
+    </g>
+</svg>

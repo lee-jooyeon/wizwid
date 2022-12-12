@@ -1,0 +1,130 @@
+﻿/* member css */
+.member {padding:0 15px;}
+
+/* 로그인 */
+.login {margin-bottom:30px;}
+.login .id_input {margin-bottom:10px;position:relative;}
+.login .pw_input {margin-bottom:20px;position:relative;}
+.login .pw_input input {padding-right: 80px;}
+.login .btn_area {margin-bottom:20px;}
+.login .btn_area button {height:50px;width:100%;background:#000000;font-size:15px;font-weight:500;}
+.login .login_check {position:relative;min-height:20px;}
+.login .login_check label {font-size: 12px;font-weight:500;color:#000000;}
+.login .login_check ul {position:absolute;top:0;right:0;}
+.login .login_check li {float:left;padding:0px 11px 0px 10px;position:relative;line-height:20px;font-size: 12px;}
+.login .login_check li:not(:last-child):before {content:"";position:absolute;top:5px;right:0;width:1px;bottom:5px;background:#dddddd;}
+.login .login_check li:last-child {padding-right:0;}
+.login .login_check li a {color:#999999;}
+
+.sns_login {border-top:1px solid #000000;padding-top:39.5px;margin-bottom:30px;}
+.sns_login h3 {font-size:15px;line-height:20px;text-align:center;margin-bottom:20px;font-weight:500;}
+.sns_login .sns_ico {text-align:center;margin-bottom:60px;}
+.sns_login ul {display:flex;justify-content:center;}
+.sns_login li {margin:0px 7.5px;}
+.sns_login .btn_area {margin-bottom:20px;}
+.sns_login .btn_area button {height:50px;width:100%;background:#ffffff;border:1px solid #bbbbbb;color:#000000;font-size:15px;font-weight:500;}
+.sns_login .no_member {text-align:center;}
+.sns_login .no_member a {display:inline-block;color:#777;padding-right:15px;background:url('../images/common/s_arrow_right_01.svg') no-repeat center right;line-height:18px;}
+
+/* 회원가입 */
+.member_join {margin-bottom:40px;}
+.member_join .head_text {line-height:18px;margin-bottom:5px;}
+.member_join h3 {font-size:19px;line-height:24px;margin-bottom:40px;}
+.member_join h3 + .benefit_list {margin-top: -20px;}
+.member_join .btn_area {margin-bottom:60px;}
+.member_join .benefit_list {}
+.member_join .benefit_list li {position:relative;padding-left:130px;min-height:80px;margin-bottom:10px;}
+.member_join .benefit_list li:last-child {margin-bottom:0;}
+.member_join .benefit_list .img01 {position:absolute;top:0;left:0;}
+.member_join .benefit_list .img01 img {width:110px; height: 80px;}
+/* .member_join .benefit_list li:nth-child(1) {background:url('../images/member/ico_benefit_01.svg') no-repeat;}
+.member_join .benefit_list li:nth-child(2) {background:url('../images/member/ico_benefit_02.svg') no-repeat;}
+.member_join .benefit_list li:nth-child(3) {background:url('../images/member/ico_benefit_03.svg') no-repeat;} */
+.member_join .benefit_list h4 { padding-top: 20px; font-size:15px;line-height:22px; font-weight: 500;}
+.member_join .benefit_list .text01 {font-size:12px;line-height:16px;color:#666666;}
+
+/* 비회원 주문동의 */
+.non_mem_order {}
+.non_mem_order h3 {font-size:19px;line-height:26px;margin-bottom:40px;}
+.non_mem_order .input_box {margin-bottom:20px;}
+.non_mem_order .input_box li {margin-bottom:10px;position:relative;}
+.non_mem_order .input_box p {margin-top:10px;font-size:12px;color:#ff4600;line-height:15px;}
+.non_mem_order .btn_area {margin-bottom:30px;}
+.non_mem_order .join_go {margin-bottom:60px;}
+.non_mem_order .join_go a {display:inline-block;color:#666666;padding-right:15px;background:url('../images/common/s_arrow_right_01.svg') no-repeat center right;line-height:18px;}
+.non_mem_order .text_customer {font-size:12px;color:#999999;line-height:18px;}
+.non_mem_order .text_customer a {color:#999999;font-family:'Spoqa Han Sans Neo';}
+
+/* 계정 찾기 */
+.id_pw_find {}
+.id_pw_find .id_pw_tab {margin-bottom:40px;}
+.id_pw_find .id_pw_tab:after {content:" ";display:block;clear:both;height:0;}
+.id_pw_find .id_pw_tab li {width:50%;float:left;padding:0px 2.5px 0px 0px;}
+.id_pw_find .id_pw_tab li:nth-child(2) {padding:0px 0px 0px 2.5px;}
+.id_pw_find .id_pw_tab span {display:block;text-align:center;cursor:pointer;font-size:15px;font-weight:500;color:#bbbbbb;line-height:20px;padding-bottom:20px;border-bottom:2px solid #dddddd;}
+.id_pw_find .id_pw_tab span.on {color:#000000;border-bottom:2px solid #000000;}
+.id_pw_find h3 {font-size:15px;font-weight:500;line-height:22px;margin-bottom:20px;}
+.id_pw_find .btn_area01 {margin-bottom:60px;}
+.id_pw_find .input_box {margin-bottom:20px;}
+.id_pw_find .input_box li {margin-bottom:10px;position:relative;}
+.id_pw_find .input_box p {margin-top:10px;font-size:12px;color:#ff4600;line-height:18px;}
+.id_pw_find .btn_area02 {}
+
+/* 아이디 찾기 결과 */
+.id_pw_find_result {}
+.id_pw_find_result .info_list {margin-bottom:60px;}
+.id_pw_find_result .info_list li {position:relative;margin-bottom:20px;font-size:15px;line-height:22px;min-height:22px;padding-left:100px;}
+.id_pw_find_result .info_list .head01 {position:absolute;top:0;left:0;}
+.id_pw_find_result .btn_area {margin-bottom:30px;}
+.id_pw_find_result .join_go {margin-bottom:60px;}
+.id_pw_find_result .change_pw a {display:inline-block;color:#777;padding-right:15px;background:url('../images/common/s_arrow_right_01.svg') no-repeat center right;line-height:18px;}
+.id_pw_find_result .text_notice {position: relative; padding-left:7px; margin-top: 60px; font-size: 12px; color: #999999; line-height: 15px;}
+.id_pw_find_result .text_notice:before {content: ""; position: absolute; top: 6px; left: 0; height: 2px; width: 2px; background-color: #999999;}
+
+/* 비밀번호 재설정 */
+.pw_reset {}
+.pw_reset h3 {font-size:19px;line-height:26px;margin-bottom:40px;}
+.pw_reset .input_box {margin-bottom:60px;}
+.pw_reset .input_box li {margin-bottom:10px;position:relative;}
+.pw_reset .input_box p {margin-top:10px;font-size:12px;color:#999999;line-height:18px;}
+.pw_reset .btn_area {}
+
+
+/* 회원가입 */
+.join_step {position:relative;padding:0px 0px 40px 0px;}
+.join_step .step {position:absolute;top:-40px;left:-1.5px;height:4px;width:100%;}
+.join_step .step li {height:100%;float:left;background:#dddddd;width:25%;position:relative;font-size:0;}
+.join_step .step li:before {content:"";position:absolute;top:0;left:0;width:3px;background:#ffffff;height:4px;}
+.join_step .step li.on {background:#000000;}
+.join_step h3 {font-size:19px;line-height:26px;margin-bottom:40px;}
+.join_step .agree_check {margin-bottom:60px;}
+.join_step .agree_check .all {border-bottom:1px solid #000000;margin-bottom:30.5px;}
+.join_step .agree_check .all .checkbox01 {margin-bottom:19.5px;}
+.join_step .agree_check .all .checkbox01 label {font-size:15px;font-weight:500;}
+.join_step .agree_check li {margin-bottom:23px;position:relative;}
+.join_step .agree_check .view01 {position:absolute;top:1.5px;;right:0;line-height:14px;color:#999999;cursor:pointer;border-bottom:1px solid #999999;}
+.join_step .agree_check .marketing .checkbox01 {margin-bottom:23px;}
+.join_step .agree_check .sub_list {}
+.join_step .agree_check .sub_list .checkbox02 {margin-right:18px;}
+.join_step .input_box {margin-bottom:20px;}
+.join_step .input_box li {margin-bottom:10px;position:relative;}
+.join_step .input_box p {margin-top:10px;font-size:12px;color:#999999;line-height:18px;}
+.join_step .email_box {margin:30px 0px 60px 0px;border-top:1px solid #000000;padding-top:40px;}
+.join_step .email_box h4 {font-size:15px;font-weight:500;line-height:22px;margin-bottom:20px;}
+.join_step .email_box .email_input {position:relative;}
+.join_step .email_box .recommender {margin-bottom:40px;}
+.join_step .banner_box {margin-bottom:60px;}
+.join_step .banner_box img {width:100%;}
+.join_step .btn_area {}
+.join_step .join_go {margin-top:30px;}
+.join_step .join_go a {display:inline-block;color:#777;padding-right:15px;background:url('../images/common/s_arrow_right_01.svg') no-repeat center right;line-height:18px;}
+
+/* 휴대폰번호 */
+.join_phone_num {}
+.join_phone_num h3 {font-size:19px;line-height:26px;margin-bottom:40px;}
+.join_phone_num .input_box {margin-bottom:60px;}
+.join_phone_num .input_box li {margin-bottom:10px;position:relative;padding-right:113px;}
+.join_phone_num .input_box .input_area {position:relative;}
+.join_phone_num .input_box button {position:absolute;top:0;right:0;width:108px;}
+.join_phone_num .input_box .time {position:absolute;top:11px;right:128px;font-weight:500;line-height:18px;}
+

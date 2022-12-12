@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+    <g data-name="Path 127" style="fill:none">
+        <path d="M8 0a8 8 0 1 1-8 8 8 8 0 0 1 8-8z" style="stroke:none"/>
+        <path d="M8 1C4.14 1 1 4.14 1 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7m0-1a8 8 0 1 1 0 16A8 8 0 0 1 8 0z" style="fill:#000;stroke:none"/>
+    </g>
+    <text data-name="?" transform="translate(5.3 11.8)" style="font-size:11px;font-family:RedHatDisplay-Medium,Red Hat Display;font-weight:500"><tspan x="0" y="0">?</tspan></text>
+</svg>

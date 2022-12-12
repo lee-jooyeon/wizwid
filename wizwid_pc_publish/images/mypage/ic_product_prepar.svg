@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60">
+  <defs>
+    <style>
+      .cls-1, .cls-4, .cls-5 {
+        fill: none;
+      }
+
+      .cls-1 {
+        opacity: 0.4;
+      }
+
+      .cls-2, .cls-3 {
+        fill: #fff;
+      }
+
+      .cls-2 {
+        stroke: #707070;
+      }
+
+      .cls-2, .cls-3, .cls-4, .cls-5 {
+        stroke-width: 2px;
+      }
+
+      .cls-3, .cls-4 {
+        stroke: #000;
+      }
+
+      .cls-3, .cls-4, .cls-5 {
+        stroke-miterlimit: 10;
+      }
+
+      .cls-5 {
+        stroke: #00bab4;
+      }
+    </style>
+  </defs>
+  <g id="상품준비중" transform="translate(9.861 10)">
+    <rect id="Rectangle_1839" data-name="Rectangle 1839" class="cls-1" width="60" height="60" transform="translate(-9.861 -10)"/>
+    <path id="Path_1173" data-name="Path 1173" class="cls-2" d="M5.523.75.749,10.3V38.2H37.688V10.3L32.914.75Z" transform="translate(-0.75 -0.75)"/>
+    <path id="Path_1174" data-name="Path 1174" class="cls-3" d="M32.915.75H5.522L.75,10.295V38.2H37.687v-27.9Z" transform="translate(-0.749 -0.75)"/>
+    <line id="Line_597" data-name="Line 597" class="cls-4" x2="36.937" transform="translate(0.001 9.545)"/>
+    <line id="Line_598" data-name="Line 598" class="cls-4" y1="9.545" transform="translate(18.469 0.001)"/>
+    <g id="Group_1225" data-name="Group 1225" transform="translate(26.939 22.8)">
+      <ellipse id="Ellipse_231" data-name="Ellipse 231" class="cls-3" cx="11" cy="11" rx="11" ry="11" transform="translate(-1 -1)"/>
+      <path id="Path_1178" data-name="Path 1178" class="cls-5" d="M32.315,24.8v7.152h4.871" transform="translate(-22.599 -20.631)"/>
+    </g>
+  </g>
+</svg>

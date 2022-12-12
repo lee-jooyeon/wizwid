@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60">
+  <defs>
+    <style>
+      .cls-1, .cls-6 {
+        fill: none;
+      }
+
+      .cls-1 {
+        opacity: 0.4;
+      }
+
+      .cls-2, .cls-3 {
+        fill: #fff;
+        stroke: #000;
+        stroke-width: 2px;
+      }
+
+      .cls-2 {
+        stroke-miterlimit: 10;
+      }
+
+      .cls-4 {
+        fill: #00bab4;
+        stroke: #00bab4;
+      }
+
+      .cls-5 {
+        stroke: none;
+      }
+    </style>
+  </defs>
+  <g id="입금대기" transform="translate(3.25 7.982)">
+    <rect id="Rectangle_1834" data-name="Rectangle 1834" class="cls-1" width="60" height="60" transform="translate(-3.25 -7.982)"/>
+    <path id="Path_1159" data-name="Path 1159" class="cls-2" d="M45.385,28.154H3.049c-1.533,0-2.657-.45-2.191-1.911L4.444,20.02H43.923l3.585,6.223C47.974,27.7,46.919,28.154,45.385,28.154Z" transform="translate(3.267 7.898)"/>
+    <g id="Rectangle_1916" data-name="Rectangle 1916" class="cls-3" transform="translate(6.25 3.018)">
+      <rect class="cls-5" width="40.48" height="26.802" rx="2"/>
+      <rect class="cls-6" x="1" y="1" width="38.48" height="24.802" rx="1"/>
+    </g>
+    <g id="Group_1211" data-name="Group 1211" transform="translate(3.411 2.411)">
+      <circle id="Ellipse_230" data-name="Ellipse 230" class="cls-2" cx="11" cy="11" r="11" transform="translate(30.186 21.408)"/>
+      <path id="Path_1161" data-name="Path 1161" class="cls-4" d="M26.3,24.592h1.222l-.9-3.277h.78l.855,3.277h1.566l.911-3.277h.636l.849,3.277h1.485l.824-3.277h.761l-.874,3.277h1.3v.529H34.273l-.892,3.327h-.812l-.88-3.327H30.311l-.924,3.327h-.8l-.917-3.327H26.3Zm2.72,3.011c.012-.09.039-.218.079-.383s.231-.865.577-2.1H28.389l.487,1.857a5.978,5.978,0,0,1,.118.626Zm1.442-3.011h1.086l-.406-1.537a2.484,2.484,0,0,1-.106-.645h-.018a1.7,1.7,0,0,1-.029.211q-.022.114-.527,1.971M32.975,27.6a2.2,2.2,0,0,1,.04-.24q.035-.167.553-2.238H32.357l.461,1.775a6.143,6.143,0,0,1,.144.7Z" transform="translate(10.176 7.891)"/>
+    </g>
+    <rect id="Rectangle_1881" data-name="Rectangle 1881" width="26" height="2" transform="translate(13.513 11.018)"/>
+    <rect id="Rectangle_1882" data-name="Rectangle 1882" width="17" height="2" transform="translate(13.513 16.45)"/>
+  </g>
+</svg>

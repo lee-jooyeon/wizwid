@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 70 70">
+    <g data-name="신용평가 icon">
+        <path data-name="Rectangle 2079" style="opacity:.5;fill:none" d="M0 0h70v70H0z"/>
+        <g data-name="Group 1631" transform="translate(12 7)">
+            <rect data-name="Rectangle 1989" width="45.656" height="51.457" rx=".3" transform="translate(0 5.313)" style="stroke-linejoin:round;stroke-linecap:round;stroke-width:2px;stroke:#000;fill:none"/>
+            <path data-name="Path 1688" d="M.445 0h23.511a.445.445 0 0 1 .444.445v7.392a.445.445 0 0 1-.445.445H.445A.445.445 0 0 1 0 7.837V.445A.445.445 0 0 1 .445 0z" transform="translate(10.627 .5)" style="fill:#fff;stroke-linecap:round;stroke-width:2px;stroke:#000"/>
+            <path data-name="Path 1592" d="m2.513 8.856 2.72 2.72 4.153-4.151" transform="translate(7.862 14.258)" style="stroke:#00bab4;stroke-linejoin:round;stroke-linecap:round;stroke-width:2px;fill:none"/>
+            <path data-name="Line 1038" transform="translate(22.822 24.486)" style="stroke:#00bab4;stroke-linejoin:round;stroke-linecap:round;stroke-width:2px;fill:none" d="M0 0h12.207"/>
+            <path data-name="Path 1593" d="m2.513 13.4 2.72 2.72 4.153-4.151" transform="translate(7.862 26.172)" style="stroke:#00bab4;stroke-linejoin:round;stroke-linecap:round;stroke-width:2px;fill:none"/>
+            <path data-name="Line 1039" transform="translate(22.822 40.958)" style="stroke:#00bab4;stroke-linejoin:round;stroke-linecap:round;stroke-width:2px;fill:none" d="M0 0h12.207"/>
+        </g>
+    </g>
+</svg>

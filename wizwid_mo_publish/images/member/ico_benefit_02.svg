@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="110" height="80" viewBox="0 0 110 80">
+    <path data-name="Rectangle 1611" style="fill:#f8f8f8" d="M0 0h110v80H0z"/>
+    <path data-name="Rectangle 2028" style="opacity:.5;fill:none" d="M0 0h48v48H0z" transform="translate(31 16)"/>
+    <g data-name="Group 1172" transform="translate(41.602 16.534)">
+        <g data-name="Rectangle 1673" style="stroke-width:1.2px;stroke:#000;fill:none">
+            <rect width="26.687" height="46.293" rx="3" style="stroke:none"/>
+            <rect x=".6" y=".6" width="25.487" height="45.093" rx="2.4" style="fill:none"/>
+        </g>
+        <path data-name="Rectangle 1674" d="M0 6.193h26.687v1H0z"/>
+        <path data-name="Rectangle 1679" d="M0 38.326h26.687v1H0z"/>
+        <rect data-name="Rectangle 1676" width="1.911" height="1.634" rx=".817" transform="translate(12.388 41.593)"/>
+        <rect data-name="Rectangle 2022" width="3.404" height=".887" rx=".444" transform="translate(11.641 2.769)"/>
+    </g>
+    <path data-name="Path 1165" d="m29.671 22.833 3.3 3.465 6.72-6.389" transform="translate(20.635 15.679)" style="stroke:#00bab4;stroke-miterlimit:10;stroke-width:1.8px;fill:none"/>
+    <g data-name="Group 1560">
+        <path data-name="Line 1049" transform="translate(34.786 32.96)" style="stroke-linecap:round;stroke:#000;fill:none" d="m0 0 2.033 2.24"/>
+        <path data-name="Line 1050" transform="translate(34.786 43.528)" style="stroke-linecap:round;stroke:#000;fill:none" d="M0 2.24 2.033 0"/>
+        <path data-name="Line 1051" transform="translate(33.293 39.364)" style="stroke-linecap:round;stroke:#000;fill:none" d="M0 0h2.986"/>
+    </g>
+    <g data-name="Group 1561">
+        <path data-name="Line 1049" transform="translate(72.864 32.96)" style="stroke-linecap:round;stroke:#000;fill:none" d="M2.033 0 0 2.24"/>
+        <path data-name="Line 1050" transform="translate(72.864 43.528)" style="stroke-linecap:round;stroke:#000;fill:none" d="M2.033 2.24 0 0"/>
+        <path data-name="Line 1051" transform="translate(73.403 39.364)" style="stroke-linecap:round;stroke:#000;fill:none" d="M2.986 0H0"/>
+    </g>
+</svg>

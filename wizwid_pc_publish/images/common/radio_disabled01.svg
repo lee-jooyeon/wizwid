@@ -1,0 +1,6 @@
+<svg data-name="*radio_disable" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+    <g data-name="Path 1056" style="fill:#eee">
+        <path d="M10 19c-4.963 0-9-4.037-9-9s4.037-9 9-9 9 4.037 9 9-4.037 9-9 9z" style="stroke:none"/>
+        <path d="M10 2c-4.411 0-8 3.589-8 8s3.589 8 8 8 8-3.589 8-8-3.589-8-8-8m0-2c5.523 0 10 4.477 10 10s-4.477 10-10 10S0 15.523 0 10 4.477 0 10 0z" style="fill:#ddd;stroke:none"/>
+    </g>
+</svg>

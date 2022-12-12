@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60">
+    <path data-name="Rectangle 1840" style="opacity:.4;fill:none" d="M0 0h60v60H0z"/>
+    <path data-name="Path 1173" d="M5.523.75.749 10.3v27.9h36.939V10.3L32.914.75z" transform="translate(9.11 9.25)" style="fill:#fff"/>
+    <path data-name="Path 1174" d="M32.915.75H5.522L.75 10.295V38.2h36.937V10.3z" transform="translate(9.11 9.25)" style="stroke-miterlimit:10;stroke:#000;stroke-width:1.5px;fill:#fff"/>
+    <path data-name="Line 597" transform="translate(9.86 19.545)" style="stroke-miterlimit:10;stroke:#000;stroke-width:1.5px;fill:none" d="M0 0h36.937"/>
+    <path data-name="Line 598" transform="translate(28.329 10.001)" style="stroke-miterlimit:10;stroke:#000;stroke-width:1.5px;fill:none" d="M0 9.545V0"/>
+    <g data-name="Group 1249">
+        <path data-name="Path 1164" d="M48.315 25.538a11 11 0 1 1-11-11 11 11 0 0 1 11 11z" transform="translate(9.483 17.26)" style="stroke-miterlimit:10;stroke:#000;stroke-width:1.5px;fill:#fff"/>
+        <path data-name="Path 1165" d="m29.671 22.824 3.295 3.455 6.7-6.37" transform="translate(12.129 19.703)" style="stroke:#1bd9ba;stroke-width:1.8px;stroke-miterlimit:10;fill:none"/>
+    </g>
+</svg>

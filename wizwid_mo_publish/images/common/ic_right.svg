@@ -1,0 +1,17 @@
+<svg id="_ic_right" data-name="*ic_right" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        opacity: 0.5;
+      }
+
+      .cls-2 {
+        stroke: #000;
+        stroke-width: 0.5px;
+      }
+    </style>
+  </defs>
+  <rect id="Rectangle_1682" data-name="Rectangle 1682" class="cls-1" width="22" height="22"/>
+  <path id="_ic_right-2" data-name="*ic_right" class="cls-2" d="M.239,0C.2-.014.094.043.047.12A.333.333,0,0,0,.1.525L6.366,6.192.093,12.047a.333.333,0,0,0-.044.407.212.212,0,0,0,.335.053L6.907,6.418a.33.33,0,0,0,0-.463L.381.06A.212.212,0,0,0,.239,0Z" transform="translate(7 4.615)"/>
+</svg>

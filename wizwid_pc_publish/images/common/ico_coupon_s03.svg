@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="96" height="55" viewBox="0 0 96 55">
+    <g data-name="빼기 15" style="fill:#fff">
+        <path d="M95.5 54.5H.5V.5h95v21.123c-3.02.244-5.4 2.671-5.4 5.62 0 2.949 2.38 5.376 5.4 5.62v21.636z" style="stroke:none"/>
+        <path d="M95 54V33.307c-3.056-.462-5.4-3.006-5.4-6.065 0-3.059 2.344-5.603 5.4-6.065V1H1v53h94m1 1H0V0h96v22.103c-2.978 0-5.4 2.306-5.4 5.14 0 2.834 2.422 5.14 5.4 5.14V55z" style="fill:#000;stroke:none"/>
+    </g>
+    <g data-name="그룹 1303">
+        <text data-name="첫 구매 쿠폰" transform="translate(48 15)" style="font-size:7px;font-family:SpoqaHanSansNeo-Regular,Spoqa Han Sans Neo;letter-spacing:-.02em"><tspan x="-17.248" y="0">첫 구매 쿠폰</tspan></text>
+        <g data-name="그룹 1300">
+            <text data-name="7" transform="translate(42.999 43)" style="font-size:18px;font-family:RedHatDisplay-Bold,Red Hat Display;font-weight:700"><tspan x="-5.4" y="0">7</tspan></text>
+            <text data-name="%" transform="translate(49.999 43)" style="font-size:11px;font-family:RedHatDisplay-Medium,Red Hat Display;font-weight:500"><tspan x="0" y="0">%</tspan></text>
+        </g>
+        <path data-name="사각형 1693" transform="translate(13 22)" style="fill:#eee" d="M0 0h70v1H0z"/>
+    </g>
+</svg>

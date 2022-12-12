@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 70 70">
+    <g data-name="상품검토 icon">
+        <path data-name="Rectangle 2080" style="opacity:.5;fill:none" d="M0 0h70v70H0z"/>
+        <g data-name="Group 1605">
+            <g data-name="Group 1630">
+                <path data-name="Path 1542" d="M41.876.5H6.639L.5 12.331v34.586h47.515v-34.58z" transform="translate(6.5 11.16)" style="stroke-width:2px;stroke-miterlimit:10;stroke-linejoin:round;stroke-linecap:round;stroke:#000;fill:none"/>
+                <path data-name="Path 1544" d="M1.312 0h46.541" transform="translate(6.027 23.184)" style="stroke-width:2px;stroke-linecap:round;stroke:#000;fill:none"/>
+                <path data-name="Line 989" transform="translate(30.757 12.339)" style="stroke-width:2px;stroke-miterlimit:10;stroke-linecap:round;stroke:#000;fill:none" d="M0 9.917.001 0"/>
+            </g>
+            <g data-name="Group 1632" transform="translate(39.219 31.829)">
+                <path data-name="Line 990" transform="translate(19.01 19.528)" style="stroke:#00bab4;stroke-width:2px;stroke-miterlimit:10;stroke-linecap:round;fill:none" d="m0 0 7.582 8.642"/>
+                <circle data-name="Ellipse 231" cx="11.4" cy="11.4" style="fill:#fff;stroke:#00bab4;stroke-width:2px;stroke-linejoin:round" r="11.4"/>
+            </g>
+        </g>
+    </g>
+</svg>

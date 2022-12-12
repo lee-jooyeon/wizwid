@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+    <g data-name="*check_비활성">
+        <g data-name="사각형 1583" style="stroke:#ddd;fill:#fff">
+            <path style="stroke:none" d="M0 0h20v20H0z"/>
+            <path style="fill:none" d="M.5.5h19v19H.5z"/>
+        </g>
+        <path data-name="패스 757" d="m123.336 1669.4 3.768 3.543 6.334-6.478" transform="translate(-117.836 -1659.961)" style="stroke-linecap:square;stroke-width:2px;fill:none;stroke:#ddd"/>
+    </g>
+</svg>

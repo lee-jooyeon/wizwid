@@ -1,0 +1,4286 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0,  viewport-fit=contain">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>WizWid</title>
+	<style>
+		html,body{margin:0;padding:0;}
+		html{overflow-y:scroll;}
+		body{color:#666;background-color:#fff;font:13px/1.5 'Malgun Gothic','MalgunGothic','맑은고딕',Dotum,'돋움',Verdana,sans-serif;padding-bottom:20px;}
+		a{color:#27e;text-decoration:none;}
+		a:focus,a:hover,a:active{text-decoration:underline;}
+		.header{position:fixed;top:0;left:0;width:100%;border-bottom:1px solid #000;background-color:#fff;}
+		.header .header-inner{display:table;width:100%;padding:0.5em 2em;box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;-ms-box-sizing:border-box;}
+		.header h1{display:table-cell;margin-right:1em;color:#000;font-size:1.6em;}
+		.header h1 .sub{display:block;margin-top:6px;font-size:0.6em;font-weight:400;/*vertical-align:2px;*/
+		}
+		.header .link-wrap{display:table-cell;text-align:right;vertical-align:middle;}
+		.header .link-wrap a{display:inline-block;color:#000;text-decoration:underline;}
+		.header .link-wrap a + a{margin-left:10px;}
+		.group-title{margin-top:1em;color:#000;font-weight:bold;font-size:1.5em;}
+		table{width:100%;border-collapse:collapse;border-spacing:0;}
+		table caption{display:none;}
+		table th{color:#333;background-color:#eee;}
+		table th,table td{padding:.3em .5em;border:1px solid #ddd;text-align:left;}
+		table th,table td:nth-child(5),table td.stat,table td.date{text-align:center;}
+		table tr.hover td{background-color:#f1f1f1;}
+		table tr.none td{color:#000;background-color:#fc8989;}
+		table tr.up td{background-color:#ffe9f5;}
+		table tr td.has-history .history{display:inline-block;margin:0;padding:0;border:0;background:0;color:#666;line-height:15px;}
+		table tr td.has-history .history:after{content:'+';overflow:hidden;display:inline-block;color:#e05555;width:15px;height:15px;margin-left:5px;border:1px solid #bbb;text-align:center;vertical-align:-3px;line-height:13px;background:#fff;}
+		table tr td.has-history.active .history-con{display:block;padding:5px 0;}
+		table tr td.has-history.active .history:after{content:'-';color:#e05555;}
+		table tr.sta td{background-color:#e5e5e5;font-weight:bold;}
+		.section{margin:1.5em 2em !important;}
+		body.js .section{margin:0;}
+		.section .title{margin:0;padding:0;color:#000;font-weight:bold;font-size:120%;}
+		body.js .section .title{padding:0.5em;border:1px solid #ccc;background-color:#b5b5b5;cursor:pointer;}
+		body.js .section + .section .title{border-top:0;}
+		body.js .section .title .page-count{color:#666;font-weight:normal;}
+		body.js .section .content{display:none;}
+		#sb-body{border:none !important;}
+		.history-con{display:none;}
+		.history-con p{margin:0;line-height:1.4;}
+		.history-con p + p{margin-top:5px;}
+		.new{background-color:#fded96;color:#000;}
+		.new th,.new td{font-weight:bold;background-color:#fded96;}
+		.update{background-color:#9cd7aa;color:#000;}
+		.update th,.update td{font-weight:bold;background-color:#9cd7aa;}
+		.delete th,.delete td,.delete a,.delete .has-history .history{color:#ccc;}
+		.delete th,.delete td{background-color:#434343;}
+		.delete th,.delete td:not(.has-history),.delete a{text-decoration:line-through;}
+		.box{padding:1.5em 2em 0;}
+		.box .box-inner{padding:1em;background-color:#ffe4e4;line-height:1.4;}
+		.info-list{margin:0;padding:0;}
+		.info-list li{list-style:none;text-indent:-10px;padding-left:10px;}
+		.tc-red{color: red !important;}
+
+		@media screen and (max-width: 640px) {
+			.header .header-inner{display:block;}
+			.header h1{display:block;}
+			.header .link-wrap {text-align: left;}
+			.header .link-wrap a {margin-right: 10px; margin-bottom: 5px;}
+			.header .link-wrap a + a {margin-left: 0;}
+			/* .header .link-wrap{display:none;margin:0 -2em; */
+			/* padding:0.5em 2em;*/
+			/* border-top:1px solid #111;*/
+			/* text-align:left;*/
+			/* } */
+			table thead{display:none;}
+			table tr td{display:table;width:100%;border-bottom:1px solid #fff;table-layout:fixed;}
+			table tr td:before{content:attr(data-label);display:table-cell;width:90px;padding:0.3em 0.5em;background:#ddd;text-align:left;}
+			table tr td .text{display:table-cell;word-break:break-all;padding:0.3em 0.5em;}
+			table tr td:last-child{border-bottom:2px solid #000;}
+			.section{margin-top:0 !important;}
+			.section h2.title { margin-top: 1.5em; }
+		}
+
+		.window-popup:after{content:' (popup)';}
+		.common-notice {color: #000; margin: 1.5em 2em !important; font-size: 16px; font-weight: 700;}
+		.common-notice .title {display: block; font-size: 20px; font-weight: 700; margin-bottom: 10px; border-bottom: 1px solid #ddd;}
+		.common-notice .title ~ .title {margin-top: 30px;}
+		.common-notice ol {margin: 0; padding: 0;}
+		.common-notice ol li {list-style: none;}
+		.common-notice ol li.complete {text-decoration: line-through; list-style: none;}
+	</style>
+	<script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
+	<script>
+		(function ($) {
+			$.fn.stat = function (options) {
+				var settings = $.extend({
+						title: 'h2.title',
+						content: 'div.content',
+						files: 'tbody tr',
+						history: '.has-history',
+						// stat: 'td:nth-child(5)',
+						stat: 'td:nth-child(6)',
+						index: 0,
+						openAll: false,
+						speed: 'fast',
+						headerHeight: 0
+					}, options),
+					all_sections = this,
+					header = $('div.header');
+
+				return this.each(function () {
+					var self = this,
+						$self = $(self),
+						title_text,
+						completed = 0;
+					self.sectionTitle = $(settings.title, $self);
+					self.content = $(settings.content, $self);
+					self.files = $(settings.files, $self);
+					self.history = $(settings.history, $self);
+					self.files.each(function () {
+						var stat = $(settings.stat, this);
+						stat.each(function () {
+							// var text = $(this).text();
+							// if (!isNaN(Date.parse(text))) {
+							// 	completed++;
+							// }
+
+							var text = $(this).find('a').text().trim();
+							if (text !== '') {
+								completed++;
+							}
+						});
+					});
+					self.history.each(function () {
+						var historyCont = $(this).find('.history-con');
+						if (historyCont.text().trim().length > 0) {
+							historyCont.before('<button type="button" class="history">내용</button>');
+							self.history.addClass('active');
+						}
+					});
+					self.files
+						.bind('mouseenter', function () {
+							$(this).addClass('hover');
+						})
+						.bind('mouseleave', function () {
+							$(this).removeClass('hover');
+						});
+					title_text = ' <span class="page-count">(' + completed + '/' + self.files.length + ')</span>';
+
+					self.sectionTitle.append(title_text);
+					$(".header .link-wrap").append("<a href='#" + $self.attr("id") + "' class='link-section'>" + $self.find(".name").text() + "</a>")
+
+					$(".link-section").on("click", function (event) {
+						var targetID;
+						targetID = $(this).attr("href");
+						event.preventDefault();
+						$(window).scrollTop($(targetID).offset().top - $(".header").outerHeight());
+					});
+					self.sectionTitle.bind('click', function () {
+						self.content.slideToggle(0);
+					});
+					if (settings.openAll || ((settings.index - 1) === all_sections.index(this))) {
+						self.content.css('display', 'block');
+					}
+				});
+
+			};
+
+
+			$(document).ready(function () {
+				var completeCnt;
+				completeCnt = 0;
+				$('div.section').stat({openAll: true});
+				$('#totalNum').text($('tbody tr').length);
+				// $('tbody tr td:nth-child(5)').each(function (index) {
+				// 	if (!isNaN(Date.parse($(this).text()))) {
+				// 		completeCnt++;
+				// 	}
+				// });
+
+				$('tbody tr td:nth-child(6)').each(function (index) {
+					var text = $(this).find('a').text().trim();
+					if (text !== '') {
+						completeCnt++;
+					}
+				});
+
+
+				
+
+
+				$('#completeNum').text(completeCnt);
+				// $('#newNum').text($('tbody tr.new').length);
+				// $('#updateNum').text($('tbody tr.update').length);
+				$("button.history").each(function () {
+					if ($(this).closest("tr").hasClass("update") || $(this).closest("tr").hasClass("new")) {
+						$(this).closest('tr').find(".has-history").toggleClass("active");
+					}
+
+					$(this).click(function () {
+						$(this).closest('tr').find(".has-history").toggleClass("active");
+						return false;
+					});
+				});
+
+				var _resize = new MobileResize();
+				_resize.initialize();
+
+
+			});
+
+			function MobileResize() {
+				var el = this,
+					MobileNonfilter = "win16|win32|win64|mac",
+					mediaQuerySize = 640,
+					afterHeaderHeight = 0,
+					tableHeadDataArrow = [];
+
+				el.initialize = function () {
+
+					funcSectionPadding();
+
+					if (0 > MobileNonfilter.indexOf(navigator.platform.toLowerCase())) {
+						//console.log("Mobile");
+						funcMobileTable();
+					}
+					if ($(window).width() <= mediaQuerySize) {
+						funcMobileTable();
+					} else {
+						$('.section table tr td').removeAttr('data-label');
+					}
+					$(window).resize(function () {
+						funcSectionPadding();
+						if ($(window).width() <= mediaQuerySize) {
+							funcMobileTable();
+						} else {
+							$('.section table tr td').removeAttr('data-label');
+						}
+					});
+				};
+
+				function funcSectionPadding() {
+					var _headerHeight = $(".header").outerHeight();
+					if (!(afterHeaderHeight === _headerHeight)) {
+						if ($('.common-notice, .section').length > 0) {
+							$('.common-notice, .section').each(function (index) {
+								if (index === 0) {
+									$(this).css('paddingTop', _headerHeight);
+								} else {
+									$(this).css('paddingTop', 10);
+								}
+							});
+						}
+						afterHeaderHeight = _headerHeight;
+					}
+				}
+
+				function funcMobileTable() {
+
+					if ($('.section table tr td').attr('data-label') === undefined) {
+						$('.section table').each(function (i) {
+							$(this).tableHeadData({index: i});
+						});
+					}
+
+				}
+			}
+
+			$.fn.tableHeadData = function (options) {
+				var settings = $.extend({
+					el: $(this),
+					index: 0,
+					headDataArrow: []
+				}, options);
+
+				settings.el.find('thead th').each(function () {
+					settings.headDataArrow.push($(this).text());
+				});
+
+				settings.el.find('tbody tr td').each(function (i) {
+					var tdHtml = $(this).html();
+					// console.log(tdHtml)
+					$(this).empty();
+					$(this).append('<div class="text">' + tdHtml + '</div>');
+					$(this).attr('data-label', settings.headDataArrow[$(this).index()]);
+				});
+
+				$("button.history").click(function () {
+					$(this).closest('tr').find(".has-history").toggleClass("active");
+					return false;
+				});
+
+			}
+		}(jQuery));
+
+		function showWindowPopup(url, customWidth, customHeight, left, top, scrollbars) {
+			var popWidth, popHeight, options;
+			popWidth = screen.availWidth - 10;
+			popHeight = screen.availHeight - 60;
+			left = left ? left : 0;
+			top = top ? top : 0;
+			scrollbars = scrollbars ? scrollbars : 'yes';
+			if (customWidth !== undefined && customWidth !== null && !isNaN(customWidth) && customWidth > 0) {
+				popWidth = customWidth;
+			}
+			if (customHeight !== undefined && customHeight !== null && !isNaN(customHeight) && customHeight > 0) {
+				popHeight = customHeight;
+			}
+			options = 'resizable=yes,scrollbars=' + scrollbars + ',status=no,left=' + left + ',top=' + top + ',width=' + popWidth + ', height=' + popHeight;
+			window.open(url, "", options);
+		}
+	</script>
+</head>
+<body>
+	<script>document.body.className += ' js';</script>
+	<div class="header">
+		<div class="header-inner">
+			<h1>WizWid MO
+				<span class="sub">
+					<span class="total complete">Total: <span id="completeNum">0</span> pages</span>
+					<!--<span class="gap">|</span>-->
+					<!--<span class="total update">Update: <span id="updateNum">0</span> pages</span>-->
+					<!--<span class="gap">|</span>-->
+					<!--<span class="total new">New: <span id="newNum">0</span> pages</span>-->
+				</span>
+			</h1>
+
+			<span class="link-wrap"></span>
+		</div>
+	</div>
+
+	<!-- 가이드 -->
+	<!-- <div class="section" id="headerGuide">
+		<h2 class="title"><span class="name">가이드</span></h2>
+		<div class="content">
+			<table>
+				<colgroup>
+					<col style="width:10%">
+					<col style="width:10%">
+					<col style="width:10%">
+					<col style="width:10%">
+					<col style="width:5%">
+					<col style="width:25%">
+					<col>
+				</colgroup>
+				<thead>
+				<tr>
+					<th scope="col">1depth</th>
+					<th scope="col">2depth</th>
+					<th scope="col">3depth</th>
+					<th scope="col">4depth</th>
+					<th scope="col">date</th>
+					<th scope="col">file name</th>
+					<th scope="col">note</th>
+				</tr>
+				</thead>
+				<tbody>
+					<tr class="update"></tr>
+					<tr>
+						<td>guide</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>
+							<a target="_blank" href="html/guide/index.html">/html/guide/index</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>sample</td>
+						<td>viewer</td>
+						<td></td>
+						<td></td>
+						<td>
+							<a target="_blank" href="html/sample/viewer.html">/html/sample/viewer</a>
+						</td>
+						<td>이미지 상세보기 팝업</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td>popup</td>
+						<td></td>
+						<td></td>
+						<td>
+							<a target="_blank" href="html/sample/layer.html">/html/sample/layer</a>
+						</td>
+						<td>풀 팝업, 레이어 팝업</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td>loading</td>
+						<td></td>
+						<td></td>
+						<td>
+							<a target="_blank" href="html/common/loading.html">/html/common/loading</a>
+						</td>
+						<td>페이지 로딩, 리스트 로딩 애니메이션</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td>동영상</td>
+						<td></td>
+						<td></td>
+						<td>
+							<a target="_blank" href="html/common/video.html">/html/common/video</a>
+						</td>
+						<td>비디오, video, youtube</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td>옵션선택(기타페이지)</td>
+						<td></td>
+						<td></td>
+						<td>
+							<a target="_blank" href="html/sample/optionSelect.html">/html/sample/optionSelect</a>
+						</td>
+						<td>상품상세용은 별도 관리</td>
+					</tr>
+					<tr>
+						<td>guide</td>
+						<td></td>
+						<td></td>
+						<td>01_layout</td>
+						<td></td>
+						<td>
+							<a target="_blank" href="html/guide/01_layout.html">/html/guide/01_layout</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>guide</td>
+						<td></td>
+						<td></td>
+						<td>02_text</td>
+						<td></td>
+						<td>
+							<a target="_blank" href="html/guide/02_text.html">/html/guide/02_text</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>guide</td>
+						<td></td>
+						<td></td>
+						<td>03_title</td>
+						<td></td>
+						<td>
+							<a target="_blank" href="html/guide/03_title.html">/html/guide/03_title</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>guide</td>
+						<td></td>
+						<td></td>
+						<td>04_button</td>
+						<td></td>
+						<td>
+							<a target="_blank" href="html/guide/04_button.html">/html/guide/04_button</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>guide</td>
+						<td></td>
+						<td></td>
+						<td>05_form</td>
+						<td></td>
+						<td>
+							<a target="_blank" href="html/guide/05_form.html">/html/guide/05_form</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>guide</td>
+						<td></td>
+						<td></td>
+						<td>06_board</td>
+						<td></td>
+						<td>
+							<a target="_blank" href="html/guide/06_board.html">/html/guide/06_board</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>guide</td>
+						<td></td>
+						<td></td>
+						<td>07_list</td>
+						<td></td>
+						<td>
+							<a target="_blank" href="html/guide/07_list.html">/html/guide/07_list</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>guide</td>
+						<td></td>
+						<td></td>
+						<td>08_tab</td>
+						<td></td>
+						<td>
+							<a target="_blank" href="html/guide/08_tab.html">/html/guide/08_tab</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>guide</td>
+						<td></td>
+						<td></td>
+						<td>09_fold</td>
+						<td></td>
+						<td>
+							<a target="_blank" href="html/guide/09_fold.html">/html/guide/09_fold</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>guide</td>
+						<td></td>
+						<td></td>
+						<td>10_slide</td>
+						<td></td>
+						<td>
+							<a target="_blank" href="html/guide/10_slide.html">/html/guide/10_slide</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>guide</td>
+						<td></td>
+						<td></td>
+						<td>11_popup</td>
+						<td></td>
+						<td>
+							<a target="_blank" href="html/guide/11_popup.html">/html/guide/11_popup</a>
+						</td>
+						<td></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div> -->
+
+	<!-- 공통 -->
+	<!-- <div class="section" id="common">
+		<h2 class="title"><span class="name">공통</span></h2>
+		<div class="content">
+			<table>
+				<colgroup>
+					<col style="width:10%">
+					<col style="width:10%">
+					<col style="width:10%">
+					<col style="width:10%">
+					<col style="width:5%">
+					<col style="width:25%">
+					<col>
+				</colgroup>
+				<thead>
+				<tr>
+					<th scope="col">1depth</th>
+					<th scope="col">2depth</th>
+					<th scope="col">3depth</th>
+					<th scope="col">4depth</th>
+					<th scope="col">date</th>
+					<th scope="col">file name</th>
+					<th scope="col">note</th>
+				</tr>
+				</thead>
+				<tbody>
+				<tr>
+					<td>전체메뉴</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/common/menu.html">menu</a>
+					</td>
+					<td>2020.08.26 (로고 svg로 변경)</td>
+				</tr>
+				<tr>
+					<td>탭바</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/common/tabbar.html">tabbar</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>필터</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/common/filter.html">filter</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>Footer</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/common/footer.html">footer</a>
+					</td>
+					<td>
+						20.07.27 (푸터 고객의소리,이용약관,개인정보처리방침,채무지급보증안내 button으로 변경)<br>
+						20.07.29 (푸터 SNS 아이콘 수정 / 텍스트 정렬 수정)
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>현대복지몰 푸터</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/common/footer_02.html">footer_02</a>
+					</td>
+					<td>신규</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>서비스 이용약관</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/member/HFM-MC-ME-300201.html">HFM-MC-ME-300201</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>개인정보처리(취급)방침</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/common/footer.html">footer</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>사업자정보확인</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/common/CM-0001.html"></a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>고객의 소리</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/common/customer_voice.html">customer_voice</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>에러페이지</td>
+					<td>404 error</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/common/404_error.html">404 error</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>500 error</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/common/500_error.html">500 error</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>공지페이지</td>
+					<td>현대복지몰 임시안내</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/common/notice_hyundai.html">notice hyundai</a>
+					</td>
+					<td>신규</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>오픈 준비중</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/common/preparing_ready.html">Preparing Ready</a>
+					</td>
+					<td>신규</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>AEO 개인정보 이전 동의 페이지</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/common/aeo_privacy.html">aeo privacy</a>
+					</td>
+					<td>신규</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>현대복지몰 팝업</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/common/popup_rivart.html">popup rivart</a>
+					</td>
+					<td>신규</td>
+				</tr>
+				</tbody>
+			</table>
+		</div>
+	</div> -->
+
+	<!-- 회사소개 -->
+	<!-- <div class="section" id="company">
+		<h2 class="title"><span class="name">회사소개</span></h2>
+		<div class="content">
+			<table>
+				<colgroup>
+					<col style="width:10%">
+					<col style="width:10%">
+					<col style="width:10%">
+					<col style="width:10%">
+					<col style="width:5%">
+					<col style="width:25%">
+					<col>
+				</colgroup>
+				<thead>
+				<tr>
+					<th scope="col">1depth</th>
+					<th scope="col">2depth</th>
+					<th scope="col">3depth</th>
+					<th scope="col">4depth</th>
+					<th scope="col">date</th>
+					<th scope="col">file name</th>
+					<th scope="col">note</th>
+				</tr>
+				</thead>
+				<tbody>
+				<tr>
+					<td>회사소개</td>
+					<td>한섬</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/company/HFM-MC-CM-206010.html">HFM-MC-CM-206010</a>
+					</td>
+					<td>신규</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>ceo 메세지</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/company/HFM-MC-CM-206020.html">HFM-MC-CM-206020</a>
+					</td>
+					<td>신규</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>브랜드 소개</td>
+					<td>국내브랜드 / 해외브랜드</td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/company/HFM-MC-CM-206030.html">HFM-MC-CM-206030</a>
+					</td>
+					<td>신규</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>온라인플랫폼</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/company/HFM-MC-CM-206040.html">HFM-MC-CM-206040</a>
+					</td>
+					<td>신규</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>회사소개 메뉴 레이어</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/company/company_menu.html">company_menu</a>
+					</td>
+					<td>신규</td>
+				</tr>
+				</tbody>
+			</table>
+		</div>
+	</div> -->
+
+	<!-- 메인 -->
+	<div class="section" id="main">
+		<h2 class="title"><span class="name">메인</span></h2>
+		<div class="content">
+			<table>
+				<colgroup>
+					<col style="width:10%">
+					<col style="width:10%">
+					<col style="width:10%">
+					<col style="width:10%">
+					<col style="width:5%">
+					<col style="width:25%">
+					<col>
+				</colgroup>
+				<thead>
+				<tr>
+					<th scope="col">1depth</th>
+					<th scope="col">2depth</th>
+					<th scope="col">3depth</th>
+					<th scope="col">4depth</th>
+					<th scope="col">date</th>
+					<th scope="col">file name</th>
+					<th scope="col">note</th>
+				</tr>
+				</thead>
+				<tbody>
+				<tr>
+					<td>Main</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="page/main.html">MA-DSP-101000</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>배너 전체보기(L)</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="page/display/MA-DSP-101002.html">MA-DSP-101002</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td>LOOKBOOK 상세(L)</td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="page/display/MA-DSP-101003.html">MA-DSP-101003</a>
+					</td>
+					<td></td>
+				</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+
+	<!-- 전시 -->
+	<div class="section" id="display">
+		<h2 class="title"><span class="name">전시</span></h2>
+		<div class="content">
+			<table>
+				<colgroup>
+					<col style="width:10%">
+					<col style="width:10%">
+					<col style="width:10%">
+					<col style="width:10%">
+					<col style="width:5%">
+					<col style="width:25%">
+					<col>
+				</colgroup>
+				<thead>
+				<tr>
+					<th scope="col">1depth</th>
+					<th scope="col">2depth</th>
+					<th scope="col">3depth</th>
+					<th scope="col">4depth</th>
+					<th scope="col">date</th>
+					<th scope="col">file name</th>
+					<th scope="col">note</th>
+				</tr>
+				</thead>
+				<tbody>
+				<tr>
+					<td>카테고리</td>
+					<td>WOMEN(상품목록 Depth1)</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="page/display/MA-DSP-203000.html">MA-DSP-203000</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td>CLOTHING(상품목록 Depth2)</td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="page/display/MA-DSP-203001.html">MA-DSP-203001</a>
+						<a target="_blank" href="page/display/MA-DSP-203001_1.html">MA-DSP-203001_1 (상품 1열)</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td>티셔츠(상품목록 Depth3)</td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="page/display/MA-DSP-203002.html">MA-DSP-203002</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>MEN</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>'MA-DSP-203000'과 동일</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>LIFE</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="page/display/MA-DSP-205000.html">MA-DSP-205000</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>ACTIVE</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="page/display/MA-DSP-206000.html">MA-DSP-206000</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>GLOBAL</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="page/display/MA-DSP-207000.html">MA-DSP-207000</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td>OO 상품보기(L)</td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="page/display/MA-DSP-207001.html">MA-DSP-207001</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>NEW</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="page/display/MA-DSP-208000.html">MA-DSP-208000</a>
+					</td>
+					<td></td>
+				</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+
+	<!-- 매거진 -->
+	<!-- <div class="section" id="magazine">
+		<h2 class="title"><span class="name">매거진</span></h2>
+		<div class="content">
+			<table>
+				<colgroup>
+					<col style="width:10%">
+					<col style="width:10%">
+					<col style="width:10%">
+					<col style="width:10%">
+					<col style="width:5%">
+					<col style="width:25%">
+					<col>
+				</colgroup>
+				<thead>
+				<tr>
+					<th scope="col">1depth</th>
+					<th scope="col">2depth</th>
+					<th scope="col">3depth</th>
+					<th scope="col">4depth</th>
+					<th scope="col">date</th>
+					<th scope="col">file name</th>
+					<th scope="col">note</th>
+				</tr>
+				</thead>
+				<tbody>
+				<tr>
+					<td>매거진 운영</td>
+					<td>상세</td>
+					<td>외부업체1</td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/display/magazine_202010_01.html">magazine_202010_01</a>
+					</td>
+					<td></td>
+				</tr></tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td>외부업체2</td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/display/magazine_202010_02.html">magazine_202010_02</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td>외부업체3</td>
+					<td>새옷신고서</td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/display/magazine_202011_01.html">magazine_202011_01</a>
+					</td>
+					<td></td>
+				</tr>
+				</tbody>
+			</table>
+		</div>
+	</div> -->
+
+	<!-- 기획전 -->
+	<!-- <div class="section" id="promotion">
+		<h2 class="title"><span class="name">기획전</span></h2>
+		<div class="content">
+			<table>
+				<colgroup>
+					<col style="width:10%">
+					<col style="width:10%">
+					<col style="width:10%">
+					<col style="width:10%">
+					<col style="width:5%">
+					<col style="width:25%">
+					<col>
+				</colgroup>
+				<thead>
+				<tr>
+					<th scope="col">1depth</th>
+					<th scope="col">2depth</th>
+					<th scope="col">3depth</th>
+					<th scope="col">4depth</th>
+					<th scope="col">date</th>
+					<th scope="col">file name</th>
+					<th scope="col">note</th>
+				</tr>
+				</thead>
+				<tbody>
+				<tr>
+					<td>기획전</td>
+					<td>목록</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/display/promotion.html"></a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>카테고리, 대표상품, 브랜드</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/display/promotion2.html"></a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>여러기획전 모음</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/display/promotion3.html"></a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>상세기본</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/display/promotionDetail.html">promotionDetail</a>
+					</td>
+					<td>
+						<del>2020.07.24 수정(팝업으로 변경, 상품 브랜드/카테고리 sticky 추가)</del><br>
+						2020.07.27 (쿠폰 정렬 case 추가 / 배너)<br>
+						2020.08.07 (상품 라벨 수정)<br>
+						2020.08.17 (로고 영역 수정)<br>
+						2020.08.18 (기획전 레이어 수정)
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>교차할인 기획전</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/display/promotion_cross.html">promotion_cross</a>
+					</td>
+					<td>
+						<del>2020.07.24 수정(팝업으로 변경, 상품 브랜드/카테고리 sticky 추가)</del><br>
+						2020.07.27 (쿠폰 정렬 case 추가 / 배너)<br>
+						2020.08.07 (상품 라벨 수정)<br>
+						2020.08.18 (기획전 레이어 수정)
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>BOGO 할인 기획전</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/display/promotion_bogo.html">promotion_bogo</a>
+					</td>
+					<td>
+						<del>2020.07.24 수정(팝업으로 변경, 상품 브랜드/카테고리 sticky 추가)</del><br>
+						2020.07.27 (쿠폰 정렬 case 추가 / 배너)<br>
+						2020.08.07 (상품 라벨 수정)<br>
+						2020.08.18 (기획전 레이어 수정)
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>묶음상품 할인 기획전</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/display/promotion_pack.html">promotion_pack</a>
+					</td>
+					<td>
+						<del>2020.07.24 수정(팝업으로 변경, 상품 브랜드/카테고리 sticky 추가)</del><br>
+						2020.07.27 (쿠폰 정렬 case 추가 / 배너)<br>
+						2020.08.07 (상품 라벨 수정)<br>
+						2020.08.18 (기획전 레이어 수정)
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>타임세일 기획전</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/display/promotion_time.html">promotion_time</a>
+					</td>
+					<td>
+						<del>2020.07.24 수정(팝업으로 변경, 상품 브랜드/카테고리 sticky 추가)</del><br>
+						2020.07.27 (쿠폰 정렬 case 추가 / 배너)<br>
+						2020.07.28 (top 이미지영역 수정 / 상품 남은수량 추가)<br>
+						2020.08.07 (상품 라벨 수정)
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>패키지 상품 할인 기획전</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/display/promotion_package.html">promotion_package</a>
+					</td>
+					<td>
+						<del>2020.07.24 수정(팝업으로 변경, 상품 브랜드/카테고리 sticky 추가)</del><br>
+						2020.07.27 (쿠폰 정렬 case 추가 / 배너 / 패키지 상품할인 BG삭제)<br>
+						2020.08.07 (상품 라벨 수정)
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>폐쇄형 기획전 인증페이지</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/display/promotion_email.html">promotion_email</a>
+					</td>
+					<td><del>2020.07.24 수정(팝업으로 변경, 상품 브랜드/카테고리 sticky 추가)</del></td>
+				</tr>
+
+				<tr>
+					<td></td>
+					<td>DKNY 정경호 기획전</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/display/promo_202011_01.html">promo_202011_01</a>
+					</td>
+					<td></td>
+				</tr>
+
+				<tr>
+					<td></td>
+					<td>7주년 혜택모음</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/display/promo_seven_202011.html">promo_seven_202011</a>
+					</td>
+					<td></td>
+				</tr>
+
+				<tr>
+					<td></td>
+					<td>11월 2주차 MD들의 수다</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/promo/promo_mdtalk_202011.html">promo_mdtalk_202011</a>
+					</td>
+					<td></td>
+				</tr>
+				</tbody>
+			</table>
+		</div>
+	</div> -->
+
+	<!-- 이벤트 -->
+	<!-- <div class="section" id="event">
+		<h2 class="title"><span class="name">이벤트</span></h2>
+		<div class="content">
+			<table>
+				<colgroup>
+					<col style="width:10%">
+					<col style="width:10%">
+					<col style="width:10%">
+					<col style="width:10%">
+					<col style="width:5%">
+					<col style="width:25%">
+					<col>
+				</colgroup>
+				<thead>
+				<tr>
+					<th scope="col">1depth</th>
+					<th scope="col">2depth</th>
+					<th scope="col">3depth</th>
+					<th scope="col">4depth</th>
+					<th scope="col">date</th>
+					<th scope="col">file name</th>
+					<th scope="col">note</th>
+				</tr>
+				</thead>
+				<tbody>
+				<tr>
+					<td>이벤트</td>
+					<td>목록</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/event/HFM-MC-MK-100100.html">HFM-MC-MK-100100</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>이벤트상세</td>
+					<td>대표이벤트</td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/event/HFM-MC-MK-100110.html">HFM-MC-MK-100110</a>
+					</td>
+					<td>2020.08.10 (상단 이벤트 타이틀 가운데정렬 / 리스트 아이콘 삭제)</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td>공지</td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/event/HFM-MC-MK-100120.html">HFM-MC-MK-100120</a>
+					</td>
+					<td>2020.08.10 (상단 이벤트 타이틀 가운데정렬 / 리스트 아이콘 삭제)</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td>공지 - 카드혜택</td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/event/HFM-MC-MK-100120_card.html">HFM-MC-MK-100120_card</a>
+					</td>
+					<td>신규</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td>응모</td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/event/HFM-MC-MK-100130.html">HFM-MC-MK-100130</a>
+					</td>
+					<td>2020.08.10 (상단 이벤트 타이틀 가운데정렬 / 리스트 아이콘 삭제)</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>쿠폰다운로드</td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/event/HFM-MC-MK-100130_01.html">HFM-MC-MK-100130_01</a>
+					</td>
+					<td>2020.08.10 (상단 이벤트 타이틀 가운데정렬 / 리스트 아이콘 삭제 / 쿠폰영역 수정)</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>H-Gift적립</td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/event/HFM-MC-MK-100130_02.html">HFM-MC-MK-100130_02</a>
+					</td>
+					<td>2020.08.10 (상단 이벤트 타이틀 가운데정렬 / 리스트 아이콘 삭제 / 쿠폰영역 수정)</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>쿠폰+Gift</td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/event/HFM-MC-MK-100130_03.html">HFM-MC-MK-100130_03</a>
+					</td>
+					<td>2020.08.10 (상단 이벤트 타이틀 가운데정렬 / 리스트 아이콘 삭제 / 쿠폰영역 수정)</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td>구매</td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/event/HFM-MC-MK-100140.html">HFM-MC-MK-100140</a>
+					</td>
+					<td>2020.08.10 (상단 이벤트 타이틀 가운데정렬 / 리스트 아이콘 삭제)</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td>댓글</td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/event/HFM-MC-MK-100150.html">HFM-MC-MK-100150</a>
+					</td>
+					<td>2020.08.10 (상단 이벤트 타이틀 가운데정렬 / 리스트 아이콘 삭제)</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td>투표</td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/event/HFM-MC-MK-100160.html">HFM-MC-MK-100160</a>
+					</td>
+					<td>2020.08.10 (상단 이벤트 타이틀 가운데정렬 / 리스트 아이콘 삭제 / 투표한 정보 댓글영역에 추가)</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>투표결과보기(L)</td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/event/HFM-MC-MK-100161_src.html">HFM-MC-MK-100161_src</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td>출석체크</td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/event/HFM-MC-MK-100170.html">HFM-MC-MK-100170</a>
+					</td>
+					<td>2020.08.10 (상단 이벤트 타이틀 가운데정렬 / 리스트 아이콘 삭제)</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td>출석체크</td>
+					<td>달력 타입</td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/event/HFM-MC-MK-100170-02.html">HFM-MC-MK-100170-02</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td>크라우드펀딩</td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/event/HFM-MC-MK-100180.html">HFM-MC-MK-100180</a>
+					</td>
+					<td>2020.08.10 (상단 이벤트 타이틀 가운데정렬 / 리스트 아이콘 삭제 / 마감 영역 수정)</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>마케팅수신동의(L)</td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/event/HFM-MC-MK-100190.html">HFM-MC-MK-100190</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>쿠폰다운로드(L)</td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/event/HFM-MC-MK-100190.html">HFM-MC-MK-100190</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>H-Gift적립(L)</td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/event/HFM-MC-MK-100190.html">HFM-MC-MK-100190</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>자동응모안내(L)</td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/event/HFM-MC-MK-100190.html">HFM-MC-MK-100190</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>출석체크-쿠폰/Gift(L)</td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/event/HFM-MC-MK-100190.html">HFM-MC-MK-100190</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>출석체크-경품(L)</td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/event/HFM-MC-MK-100190.html">HFM-MC-MK-100190</a>
+					</td>
+					<td></td>
+				</tr>
+
+				<tr>
+					<td></td>
+					<td></td>
+					<td>럭키드로우 이벤트</td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/event/luckydraw_202009.html">luckydraw_202009</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td>럭키드로우 이벤트 팝업</td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/event/luckydraw_popup_202009.html">luckydraw_popup_202009</a>
+					</td>
+					<td></td>
+				</tr>
+
+				<tr>
+					<td></td>
+					<td></td>
+					<td>빙고 이벤트</td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/event/bingo_202009.html">bingo_202009</a>
+					</td>
+					<td></td>
+				</tr>
+
+				<tr>
+					<td></td>
+					<td></td>
+					<td>멤버쉽경험/평생회원 이벤트</td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/event/membership_202009.html">membership_202009</a>
+					</td>
+					<td></td>
+				</tr>
+
+				<tr>
+					<td></td>
+					<td></td>
+					<td>래플 응모 이벤트</td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/event/3days_202009.html">3days_202009</a>
+					</td>
+					<td></td>
+				</tr>
+
+				
+				<tr>
+					<td></td>
+					<td></td>
+					<td>SNS 공유 이벤트</td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/event/snsshare_202009.html">snsshare_202009</a>
+					</td>
+					<td></td>
+				</tr>
+
+				<tr>
+					<td></td>
+					<td></td>
+					<td>PAYBACK 이벤트</td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/event/payback_202009.html">payback_202009</a>
+					</td>
+					<td></td>
+				</tr>
+
+				<tr>
+					<td></td>
+					<td></td>
+					<td>ALLURE of Autumn 화보</td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/event/autumn_202010.html">autumn_202010</a>
+					</td>
+					<td></td>
+				</tr>
+
+				<tr>
+					<td></td>
+					<td></td>
+					<td>Luckybox</td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/event/luckybox_202011.html">luckybox_202011</a>
+					</td>
+					<td></td>
+				</tr>
+
+				<tr>
+					<td></td>
+					<td></td>
+					<td>Lucky seven</td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/event/luckyseven_202011.html">luckyseven_202011</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td>Lucky seven 팝업_01</td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/event/luckyseven_popup_202011_01.html">luckyseven_popup_202011_01</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td>Lucky seven 팝업_02</td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/event/luckyseven_popup_202011_02.html">luckyseven_popup_202011_02</a>
+					</td>
+					<td></td>
+				</tr>
+				
+				<tr>
+					<td></td>
+					<td>당첨자발표</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/event/HFM-MC-MK-100200.html">HFM-MC-MK-100200</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td>당첨자발표(L)</td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/event/HFM-MC-MK-100201.html">HFM-MC-MK-100201</a>
+					</td>
+					<td></td>
+				</tr>
+				</tbody>
+			</table>
+		</div>
+	</div> -->
+
+	<!-- 어필리에이트 -->
+	<!-- <div class="section" id="affiliate">
+		<h2 class="title"><span class="name">어필리에이트</span></h2>
+		<div class="content">
+			<table>
+				<colgroup>
+					<col style="width:10%">
+					<col style="width:10%">
+					<col style="width:10%">
+					<col style="width:10%">
+					<col style="width:5%">
+					<col style="width:25%">
+					<col>
+				</colgroup>
+				<thead>
+				<tr>
+					<th scope="col">1depth</th>
+					<th scope="col">2depth</th>
+					<th scope="col">3depth</th>
+					<th scope="col">4depth</th>
+					<th scope="col">date</th>
+					<th scope="col">file name</th>
+					<th scope="col">note</th>
+				</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>마이페이지</td>
+						<td>어필리에이트</td>
+						<td>어필리에이트란?</td>
+						<td></td>
+						<td></td>
+						<td>
+							<a target="_blank" href="html/mypage/HFM-MC-MY-700100.html">HFM-MC-MY-700100</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>픽튜브 기획전 생성</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>
+							<a target="_blank" href="html/mypage/make_picktube.html">make_picktube</a>
+						</td>
+						<td>2020.08.26 (달력 아이콘(btn_calendar) svg로 변경)</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td>상품검색(P)</td>
+						<td></td>
+						<td></td>
+						<td>
+							<a target="_blank" href="html/mypage/look_search.html">look_search</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>픽튜브 기획전 상세</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>
+							<a target="_blank" href="html/mypage/make_picktube2.html">make_picktube2</a>
+						</td>
+						<td>신규 / 픽튜브 기획전 생성 디자인 동일, 단 상단에 미리보기 버튼이 있음</td>
+					</tr>
+					<tr>
+						<td>전시</td>
+						<td>픽튜브</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>
+							<a target="_blank" href="html/display/picktube.html">picktube</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td>픽튜버 프로필</td>
+						<td></td>
+						<td></td>
+						<td>
+							<a target="_blank" href="html/display/picktuber_profile.html">picktuber_profile</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td>픽튜브 상세</td>
+						<td></td>
+						<td></td>
+						<td>
+							<a target="_blank" href="html/display/picktube_detail.html">picktube_detail</a>
+						</td>
+						<td></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div> -->
+
+	<!-- 검색 -->
+	<div class="section" id="search">
+		<h2 class="title"><span class="name">검색</span></h2>
+		<div class="content">
+			<table>
+				<colgroup>
+					<col style="width:10%">
+					<col style="width:10%">
+					<col style="width:10%">
+					<col style="width:10%">
+					<col style="width:5%">
+					<col style="width:25%">
+					<col>
+				</colgroup>
+				<thead>
+				<tr>
+					<th scope="col">1depth</th>
+					<th scope="col">2depth</th>
+					<th scope="col">3depth</th>
+					<th scope="col">4depth</th>
+					<th scope="col">date</th>
+					<th scope="col">file name</th>
+					<th scope="col">note</th>
+				</tr>
+				</thead>
+				<tbody>
+				<tr>
+					<td>검색</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="page/search/MA-DSP-701000.html">MA-DSP-701000</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>검색(연관검색어)</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="page/search/MA-DSP-701000_1.html">MA-DSP-701000_1</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>검색결과_상품</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="page/search/MA-DSP-701001.html">MA-DSP-701001</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>검색결과_브랜드</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="page/search/MA-DSP-701002.html">MA-DSP-701002</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>검색결과_기획전</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="page/search/MA-DSP-701003.html">MA-DSP-701003</a>
+					</td>
+					<td>추후 제작 예정</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>검색결과_없음</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="page/search/MA-DSP-701004.html">MA-DSP-701004</a>
+					</td>
+					<td></td>
+				</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+
+	<!-- 상품 -->
+	<!-- <div class="section" id="product">
+		<h2 class="title"><span class="name">상품</span></h2>
+		<div class="content">
+			<table>
+				<colgroup>
+					<col style="width:10%">
+					<col style="width:10%">
+					<col style="width:10%">
+					<col style="width:10%">
+					<col style="width:5%">
+					<col style="width:25%">
+					<col>
+				</colgroup>
+				<thead>
+				<tr>
+					<th scope="col">1depth</th>
+					<th scope="col">2depth</th>
+					<th scope="col">3depth</th>
+					<th scope="col">4depth</th>
+					<th scope="col">date</th>
+					<th scope="col">file name</th>
+					<th scope="col">note</th>
+				</tr>
+				</thead>
+				<tbody>
+				<tr>
+					<td>상품 상세</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/product/HFM-MC-PR-100100.html">HFM-MC-PR-100100</a>
+					</td>
+					<td>
+						2020.08.13 (실측사이즈 브랜드 사이즈 toggle기능 수정)<br>
+						2020.08.17 (리뷰 포인트 증정 안내 텍스트 수정)
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>옵션 선택(L)</td>
+					<td>일반상품</td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/product/HFM-MC-PR-100100_01.html">HFM-MC-PR-100100_01</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td>일반상품+추가구성상품</td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/product/HFM-MC-PR-100100_01.html">HFM-MC-PR-100100_01</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td>패키지상품</td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/product/HFM-MC-PR-100100_01.html">HFM-MC-PR-100100_01</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td>패키지상품+추가구성상품</td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/product/HFM-MC-PR-100100_01.html">HFM-MC-PR-100100_01</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>공유하기(L)</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/product/HFM-MC-PR-100103.html">HFM-MC-PR-100103</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>할인혜택(L)</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/product/HFM-MC-PR-100104.html">HFM-MC-PR-100104</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>도서산간배송비 안내(L)</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/product/HFM-MC-PR-100105.html">HFM-MC-PR-100105</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>한섬마일리지 안내(L)</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/product/HFM-MC-PR-100106.html">HFM-MC-PR-100106</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>H.POINT 안내(L)</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/product/HFM-MC-PR-100107.html">HFM-MC-PR-100107</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>카드혜택 안내(L)</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/product/HFM-MC-PR-100108.html">HFM-MC-PR-100108</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>동일사이즈 리뷰보기(P)</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/product/HFM-MC-PR-100110.html">HFM-MC-PR-100110</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>매장수령 이용방법(P)</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/product/HFM-MC-PR-100111.html">HFM-MC-PR-100111</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>매장수령 선택(P)</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/product/HFM-MC-PR-100112.html">HFM-MC-PR-100112</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>사이즈가이드(P)</td>
+					<td>사이즈차트(T)</td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/product/HFM-MC-PR-100115.html">HFM-MC-PR-100115</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td>치수측정(T)</td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/product/HFM-MC-PR-100115.html">HFM-MC-PR-100115</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>리뷰작성(P)</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/product/HFM-MC-PR-100119.html">HFM-MC-PR-100119</a>
+					</td>
+					<td>
+						display/reviewWrite.html 와 동일
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>포토리뷰상세(P)</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/product/HFM-MC-PR-100120.html">HFM-MC-PR-100120</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>문의등록(P)</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/product/HFM-MC-PR-100122.html">HFM-MC-PR-100122</a>
+					</td>
+					<td>2020.08.17 (상품코드, 문의유형 삭제)</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>배송/교환/반품(P)</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/product/HFM-MC-PR-100123.html">HFM-MC-PR-100123</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>연관 기획전(P)</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/product/HFM-MC-PR-100124.html">HFM-MC-PR-100124</a>
+					</td>
+					<td>20.07.30 (페이징 기능 추가)</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>추가 구성상품 선택(P)</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/product/HFM-MC-PR-100125.html">HFM-MC-PR-100125</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>쇼핑백담기완료-일반상품(L)</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/product/HFM-MC-PR-100126.html">HFM-MC-PR-100126</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>쇼핑백담기완료-주문할인상품(L)</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/product/HFM-MC-PR-100127.html">HFM-MC-PR-100127</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>제휴쿠폰(L)</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/product/HFM-MC-PR-100128.html">HFM-MC-PR-100128</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>판매중지 안내(L)</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/product/HFM-MC-PR-100129.html">HFM-MC-PR-100129</a>
+					</td>
+					<td></td>
+				</tr>
+				</tbody>
+			</table>
+		</div>
+	</div> -->
+
+	<!-- 회원 -->
+	<div class="section" id="member">
+		<h2 class="title"><span class="name">회원</span></h2>
+		<div class="content">
+			<table>
+				<colgroup>
+					<col style="width:10%">
+					<col style="width:10%">
+					<col style="width:10%">
+					<col style="width:10%">
+					<col style="width:5%">
+					<col style="width:25%">
+					<col>
+				</colgroup>
+				<thead>
+				<tr>
+					<th scope="col">1depth</th>
+					<th scope="col">2depth</th>
+					<th scope="col">3depth</th>
+					<th scope="col">4depth</th>
+					<th scope="col">date</th>
+					<th scope="col">file name</th>
+					<th scope="col">note</th>
+				</tr>
+				</thead>
+				<tbody>
+				<tr>
+					<td>로그인</td>
+					<td>아이디/비밀번호 로그인</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="page/member/MA-MEM-101000.html">MA-MEM-101000</a>
+					</td>
+					<td>
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td>휴면 알림(L)</td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="page/member/MA-MEM-102000.html">MA-MEM-102000</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>비회원 주문조회</td>
+					<td>주문정보 입력</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="page/member/MA-MEM-201000.html">MA-MEM-201000</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>계정 찾기</td>
+					<td>아이디 찾기(T)</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="page/member/MA-MEM-301000.html">MA-MEM-301000</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>아이디 찾기 결과</td>
+					<td></td>
+					<td>
+						<a target="_blank" href="page/member/MA-MEM-304000.html">MA-MEM-304000</a><br/>
+						<a target="_blank" href="page/member/MA-MEM-304000-1.html">MA-MEM-304000-1 (휴면 회원일 경우)</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>비밀번호 재설정(T)</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="page/member/MA-MEM-401000.html">MA-MEM-401000</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td>휴대폰 인증</td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="page/member/MA-MEM-401001.html">MA-MEM-401001</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>비밀번호 재설정</td>
+					<td></td>
+					<td>
+						<a target="_blank" href="page/member/MA-MEM-402000.html">MA-MEM-402000</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>일반 회원가입</td>
+					<td>본인 인증</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="page/member/MA-MEM-601000.html">MA-MEM-601000</a>
+					</td>
+					<td>
+						:::: HISTORY ::::
+						<br>- 220318 : 타이틀 변경 (본인인증 -> 회원가입) | 간편 회원 가입 관련 주석 처리
+					</td>
+				</tr>
+				<tr>
+					<td>일반 회원가입</td>
+					<td>약관동의</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="page/member/MA-MEM-602000.html">MA-MEM-602000</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td>아이에스이커머스사이트이용약관(L)</td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="page/member/MA-MEM-601001.html">MA-MEM-601001</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td>개인정보수집이용등에대한동의(L)</td>
+					<td></td>
+					<td></td>
+					<td>
+						<!-- <a target="_blank" href="page/member/MA-MEM-601002.html">MA-MEM-601002</a> -->
+					</td>
+					<td>'MA-MEM-601001'과 동일 (헤더 영역 이름만 변경)</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td>개인정보의 제3자 제공 동의(L)</td>
+					<td></td>
+					<td></td>
+					<td>
+						<!-- <a target="_blank" href="page/member/MA-MEM-601003.html">MA-MEM-601003</a> -->
+					</td>
+					<td>'MA-MEM-601001'과 동일 (헤더 영역 이름만 변경)</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td>평생회원 동의(L)</td>
+					<td></td>
+					<td></td>
+					<td>
+						<!-- <a target="_blank" href="page/member/MA-MEM-601004.html">MA-MEM-601004</a> -->
+					</td>
+					<td>'MA-MEM-601001'과 동일 (헤더 영역 이름만 변경)</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>아이디/비밀번호/이메일 입력</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="page/member/MA-MEM-603000.html">MA-MEM-603000</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>친구초대 링크</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="page/member/MA-MEM-801000.html">MA-MEM-801000</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>친구초대링크 오류페이지</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="page/member/MA-MEM-802000.html">MA-MEM-802000</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>일반/간편 회원가입</td>
+					<td>가입완료</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="page/member/MA-MEM-604000.html">MA-MEM-604000</a>
+					</td>
+					<td><strong>추후 제작 예정</strong></td>
+				</tr>
+				<tr>
+					<td>간편 회원가입</td>
+					<td>휴대폰번호 확인</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="page/member/MA-MEM-701000.html">MA-MEM-701000</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>
+						휴대폰번호 확인<br>
+						(네이버 인증시)
+					</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="page/member/MA-MEM-701000-1.html">MA-MEM-701000-1</a> <br>
+						<a target="_blank" href="page/member/MA-MEM-701000-2.html">MA-MEM-701000-2</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>필수항목선택안내(L)</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="page/member/MA-MEM-701001.html">MA-MEM-701001</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>가입완료된계정안내(L)</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="page/member/MA-MEM-701002.html">MA-MEM-701002</a>
+					</td>
+					<td></td>
+				</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+	
+	<!-- 주문 -->
+	<!-- <div class="section" id="order">
+		<h2 class="title"><span class="name">주문</span></h2>
+		<div class="content">
+			<table>
+				<colgroup>
+					<col style="width:10%">
+					<col style="width:10%">
+					<col style="width:10%">
+					<col style="width:10%">
+					<col style="width:5%">
+					<col style="width:25%">
+					<col>
+				</colgroup>
+				<thead>
+				<tr>
+					<th scope="col">1depth</th>
+					<th scope="col">2depth</th>
+					<th scope="col">3depth</th>
+					<th scope="col">4depth</th>
+					<th scope="col">date</th>
+					<th scope="col">file name</th>
+					<th scope="col">note</th>
+				</tr>
+				</thead>
+				<tbody>
+				<tr>
+					<td>장바구니</td>
+					<td>택배(T)</td>
+					<td>회원/비회원</td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/order/HFM-MC-OP-100100.html">HFM-MC-OP-100100</a>
+					</td>
+					<td>
+						2020.08.17 (신용카드 혜택 안내)
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td>임직원</td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/order/HFM-MC-OP-100100.html">HFM-MC-OP-100100</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>매장수령(T)</td>
+					<td>회원/비회원</td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/order/HFM-MC-OP-100200.html">HFM-MC-OP-100200</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td>임직원</td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/order/HFM-MC-OP-100200.html">HFM-MC-OP-100200</a>
+					</td>
+					<td>
+						2020.08.17 (임직원가 결제한도 도움말 추가 / 신용카드 혜택 안내)
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>장바구니 팝업</td>
+					<td>입점 판매 상품 안내(L)</td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/order/HFM-MC-OP-100001.html">HFM-MC-OP-100001</a>
+					</td>
+					<td>
+						2020.08.17 (문구 수정)
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td>옵션 변경(L)</td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/order/HFM-MC-OP-100002.html">HFM-MC-OP-100002</a>
+					</td>
+					<td>
+						2020.08.17 (옵션선택 영역 수정)
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td>배송비 안내(L)</td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/order/HFM-MC-OP-100004.html">HFM-MC-OP-100004</a>
+					</td>
+					<td>
+						2020.08.17 (문구 수정)
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td>묶음할인 혜택보기(L)</td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/order/HFM-MC-OP-100005.html">HFM-MC-OP-100005</a>
+					</td>
+					<td>
+						2020.08.17 (할인조건, 할인율 삭제)
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td>임직원 할인가 참고(L)</td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/order/HFM-MC-OP-100006.html">HFM-MC-OP-100006</a>
+					</td>
+					<td>
+						2020.08.17 신규
+					</td>
+				</tr>
+				<tr>
+					<td>주문서</td>
+					<td>사은품 선택</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/order/HFM-MC-OP-200100.html">HFM-MC-OP-200100</a>
+					</td>
+					<td>
+						2020.08.17 (문구 수정)
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>회원/임직원</td>
+					<td>주문서 작성</td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/order/HFM-MC-OP-200200.html">HFM-MC-OP-200200</a>
+					</td>
+					<td>
+						2020.07.24 (신용카드 혜택 안내 태그 변경)<br>
+						2020.07.28 (할인혜택 가격 오른쪽 정렬)
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>제휴몰주문</td>
+					<td>복지포탈_주문서 작성</td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/order/HFM-MC-OP-200300.html">HFM-MC-OP-200300</a>
+					</td>
+					<td>
+						2020.07.24 (신용카드 혜택 안내 태그 변경)<br>
+						2020.07.28 (할인혜택 가격 오른쪽 정렬)
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td>베네피아_주문서 작성</td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/order/HFM-MC-OP-200301.html">HFM-MC-OP-200301</a>
+					</td>
+					<td>
+						2020.07.24 (신용카드 혜택 안내 태그 변경)<br>
+						2020.07.28 (할인혜택 가격 오른쪽 정렬)
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>베네피아 포인트 조회(L)</td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/order/HFM-MC-OP-200302.html">HFM-MC-OP-200302</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>비회원주문</td>
+					<td>H패션몰 회원 혜택 안내(L)</td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/order/HFM-MC-OP-200400.html">HFM-MC-OP-200400</a>
+					</td>
+					<td>
+						2020.08.17 (혜택 수정)
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td>약관동의</td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/order/HFM-MC-OP-200401.html">HFM-MC-OP-200401</a>
+					</td>
+					<td>
+						2020.08.17 (타이틀 수정)<br>
+						2020.08.18 (하단 버튼 class 추가)
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td>주문서 작성</td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/order/HFM-MC-OP-200402.html">HFM-MC-OP-200402</a>
+					</td>
+					<td>2020.07.24 (신용카드 혜택 안내 태그 변경)</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>주문완료</td>
+					<td>회원/임직원주문</td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/order/HFM-MC-OP-200500.html">HFM-MC-OP-200500</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td>비회원주문</td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/order/HFM-MC-OP-200501.html">HFM-MC-OP-200501</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>기타</td>
+					<td>결제진행중</td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/order/HFM-MC-OP-200600.html">HFM-MC-OP-200600</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td>포인트 오류</td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/order/HFM-MC-OP-200601.html">HFM-MC-OP-200601</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td>결제 오류</td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/order/HFM-MC-OP-200601_01.html">HFM-MC-OP-200601_01</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>주문서 팝업</td>
+					<td>휴대폰 인증(L)</td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/order/HFM-MC-OP-200001.html">HFM-MC-OP-200001</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td>쿠폰 등록(L)</td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/order/HFM-MC-OP-200002.html">HFM-MC-OP-200002</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td>쿠폰 적용(L)</td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/order/HFM-MC-OP-200003.html">HFM-MC-OP-200003</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td>SK패션상품권 적용(L)</td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/order/HFM-MC-OP-200004.html">HFM-MC-OP-200004</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td>배송비 쿠폰(L)</td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/order/HFM-MC-OP-200006.html">HFM-MC-OP-200006</a>
+					</td>
+					<td>
+						2020.08.17 (할인금액 항목 삭제)
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td>다른 배송지 찾기(L)</td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/order/HFM-MC-OP-200007.html">HFM-MC-OP-200007</a>
+					</td>
+					<td>
+						2020.08.17 (스마일박스)<br>
+						2020.08.26 (스마일박스 안내문구 추가, 주소찾기 버튼 삭제)
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td>한섬 멤버십 통합 안내(L)</td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/order/HFM-MC-OP-200010.html">HFM-MC-OP-200010</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td>개인통관고유번호 입력(L)</td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/order/HFM-MC-OP-200011.html">HFM-MC-OP-200011</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td>할인수단별 사용 안내(L)</td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/order/HFM-MC-OP-200012.html">HFM-MC-OP-200012</a>
+					</td>
+					<td>
+						2020.08.17 (문구 수정)
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td>결제수단별 사용 안내(L)</td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/order/HFM-MC-OP-200013.html">HFM-MC-OP-200013</a>
+					</td>
+					<td>
+						2020.08.17 (문구 수정)
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td>AEO(American Eagle Outfit) 구매 회원 개인정보 국외 이전에 대한 동의(L)</td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/order/HFM-MC-OP-200014.html">HFM-MC-OP-200014</a>
+					</td>
+					<td></td>
+				</tr>
+				</tbody>
+			</table>
+		</div>
+	</div> -->
+
+	<!-- 마이페이지 -->
+	<!-- <div class="section" id="mypage">
+		<h2 class="title"><span class="name">마이페이지</span></h2>
+		<div class="content">
+			<table>
+				<colgroup>
+					<col style="width:10%">
+					<col style="width:10%">
+					<col style="width:10%">
+					<col style="width:10%">
+					<col style="width:5%">
+					<col style="width:25%">
+					<col>
+				</colgroup>
+				<thead>
+				<tr>
+					<th scope="col">1depth</th>
+					<th scope="col">2depth</th>
+					<th scope="col">3depth</th>
+					<th scope="col">4depth</th>
+					<th scope="col">date</th>
+					<th scope="col">file name</th>
+					<th scope="col">note</th>
+				</tr>
+				</thead>
+				<tbody>
+				<tr>
+					<td>메인</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/mypage/HFM-MC-MY-100100.html">HFM-MC-MY-100100</a>
+					</td>
+					<td>2020.08.11 (회원 등급 수정, 마이페이지 메뉴명 수정)</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>메뉴 리스트(L)</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/mypage/HFM-MC-MY-100101.html">HFM-MC-MY-100101</a>
+					</td>
+					<td>2020.08.11 수정</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>알림함(L)</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/mypage/HFM-MC-MY-100102.html">HFM-MC-MY-100102</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>앱설정(L)</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/mypage/HFM-MC-MY-100103.html">HFM-MC-MY-100103</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>쇼핑정보</td>
+					<td>주문/배송</td>
+					<td>주문/배송_목록</td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/mypage/HFM-MC-MY-200100.html">HFM-MC-MY-200100</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>결제방법 변경(L)</td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/mypage/HFM-MC-MY-200001.html">HFM-MC-MY-200001</a>
+					</td>
+					<td></td>
+				</tr>
+
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>사진 첨부(L)</td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/mypage/HFM-MC-MY-200002.html">HFM-MC-MY-200002</a>
+					</td>
+					<td>2020.08.18 신규</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>취소 사유 선택(L) / 교환 사유 선택(L) / 반품 사유 선택(L)</td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/mypage/HFM-MC-MY-200004.html">HFM-MC-MY-200004</a>
+					</td>
+					<td>2020.08.18 신규</td>
+				</tr>
+
+
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>환불계좌정보 입력 (L)</td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/mypage/HFM-MC-MY-200005.html">HFM-MC-MY-200005</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>재고부족(L)</td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/mypage/HFM-MC-MY-200003.html">HFM-MC-MY-200003</a>
+					</td>
+					<td>20.07.29 (텍스트 내용 수정)</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>다른 주소 선택(L)</td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/mypage/HFM-MC-MY-200007.html"><del>HFM-MC-MY-200007</del></a>
+						<del>HFM-MC-MY-200007</del>
+					</td>
+					<td>팝업 삭제</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>취소 사유 선택(L)</td>
+					<td></td>
+					<td>
+						<del>HFM-MC-MY-200004</del>
+						<a target="_blank" href="html/mypage/HFM-MC-MY-200004.html">HFM-MC-MY-200004</a>
+					</td>
+					<td>
+						20.07.29 (기타사유 input box 추가)<br>
+						2020.08.18 화면 삭제
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>반품 사유 선택(L)</td>
+					<td></td>
+					<td>
+						<del>HFM-MC-MY-200008</del>
+						<a target="_blank" href="html/mypage/HFM-MC-MY-200008.html">HFM-MC-MY-200008</a>
+					</td>
+					<td>
+						20.07.29 (기타사유 input box 추가)<br>
+						2020.08.18 화면 삭제
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>교환 옵션/사유 선택(L)</td>
+					<td></td>
+					<td>
+						<del>HFM-MC-MY-200006</del>
+						<a target="_blank" href="html/mypage/HFM-MC-MY-200006.html">HFM-MC-MY-200006</a>
+					</td>
+					<td>
+						20.07.29 (컬러칩 추가/ 기타사유 input box 추가)<br>
+						2020.08.18 화면 삭제
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td>주문/배송_상세</td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/mypage/HFM-MC-MY-200101.html">HFM-MC-MY-200101</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td>배송지 변경</td>
+					<td></td>
+					<td></td>
+					<td>
+						<del>HFM-MC-MY-200102</del>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>배송지 변경(L)</td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/mypage/HFM-MC-MY-200010.html">HFM-MC-MY-200010</a>
+					</td>
+					<td>20.07.29 (배송요청사항 추가)</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>배송조회(P)</td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/mypage/HFM-MC-MY-200012.html">HFM-MC-MY-200012</a>
+					</td>
+					<td>신규</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td>주문취소</td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/mypage/HFM-MC-MY-200103.html">HFM-MC-MY-200103</a>
+					</td>
+					<td>
+						20.07.30 (추가비용 UI 변경/ 안내 문구 수정)<br>
+						2020.08.18 (버튼)
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td>주문취소 완료</td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/mypage/HFM-MC-MY-200104.html">HFM-MC-MY-200104</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td>교환신청</td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/mypage/HFM-MC-MY-200105.html">HFM-MC-MY-200105</a>
+					</td>
+					<td>
+						20.07.30 (패키지명 삭제 / 추가비용 UI 변경 / 안내문구 수정)<br>
+						2020.08.18 (버튼 / 사유 영역)
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td>교환신청 완료</td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/mypage/HFM-MC-MY-200106.html">HFM-MC-MY-200106</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td>반품신청</td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/mypage/HFM-MC-MY-200107.html">HFM-MC-MY-200107</a>
+					</td>
+					<td>
+						20.07.30 (추가비용 UI 변경 / 안내문구 수정)<br>
+						2020.08.18 (버튼 / 사유 영역)
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td>반품신청 완료</td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/mypage/HFM-MC-MY-200108.html">HFM-MC-MY-200108</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>취소/교환/반품</td>
+					<td>취소 목록</td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/mypage/HFM-MC-MY-200200.html">HFM-MC-MY-200200</a>
+					</td>
+					<td>20.07.30 (안내문구 수정)</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td>취소 상세</td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/mypage/HFM-MC-MY-200201.html">HFM-MC-MY-200201</a>
+					</td>
+					<td>20.07.30 (class추가 / 추가비용 UI 수정)</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td>교환 목록</td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/mypage/HFM-MC-MY-200202.html">HFM-MC-MY-200202</a>
+					</td>
+					<td>20.07.30 (안내문구 수정)</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td>교환 상세</td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/mypage/HFM-MC-MY-200203.html">HFM-MC-MY-200203</a>
+					</td>
+					<td>20.07.30 (class 추가 / 리뷰작성 버튼 추가 / 추가비용 UI 수정 / 환불 배송비 추가)</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td>반품 목록</td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/mypage/HFM-MC-MY-200204.html">HFM-MC-MY-200204</a>
+					</td>
+					<td>20.07.30 (안내문구 수정)</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td>반품 상세</td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/mypage/HFM-MC-MY-200205.html">HFM-MC-MY-200205</a>
+					</td>
+					<td>20.07.30 (class 추가 / 추가비용 UI 수정 / 환불 배송비 추가)</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>대량주문</td>
+					<td>대량주문_목록</td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/mypage/HFM-MC-MY-200300.html">HFM-MC-MY-200300</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td>대량주문_상세</td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/mypage/HFM-MC-MY-200301.html">HFM-MC-MY-200301</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td>대량주문_결제완료</td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/mypage/HFM-MC-MY-200302.html">HFM-MC-MY-200302</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>비회원 주문조회</td>
+					<td>주문/배송</td>
+					<td>주문/배송_상세</td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/mypage/HFM-MC-MY-200400.html">HFM-MC-MY-200400</a>
+					</td>
+					<td>
+						2020.08.17 (취소/교환/반품 버튼 추가)<br>
+						2020.08.18 (버튼)
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>주문취소</td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/mypage/HFM-MC-MY-200402.html">HFM-MC-MY-200402</a>
+					</td>
+					<td>
+						2020.08.18 (버튼)
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>주문취소 완료</td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/mypage/HFM-MC-MY-200403.html">HFM-MC-MY-200403</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>교환신청</td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/mypage/HFM-MC-MY-200404.html">HFM-MC-MY-200404</a>
+					</td>
+					<td>
+						2020.08.18 (버튼 / 사유)
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>교환신청 완료</td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/mypage/HFM-MC-MY-200405.html">HFM-MC-MY-200405</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>반품신청</td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/mypage/HFM-MC-MY-200406.html">HFM-MC-MY-200406</a>
+					</td>
+					<td>
+						2020.08.18 (버튼 / 사유)
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>반품신청 완료</td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/mypage/HFM-MC-MY-200407.html">HFM-MC-MY-200407</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td>취소/교환/반품</td>
+					<td>취소(T)</td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/mypage/HFM-MC-MY-200500.html">HFM-MC-MY-200500</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>취소 상세</td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/mypage/HFM-MC-MY-200501.html">HFM-MC-MY-200501</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>교환(T)</td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/mypage/HFM-MC-MY-200502.html">HFM-MC-MY-200502</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>교환 상세</td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/mypage/HFM-MC-MY-200503.html">HFM-MC-MY-200503</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>반품(T)</td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/mypage/HFM-MC-MY-200504.html">HFM-MC-MY-200504</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>반품 상세</td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/mypage/HFM-MC-MY-200505.html">HFM-MC-MY-200505</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>혜택정보</td>
+					<td>쿠폰</td>
+					<td>보유쿠폰(T) / 사용내역(T)</td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/mypage/HFM-MC-MY-300100.html">HFM-MC-MY-300100</a>
+					</td>
+					<td>
+						2020.08.13 (타이틀영역 / 사용조건 문구)
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>쿠폰등륵(L)</td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/mypage/HFM-MC-MY-300101.html">HFM-MC-MY-300101</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>쿠폰적용대상 - 브랜드(L)</td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/mypage/HFM-MC-MY-300101.html">HFM-MC-MY-300101</a>
+					</td>
+					<td>
+						2020.08.13 (연관프로모션 바로가기 수정)
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>쿠폰적용대상 - 카테고리(L)</td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/mypage/HFM-MC-MY-300101.html">HFM-MC-MY-300101</a>
+					</td>
+					<td>
+						2020.08.13 (연관프로모션 바로가기 수정)
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>쿠폰적용대상 - 상품(L)</td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/mypage/HFM-MC-MY-300101.html">HFM-MC-MY-300101</a>
+					</td>
+					<td>
+						2020.08.13 (연관프로모션 바로가기 수정)
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>H.POINT</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/mypage/HFM-MC-MY-300200.html">HFM-MC-MY-300200</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td>소멸 예정 포인트(L)</td>
+					<td></td>
+					<td></td>
+					<td>
+						<del>HFM-MC-MY-300201</del>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>H-Gift</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/mypage/HFM-MC-MY-300300.html">HFM-MC-MY-300300</a>
+					</td>
+					<td>
+						2020.08.13 (타이틀영역 / 안내문구 / 내역없을 경우 문구)
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td>소멸 예정 포인트(L)</td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/mypage/HFM-MC-MY-300201.html">HFM-MC-MY-300201</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>한섬 마일리지</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/mypage/HFM-MC-MY-300400.html">HFM-MC-MY-300400</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td>소멸 예정 마일리지(L)</td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/mypage/HFM-MC-MY-300201.html">HFM-MC-MY-300201</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>SK 패션상품권</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/mypage/HFM-MC-MY-300500.html">HFM-MC-MY-300500</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td>신 SK 패션상품권 전환(L)</td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/mypage/HFM-MC-MY-300501.html">HFM-MC-MY-300501</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td>구 SK 패션상품권 전환(L)</td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/mypage/HFM-MC-MY-300501.html">HFM-MC-MY-300502</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td>SK 패션상품권 전환접수증(L)</td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/mypage/HFM-MC-MY-300501.html">HFM-MC-MY-300503</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>참여&문의</td>
+					<td>상품 Q&amp;A</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/mypage/HFM-MC-MY-400600.html">HFM-MC-MY-400600</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td>상품 Q&amp;A 수정</td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/mypage/HFM-MC-MY-400601.html">HFM-MC-MY-400601</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>1:1 문의내역</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/mypage/HFM-MC-MY-400200.html">HFM-MC-MY-400200</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td>1:1 문의 등록</td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/mypage/HFM-MC-MY-400201.html">HFM-MC-MY-400201</a>
+					</td>
+					<td>2020.07.24 (레이어를 페이지로 변경)</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>주문내역 조회(주문선택)</td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/mypage/HFM-MC-MY-400202.html">HFM-MC-MY-400202</a>
+					</td>
+					<td>신규</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>주문내역 조회(상품선택)</td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/mypage/HFM-MC-MY-400202.html">HFM-MC-MY-400203</a>
+					</td>
+					<td>신규</td>
+				</tr>
+
+				<tr>
+					<td></td>
+					<td>나의 상품 리뷰</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/mypage/HFM-MC-MY-400300.html">HFM-MC-MY-400300</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td>리뷰작성(L)</td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/mypage/HFM-MC-MY-400300_write.html">HFM-MC-MY-400300_write</a>
+					</td>
+					<td>신규</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td>이미지 상세보기(L)</td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/mypage/HFM-MC-MY-400300.html">HFM-MC-MY-400300</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>마이클로젯</td>
+					<td>전체 Tab</td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/mypage/HFM-MC-MY-400400.html">HFM-MC-MY-400400</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td>카테고리별 Tab</td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/mypage/HFM-MC-MY-400402.html">HFM-MC-MY-400402</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td>브랜드별 Tab</td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/mypage/HFM-MC-MY-400403.html">HFM-MC-MY-400403</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td>가격대별 Tab</td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/mypage/HFM-MC-MY-400404.html">HFM-MC-MY-400404</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td>컬러별 Tab</td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/mypage/HFM-MC-MY-400405.html">HFM-MC-MY-400405</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td>코디상품 보기(L)</td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/mypage/HFM-MC-MY-400401.html">HFM-MC-MY-400401</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>이벤트 응모내역</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/mypage/HFM-MC-MY-400500.html">HFM-MC-MY-400500</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>회원정보</td>
+					<td>회원정보 수정</td>
+					<td>비밀번호 확인</td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/mypage/HFM-MC-MY-500100.html">HFM-MC-MY-500100</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td>아이디/비밀번호 생성</td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/mypage/HFM-MC-MY-500101.html">HFM-MC-MY-500101</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td>회원정보 수정</td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/mypage/HFM-MC-MY-500102.html">HFM-MC-MY-500102</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td>비밀번호 생성</td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/mypage/HFM-MC-MY-500106.html">HFM-MC-MY-500106</a>
+					</td>
+					<td>신규</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>가려진 정보 보기(L)</td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/mypage/HFM-MC-MY-500103.html">HFM-MC-MY-500103</a>
+					</td>
+					<td>200717 (수정)</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>비밀번호 변경(L)</td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/mypage/HFM-MC-MY-500104.html">HFM-MC-MY-500104</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>휴대폰번호 변경(L)</td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/mypage/HFM-MC-MY-500105.html">HFM-MC-MY-500105</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>배송지 관리</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/mypage/HFM-MC-MY-500200.html">HFM-MC-MY-500200</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td>배송지 등록(L)</td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/mypage/HFM-MC-MY-500201.html">HFM-MC-MY-500201</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td>배송지 수정(L)</td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/mypage/HFM-MC-MY-500202.html">HFM-MC-MY-500202</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td>우편번호찾기(L)</td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/mypage/HFM-MC-MY-500203.html">HFM-MC-MY-500203</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>환불 계좌 관리</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/mypage/HFM-MC-MY-500400.html">HFM-MC-MY-500400</a>
+					</td>
+					<td>2020.07.29 (생년월일 삭제)</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td>환불 계좌 등록</td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/mypage/HFM-MC-MY-500401.html">HFM-MC-MY-500401</a>
+					</td>
+					<td>2020.07.29 (생년월일 삭제)</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td>환불 계좌 수정</td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/mypage/HFM-MC-MY-500402.html">HFM-MC-MY-500402</a>
+					</td>
+					<td>2020.07.29 (생년월일 삭제)</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>회원 탈퇴</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/mypage/HFM-MC-MY-500500.html">HFM-MC-MY-500500</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td>회원 탈퇴 완료</td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/mypage/HFM-MC-MY-500501.html">HFM-MC-MY-500501</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>한섬 멤버십 통합</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/mypage/HFM-MC-MY-500600.html">HFM-MC-MY-500600</a>
+					</td>
+					<td>2020.07.29 (문구 수정)</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>회원 혜택</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/mypage/HFM-MC-MY-500700.html">HFM-MC-MY-500700</a>
+					</td>
+					<td>
+						2020.07.29 (등급명 수정)<br>
+						2020.09.05 (png > svg로 마크업 수정)
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>임직원 혜택</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/mypage/HFM-MC-MY-500800.html">HFM-MC-MY-500800</a>
+					</td>
+					<td>2020.09.05 (png > svg로 마크업 수정)</td>
+				</tr>
+				</tbody>
+			</table>
+		</div>
+	</div> -->
+
+	<!-- 고객센터 -->
+	<!-- <div class="section" id="customer">
+		<h2 class="title"><span class="name">고객센터</span></h2>
+		<div class="content">
+			<table>
+				<colgroup>
+					<col style="width:10%">
+					<col style="width:10%">
+					<col style="width:10%">
+					<col style="width:10%">
+					<col style="width:5%">
+					<col style="width:25%">
+					<col>
+				</colgroup>
+				<thead>
+				<tr>
+					<th scope="col">1depth</th>
+					<th scope="col">2depth</th>
+					<th scope="col">3depth</th>
+					<th scope="col">4depth</th>
+					<th scope="col">date</th>
+					<th scope="col">file name</th>
+					<th scope="col">note</th>
+				</tr>
+				</thead>
+				<tbody>
+				<tr>
+					<td>고객센터 메인</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/customer/HFM-MC-DI-204000.html">HFM-MC-DI-204000</a>
+					</td>
+					<td>2020.08.18 (모든 고객센터 페이지 header 홈버튼 삭제 - UX/UI가이드 참고)</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>메뉴 리스트(L)</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/customer/HFM-MC-DI-204000_menu.html">HFM-MC-DI-204000_menu</a>
+					</td>
+					<td>2020.08.11 수정</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>FAQ</td>
+					<td>리스트</td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/customer/HFM-MC-DI-204010.html">HFM-MC-DI-204010</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td>내역없음</td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/customer/HFM-MC-DI-204010_nodata.html">HFM-MC-DI-204010_nodata</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td>검색내역없음</td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/customer/HFM-MC-DI-204010_search_nodata.html">HFM-MC-DI-204010_search_nodata</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>공지사항</td>
+					<td>리스트</td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/customer/HFM-MC-DI-204020.html">HFM-MC-DI-204020</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td>상세</td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href=""></a><del>HFM-MC-DI-204021</del></a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>1:1문의</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/customer/HFM-MC-DI-204040.html"></a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td>1:1문의 등록(L)</td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/customer/HFM-MC-CM-204030.html">HFM-MC-CM-204031</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>수선진행조회</td>
+					<td>조회전</td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="/html/customer/HFM-MC-DI-204040_before.html">HFM-MC-DI-204040_before</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td>조회후</td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/customer/HFM-MC-DI-204040.html">HFM-MC-DI-204040</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td>조회결과없음</td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="/html/customer/HFM-MC-DI-204040_nodata.html">HFM-MC-DI-204040_nodata</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>매장안내</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/customer/HFM-MC-DI-204050.html">HFM-MC-DI-204050</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td>입점/제휴문의</td>
+					<td></td>
+					<td></td>
+					<td>
+						<a target="_blank" href="html/customer/HFM-MC-DI-204060.html">HFM-MC-DI-204060</a>
+					</td>
+					<td></td>
+				</tr>
+				</tbody>
+			</table>
+		</div>
+	</div> -->
+	
+</body>
+</html>

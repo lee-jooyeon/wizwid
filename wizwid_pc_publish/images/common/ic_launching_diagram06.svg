@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 70 70">
+    <g data-name="상품진행 icon">
+        <path data-name="Rectangle 2083" style="opacity:.5;fill:none" d="M0 0h70v70H0z"/>
+        <g data-name="Group 1752" transform="translate(15.074 8.796)">
+            <path data-name="Rectangle 2077" transform="translate(13.571 2.926)" style="stroke-width:2px;stroke-miterlimit:10;stroke:#040506;fill:none" d="M0 0h12.689v22.636H0z"/>
+            <path data-name="Path 1788" d="M38.476 26.125c0 1.933-2.4 3.461-2.97 5.2-.587 1.807.438 4.452-.657 5.957s-3.945 1.357-5.464 2.462-2.221 3.853-4.028 4.438c-1.744.567-3.937-1.224-5.87-1.224s-4.126 1.791-5.87 1.224c-1.807-.585-2.524-3.344-4.028-4.438s-4.359-.943-5.464-2.462-.07-4.15-.657-5.957C2.9 29.586.5 28.057.5 26.125s2.4-3.461 2.97-5.2c.587-1.807-.438-4.454.657-5.957 1.1-1.521 3.945-1.357 5.464-2.462s2.221-3.853 4.028-4.439c1.744-.567 3.937 1.224 5.87 1.224s4.126-1.791 5.87-1.224c1.807.585 2.524 3.344 4.028 4.439s4.359.943 5.464 2.462.07 4.15.657 5.957c.567 1.744 2.97 3.272 2.97 5.2" transform="translate(.426 7.656)" style="fill:#fff;stroke:#000;stroke-width:2px"/>
+            <circle data-name="Ellipse 359" cx="12.836" cy="12.836" r="12.836" transform="translate(7.078 21.568)" style="stroke:#00bab4;stroke-width:2px;stroke-miterlimit:10;fill:none"/>
+            <path data-name="Path 1790" d="m14.094 13.189 2.518 5.1 5.629.818-4.072 3.971.961 5.607-5.036-2.647-5.036 2.648.961-5.607-4.072-3.971 5.629-.818z" transform="translate(5.82 12.843)" style="stroke-linecap:round;stroke-linejoin:round;stroke:#00bab4;stroke-width:2px;fill:none"/>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22">
+    <g data-name="*ic_heart">
+        <path data-name="사각형 2076" style="opacity:.5;fill:none" d="M0 0h22v22H0z"/>
+        <g data-name="*heart">
+            <path data-name="패스 1063" d="M17.614 1.131a5.074 5.074 0 0 0-5.667.561 6.566 6.566 0 0 0-1.2 1.205l-.51.64-.509-.637a6.627 6.627 0 0 0-1.2-1.205 5.077 5.077 0 0 0-5.668-.561 4.944 4.944 0 0 0-.977 7.648L3.555 10.5l6.683 6.867 6.683-6.867 1.671-1.717a4.944 4.944 0 0 0-.978-7.652z" transform="translate(.762 1.7)" style="stroke:#fff;stroke-miterlimit:10;stroke-width:1.2px;fill:none"/>
+        </g>
+    </g>
+</svg>

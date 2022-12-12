@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60">
+  <defs>
+    <style>
+      .cls-1, .cls-4, .cls-5 {
+        fill: none;
+      }
+
+      .cls-1 {
+        opacity: 0.4;
+      }
+
+      .cls-2, .cls-3 {
+        fill: #fff;
+      }
+
+      .cls-2 {
+        stroke: #707070;
+      }
+
+      .cls-2, .cls-3, .cls-4, .cls-5 {
+        stroke-width: 2px;
+      }
+
+      .cls-3, .cls-4 {
+        stroke: #000;
+      }
+
+      .cls-3, .cls-4, .cls-5 {
+        stroke-miterlimit: 10;
+      }
+
+      .cls-5 {
+        stroke: #00bab4;
+      }
+    </style>
+  </defs>
+  <g id="배송완료" transform="translate(9.86 10)">
+    <rect id="Rectangle_1840" data-name="Rectangle 1840" class="cls-1" width="60" height="60" transform="translate(-9.86 -10)"/>
+    <path id="Path_1173" data-name="Path 1173" class="cls-2" d="M5.523.75.749,10.3V38.2H37.688V10.3L32.914.75Z" transform="translate(-0.75 -0.75)"/>
+    <path id="Path_1174" data-name="Path 1174" class="cls-3" d="M32.915.75H5.522L.75,10.295V38.2H37.687v-27.9Z" transform="translate(-0.75 -0.75)"/>
+    <line id="Line_597" data-name="Line 597" class="cls-4" x2="36.937" transform="translate(0 9.545)"/>
+    <line id="Line_598" data-name="Line 598" class="cls-4" y1="9.545" transform="translate(18.469 0.001)"/>
+    <g id="Group_1249" data-name="Group 1249" transform="translate(-7.348 4.2)">
+      <path id="Path_1164" data-name="Path 1164" class="cls-3" d="M48.315,25.538a11,11,0,1,1-11-11A11,11,0,0,1,48.315,25.538Z" transform="translate(6.971 3.06)"/>
+      <path id="Path_1165" data-name="Path 1165" class="cls-5" d="M29.671,22.824l3.295,3.455,6.7-6.37" transform="translate(9.617 5.503)"/>
+    </g>
+  </g>
+</svg>

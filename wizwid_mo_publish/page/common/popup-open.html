@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="utf-8">
+<head>
+	<title>WizWid</title>
+	<meta name="title" content="">
+	<meta name="keywords" content="WizWid">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=0,maximum-scale=1.0, user-scalable=0, viewport-fit=cover">
+	<meta name="format-detection" content="telephone=no, address=no, email=no" />
+	<meta name="HandheldFriendly" content="true">
+	<link rel="stylesheet" type="text/css" href="../../css/swiper.min.css" />
+	<link rel="stylesheet" type="text/css" href="../../css/common.css" />
+	<script type="text/javascript" src="../../js/jquery-2.0.3.min.js"></script>
+	<script type="text/javascript" src="../../js/swiper.min.js"></script>
+	<script type="text/javascript" src="../../js/vimeo.js"></script> <!-- 220613 추가 || 비메오js 추가 -->
+	<script type="text/javascript" src="../../js/pub.js"></script>
+</head>
+<body>
+<div id="wrap">
+	<style>
+		h1 {
+			padding: 20px;
+		}
+		xmp {
+			margin: 0;
+			font-size: 14px;
+			font-family: 'Red Hat Display', 'Spoqa Han Sans Neo', 'sans-serif';
+			line-height: 22px;
+		}
+	</style>
+	 <div class="sample-guide">
+		<h1>팝업 가이드</h1>
+		<xmp>
+		1. 팝업 호출 방법
+			- 자동실행 : <button data-target="layer_test">팝업실행</button> 
+						<a herf="javascript:void(0);" data-target="layer_test">팝업실행</a>
+			* data-target 이름은 팝업ID와 동일
+
+			- 함수로 open 실행 : popup.openPopup('레이어ID');
+			- 함수로 close 실행 : popup.closePopup('레이어ID');
+		
+		2. callback함수가 필요할 경우 : popup.callBackPop('버튼ID','레이어ID', callback함수);
+			- 버튼ID => callback함수가 실행되어야 하는 버튼 ID
+			- 레이어ID => callback함수가 실행되는 버튼이 포함되어있는 레이어ID
+			- callback함수 => 실행될 함수로
+		
+		3. 팝업 노출 뒤 다른 팝업이 실행될 경우
+			순서 1. popup.openPopup('레이어ID')
+			순서 2. popup.callBackPop('버튼ID','레이어ID', callback함수);
+			순서 2-2. 호출할 callback 함수에 popup.openPopup('레이어ID')를 사용
+					 * 해당 popup.openPopup('레이어ID')의 '레이어ID'는 새로 노출할 팝업 이름
+		
+		</xmp>
+	</div>
+
+    <div style="padding:20px;margin-top:50px;">
+        <button class="btn_black01" data-target="full_test" style="margin-bottom:20px;">풀팝업 띄우기</button>
+        <button id="btn_dialog1" class="btn_black01" data-target="dialog_test" style="margin-bottom:20px;">dialog 팝업</button>
+        <button class="btn_black01" data-target="layer_test" style="margin-bottom:20px;">하단 레어어 팝업</button>
+		<button class="btn_black01" data-target="layer_test02" style="margin-bottom:20px;">하단 레어어 팝업 닫기버튼 공통 사용 x</button>
+		<button class="btn_black01" data-target="layer_sns" style="margin-bottom:20px;">SNS팝업</button>
+		<a herf="javascript:void(0);" class="btn_black01" data-target="layer_test" style="margin-bottom:20px;">하단 레어어 팝업 (a태그)</a>
+    </div>
+
+	<div id="layer_sns" class="layer_md_popup">
+		<input type="hidden" id="titleParam" name="titleParam" value="" />
+
+		<h3>공유</h3>
+		<div class="cont01">
+			<ul class="sns_box">
+				<li><a href="#none" class="kakao">카카오톡</a></li>
+				<li><a href="#none" class="facebook">페이스북</a></li>
+				<li><a href="#none" class="sms">SMS</a></li>
+				<li><a href="#none" class="url">URL</a></li>
+			</ul>
+		</div>
+		<div class="btn_bottom">
+			<button class="btn_black01">닫기</button>
+		</div>
+	</div>
+
+    <!-- full 팝업 -->
+	<div id="full_test" class="normal_popup">
+		<div class="head_box">
+			<h2>상단 타이틀 영역</h2>
+			<div class="close">창닫기</div>
+		</div>
+		
+		<!-- 팝업 컨텐츠 -->
+		<div class="pop_cont">
+			컨텐츠 영역
+		</div>
+
+		<!-- 하단 버튼 -->
+		<div class="btn_bottom">
+			<div class="btn_box">
+				<button id="open_pop" class="btn_gray01">취소</button>
+				<button class="btn_black01">확인</button>
+			</div>
+		</div>
+	</div>
+
+	<!--  dialog 팝업 -->
+	<div id="dialog_test" class="layer_md_popup">
+		<h3>팝업 타이틀</h3>
+		<div class="cont01">
+			컨텐츠 영역
+		</div>
+		<div class="btn_bottom">
+			<button class="btn_black01">확인</button>
+		</div>
+	</div>
+
+    <!-- 하단 레이어 팝업 -->	
+	<div id="layer_test" class="layer_b_popup">
+		<div class="close_pop">창닫기</div>
+		<div class="cont01">
+			<h3>레이어팝업 타이틀</h3>
+			<p class="text01">컨텐츠영역</p>
+			<div class="btn_area">
+				<button class="btn_black01">확인</button>
+				<button class="btn_gray01">확인</button>
+			</div>
+		</div>
+	</div>
+
+	<!-- 하단 레이어 팝업 -->	
+	<div id="layer_test02" class="layer_b_popup">
+		<div class="close_pop02">창닫기</div>
+		<div class="cont01">
+			<h3>레이어팝업 타이틀</h3>
+			<p class="text01">컨텐츠영역</p>
+			<div class="btn_area">
+				<button class="btn_black01">확인</button>
+				<button class="btn_gray01">확인</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script>
+	//풀 팝업 실행 후 하단 레이어 팝업 실행
+	popup.callBackPop('open_pop','full_test',function(){
+		popup.openPopup("layer_test");
+	})
+</script>
+</body>
+</html>

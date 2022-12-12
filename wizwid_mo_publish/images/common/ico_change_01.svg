@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
+    <g data-name="그룹 1306">
+        <g data-name="타원 209" style="fill:#fff;stroke:#eee">
+            <circle cx="20" cy="20" r="20" style="stroke:none"/>
+            <circle cx="20" cy="20" r="19.5" style="fill:none"/>
+        </g>
+        <g data-name="그룹 1307">
+            <path d="M8.667 16.255 4.51 11.237l-.51.43 5.014 6 4.986-6-.509-.43-4.158 5.019V4h-.666v12.255z" transform="rotate(180 11.5 15.333)" style="fill:#bbb;stroke:#bbb;stroke-width:.5px;fill-rule:evenodd"/>
+            <path data-name="iconmonstr-arrow-down-thin" d="M8.667 16.255 4.51 11.237l-.51.43 5.014 6 4.986-6-.509-.43-4.158 5.019V4h-.666v12.255z" transform="translate(17 9)" style="fill:#bbb;stroke:#bbb;stroke-width:.5px;fill-rule:evenodd"/>
+        </g>
+    </g>
+</svg>

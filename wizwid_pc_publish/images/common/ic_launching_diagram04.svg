@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 70 70">
+    <g data-name="업체상담 icon">
+        <path data-name="Rectangle 2081" style="opacity:.5;fill:none" d="M0 0h70v70H0z"/>
+        <g data-name="Group 1750">
+            <path data-name="Path 1678" d="M39.746 8.425h3.393a1.057 1.057 0 0 1 1.056 1.056V27.7a1.054 1.054 0 0 1-1.056 1.053h-5.755l-.078.666-.579 4.955-3.1-3.509-1.549-1.755a1.058 1.058 0 0 0-.791-.357H12.916A1.054 1.054 0 0 1 11.86 27.7v-2.772" transform="translate(20.354 25.971)" style="stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;stroke:#00bab4;fill:none"/>
+            <g data-name="Group 1644">
+                <path data-name="Path 1677" d="M50.348 2.244A1.687 1.687 0 0 0 48.722.5H2.126A1.687 1.687 0 0 0 .5 2.244v30.117A1.687 1.687 0 0 0 2.126 34.1H11l.12 1.1.894 8.192 4.78-5.8 2.388-2.9A1.582 1.582 0 0 1 20.4 34.1h28.322a1.687 1.687 0 0 0 1.626-1.744z" transform="translate(4.5 12.449)" style="stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;fill:none"/>
+                <g data-name="Group 1645">
+                    <path data-name="Path 1679" d="M20.624 29.459a2.168 2.168 0 1 1-2.168-2.168 2.169 2.169 0 0 1 2.168 2.168"/>
+                    <path data-name="Path 1680" d="M45.215 29.459a2.168 2.168 0 1 1-2.168-2.168 2.169 2.169 0 0 1 2.168 2.168"/>
+                    <path data-name="Path 1681" d="M32.865 29.459a2.168 2.168 0 1 1-2.168-2.168 2.169 2.169 0 0 1 2.168 2.168"/>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

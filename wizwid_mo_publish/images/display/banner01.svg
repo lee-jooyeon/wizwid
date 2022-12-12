@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1364" height="240" viewBox="0 0 1364 240">
+    <defs>
+        <filter id="4qs1rq4lna" x="0" y="0" width="1364" height="240" filterUnits="userSpaceOnUse">
+            <feOffset dy="16"/>
+            <feGaussianBlur stdDeviation="15" result="blur"/>
+            <feFlood flood-opacity=".039"/>
+            <feComposite operator="in" in2="blur"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+    </defs>
+    <g data-name="Component 19 – 1">
+        <g style="filter:url(#4qs1rq4lna)">
+            <path data-name="BG" transform="translate(45 29)" style="fill:#c2c4ab" d="M0 0h1274v150H0z"/>
+        </g>
+        <text data-name="위즈위드 X 세이브워터" transform="translate(111 102)" style="letter-spacing:-.025em;font-size:27px;font-family:SpoqaHanSansNeo-Regular,Spoqa Han Sans Neo;fill:#fff"><tspan x="0" y="0">위즈위드 X 세이브워터</tspan></text>
+        <text data-name="하나밖에 없는 지구를 위한 물의 날, 위즈위드에서 코인을 드립니다." transform="translate(111 129)" style="font-size:15px;font-family:SpoqaHanSansNeo-Light,Spoqa Han Sans Neo;font-weight:300;letter-spacing:-.025em;fill:#fff"><tspan x="0" y="0" xml:space="preserve">하나밖에 없는 지구를 위한 물의 날, 위즈위드에서  코인을 드립니다.</tspan></text>
+        <g data-name="*IC" transform="translate(1102 76)">
+            <circle data-name="Ellipse 22" cx="28" cy="28" r="28" style="fill:#fff"/>
+            <text transform="translate(14 40)" style="stroke:transparent;font-size:30px;font-family:RedHatDisplay-Black,Red Hat Display;font-weight:800;letter-spacing:-.02em;fill:#c2c4ab"><tspan x="0" y="0">W</tspan></text>
+            <path data-name="Rectangle 1929" transform="translate(14 28)" style="fill:#c2c4ab" d="M0 0h6v4H0z"/>
+            <path data-name="Rectangle 1930" transform="translate(37 28)" style="fill:#c2c4ab" d="M0 0h6v4H0z"/>
+        </g>
+        <g data-name="*IC">
+            <path data-name="Path 1583" d="M18.572.892C7.571 17.15.5 27.32.5 37.206a18.073 18.073 0 0 0 36.145 0c0-9.886-7.071-20.056-18.073-36.314z" transform="translate(1216.355 75.998)" style="fill:#fff"/>
+            <path data-name="Path 1584" d="M24.572 28c2.189 7.87-.917 15.495-6 17.578 7.496 1.073 13.541-7.83 6-17.578z" transform="translate(1219.355 75.998)" style="fill:#c2c4ab"/>
+        </g>
+        <g>
+            <path data-name="Union 3" d="M13.437 13.438z" transform="rotate(45 490.897 1475.34)" style="fill:none;stroke:#fff;stroke-width:2px"/>
+        </g>
+    </g>
+</svg>

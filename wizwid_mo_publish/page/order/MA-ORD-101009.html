@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html lang="utf-8">
+<head>
+	<title>WizWid</title>
+	<meta name="title" content="">
+	<meta name="keywords" content="WizWid">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=0,maximum-scale=1.0, user-scalable=0, viewport-fit=cover">
+	<meta name="format-detection" content="telephone=no, address=no, email=no" />
+	<meta name="HandheldFriendly" content="true">
+	<link rel="stylesheet" type="text/css" href="../../css/swiper.min.css" />
+	<link rel="stylesheet" type="text/css" href="../../css/common.css" />
+	<script type="text/javascript" src="../../js/jquery-2.0.3.min.js"></script>
+	<script type="text/javascript" src="../../js/swiper.min.js"></script>
+	<script type="text/javascript" src="../../js/vimeo.js"></script> <!-- 220613 추가 || 비메오js 추가 -->
+	<script type="text/javascript" src="../../js/pub.js"></script>
+</head>
+<body>
+<div id="wrap">
+	<!-- 카드혜택 안내 -->
+	<div class="normal_popup on">
+		<div class="head_box">
+			<h2>배송지 선택</h2>
+			<div class="close">창닫기</div>
+		</div>
+		
+		<!-- 팝업 컨텐츠 -->
+		<div class="pop_cont">
+			<div class="delivery_tab">
+                <ul class="step">
+                    <li><span>최근 배송지</span></li>
+                    <li><span class="on">새로 입력</span></li>
+                    <li><span>나의 배송지</span></li>
+				</ul>
+		    </div>
+
+			<div class="address_table">
+				<span class="checkbox03"><input type="checkbox" id="check_agree" /><label for="check_agree">회원정보와 동일</lable></span>
+				<ul class="input_list">
+					<li>
+						<div class="input_box">
+							<input type="text" placeholder="받으시는 분"/> <span class="input_text_del">내용삭제</span>
+						</div>
+					</li>
+					<li>
+						<div class="input_box">
+							<input type="text" placeholder="휴대폰번호"/> <span class="input_text_del">내용삭제</span>
+						</div>
+					</li>
+					<li>
+						<div class="zip_code">
+							<span><input type="text" value="우편번호" disabled /></span> <button class="btn_black_s01">우편번호 찾기</button>
+							<span><input type="text" value="" disabled /></span>
+						</div>
+						<div class="input_box">
+							<input type="text" placeholder="상세 주소 입력" /> <span class="input_text_del">내용삭제</span>
+						</div>
+					</li>
+					<li>
+						<div class="select_box">배송시 유의사항</div>
+						<!-- 직접입력시 인풋 박스 노출 -->
+						<div class="input_box">
+							<input type="text" /> <span class="input_text_del">내용삭제</span>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="check_area">
+				<span class="checkbox01"><input type="checkbox" id="check_delivery" /><label for="check_delivery">기본 배송지로 설정</lable></span>
+			</div>
+		</div>
+		
+		<!-- 하단 버튼 -->
+		<div class="btn_bottom">
+			<div class="btn_box">
+				<button class="btn_gray01">취소</button>
+				<button class="btn_black01">확인</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>

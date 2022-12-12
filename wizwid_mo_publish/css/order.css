@@ -1,0 +1,362 @@
+@charset "utf-8";
+
+.order_table {margin:0px 15px;}
+
+.order_table .total_box {position:relative;border-bottom:3px solid #000000;padding-bottom:20px;}
+.order_table .total_box .input_area label {color:#000000;font-size:15px;font-weight:500;}
+.order_table .total_box .delete_area {position:absolute;top:0;right:0;}
+.order_table .total_box .delete_area li {position:relative;float:left;line-height:20px;font-size:12px;margin-left:30px;cursor:pointer;font-weight:500;}
+.order_table .total_box .delete_area li:after {content:"";position:absolute;left:0;right:0;bottom:3px;height:1px;background:#000000;}
+
+.order_table .order_list {}
+.order_table .order_list li {position:relative;padding-bottom:10px;}
+.order_table .order_list li:after {content:"";position:absolute;left:-15px;right:-15px;bottom:0;height:10px;background:#f3f3f3;}
+
+.order_table .delivery {margin:0px 0px 40px 0px; padding-top: 20px; position:relative;  border-top:1px solid #000000;}
+.order_table .delivery .head01 {font-size:12px;color:#999999;line-height:18px;position:absolute;top:20px;left:0;text-align:left;}
+.order_table .delivery .text01 {text-align:right;}
+.order_table .delivery .text01 p {font-size:12px;line-height:18px;position:relative;padding-right:22px;}
+.order_table .delivery .text01 p .num {font-weight:500;}
+.order_table .delivery .text01 .free {color:#00bab4;}
+.order_table .delivery .text01 .ico_notice {position:absolute;top:20px;right:-3px;height:18px;width:18px;cursor:pointer;background:url('../images/common/ico_notice_02.svg') no-repeat center center;background-size: 12px auto;font-size:0;}
+.order_table .delivery .info01_text {display: none; position:absolute; top: 40px;  right:0;padding: 15px 45px 15px 15px; background: #ffffff; border: 1px solid #000000; font-size: 12px; line-height: 18px; z-index: 10;  box-shadow: 0px 0px 10px rgba(0,0,0,0.1);}
+.order_table .delivery .info01_text .close01{position:absolute;top:15px;right:10px;width:18px;height:18px;background:url('../images/common/ico_close_02.svg') no-repeat center center;background-size:8px auto;font-size:0;cursor:pointer;z-index:10;}
+
+/* 상품 없음 */
+.order_table .non_product {position:relative;margin:140px 0px 120px 0px;}
+.order_table .non_product h3 {padding:60px 0px 40px 0px;font-size:13px;text-align:center;line-height:18px;background:url('../images/common/ico_error_01.svg') no-repeat center top;background-size:40px auto;}
+.order_table .non_product .btn_area02 {text-align:center;}
+.order_table .non_product .btn_area02 button {width:120px;}
+
+/* 총 결제금액 */
+.order_table .total_price01 {margin: 40px 0px;}
+.order_table .total_price01 ul {padding-bottom: 30px; margin-bottom: 20px; border-bottom: 2px solid #000000;}
+.order_table .total_price01 li {margin-bottom: 20px;}
+.order_table .total_price01 li:last-child {margin-bottom: 0;}
+.order_table .total_price01 .head01 {font-size: 12px; line-height: 20px; font-weight: 500;}
+.order_table .total_price01 .ea01 {float:right; font-size: 12px; line-height: 20px;}
+.order_table .total_price01 .ea01 .num01 {font-size: 15px; font-weight: 500; line-height: 20px;}
+.order_table .total_price01 .price01 {float:right; font-size: 12px; line-height: 20px;}
+.order_table .total_price01 .price01 .num01 {font-size: 15px; font-weight: 500; line-height: 20px;}
+.order_table .total_price01 .result {}
+.order_table .total_price01 .result .head01 {font-size: 15px; line-height: 25px; font-weight: 500;}
+.order_table .total_price01 .result .price01 {font-size: 12px; line-height: 25px;}
+.order_table .total_price01 .result .price01 span {font-size: 19px; font-weight: 700; line-height: 25px;}
+
+.order_table .delivery_info01 {padding: 0px 20px; margin-bottom: 10px; background: #f8f8f8;}
+.order_table .delivery_info01.on {padding-bottom: 30px;} 
+.order_table .delivery_info01 h4 {padding: 20px 0px; position: relative;font-weight: 500; line-height: 18px;}
+.order_table .delivery_info01 h4:after {content: "";  position: absolute; top: 26px; right: 0px; width: 12px;  height: 6px; background: url('../images/common/arrow_down_01.svg') no-repeat; background-size: 100% auto;}
+.order_table .delivery_info01 .price_box {display: none;}
+.order_table .delivery_info01 .price_box .head01 {font-size: 12px; line-height: 20px;}
+.order_table .delivery_info01 .price_box .price01 {float:right; font-size: 12px; line-height: 20px;}
+.order_table .delivery_info01 .price_box .price01 .num01 {font-size: 15px; font-weight: 500; line-height: 20px;}
+.order_table .delivery_info01.on h4:after {background: url('../images/common/arrow_up_01.svg') no-repeat; background-size: 100% auto;}
+.order_table .delivery_info01.on .price_box {display: block;} 
+
+.order_table .use_info01 {padding: 0px 20px; margin-bottom: 60px; background: #f8f8f8;}
+.order_table .use_info01.on {padding-bottom: 30px;} 
+.order_table .use_info01 h4 {padding: 20px 0px; position: relative;font-weight: 500; line-height: 18px;}
+.order_table .use_info01 h4:after {content: "";  position: absolute; top: 26px; right: 0px; width: 12px;  height: 6px; background: url('../images/common/arrow_down_01.svg') no-repeat; background-size: 100% auto;}
+.order_table .use_info01 .notice_common {display: none;}
+.order_table .use_info01 .notice_common li {color: #999999;}
+.order_table .use_info01 .notice_common li:before {background: #999999;}
+.order_table .use_info01 .notice_common li span {color: #000000;}
+.order_table .use_info01.on h4:after {background: url('../images/common/arrow_up_01.svg') no-repeat; background-size: 100% auto;}
+.order_table .use_info01.on .notice_common {display: block;} 
+/* 22.05.19 장바구니 비회원 추가  */
+.order_table + .product_section01 {margin-top: 60px;}
+
+/* 주문 상품 */
+.order_product {position:relative;padding:40px 0px 0px 0px; margin-bottom: 30px;}
+.order_product ~ .order_product  {border-top: 1px solid #dddddd;}
+.order_product label {font-size:0;}
+.order_product .brand {position:absolute;top:40px;left:30px;right:70px;}
+.order_product .brand .name01 {display:inline-block;font-size:14px;line-height:20px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width:calc(100% - 17px);}
+.order_product .brand .ico01 {display:inline-block;background:url('../images/common/ico_leaf_01.svg') no-repeat center center;background-size:10px 14px;font-size:0;width:12px;height:20px;vertical-align:top;}
+.order_product .like {position:absolute; top:39px; right:27px; width:22px;height:22px;background:url('../images/common/ico_like_01.svg') no-repeat center center;background-size:16px auto;font-size:0;cursor: pointer;}
+.order_product .like.on {background:url('../images/common/ico_like_02.svg') no-repeat center center;background-size:16px auto;}
+.order_product .delete {position:absolute; top:39px; right:-5px; width:22px;height:22px;background:url('../images/common/ico_delete_01.svg') no-repeat center center;background-size: 12px auto;font-size:0;cursor: pointer;}
+.order_product .shop_info {margin:20px 0px 30px 0px;position:relative;min-height:120px;}
+.order_product .shop_info + .shop_info {margin-top:40px !important;}
+.order_product .shop_info .img_box {width: 90px; height: 120px; position:absolute; top:0;left:0;}
+.order_product .shop_info .img_box img {width:100%;height:120px;}
+.order_product .shop_info .img_box .flag {position: absolute; padding: 0 10px; width: 50px; max-width: 50px; left:50%; bottom: 5px; white-space: nowrap; overflow: hidden;text-overflow: ellipsis; transform: translateX(-50%); background:rgba(0,0,0,0.7); color:#ffffff; font-size:11px; line-height:20px; text-align:center; border-radius:10px; text-transform:uppercase;} /* 22.05.20 수정 */
+.order_product .shop_info .product_info {position:relative;padding-left:110px;}
+.order_product .shop_info .product_info .brand_in .name01 {display: inline-block; font-weight:500;line-height:18px;margin-bottom:2px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width:calc(100% - 17px)} /* 22.05.19 추가  */
+.order_product .shop_info .product_info .brand_in .ico01 {display:inline-block;margin-left: 5px; background:url('../images/common/ico_leaf_01.svg') no-repeat center center;background-size:auto 14px;font-size:0;width:10px;height:14px;vertical-align:top;}
+.order_product .shop_info .product_info .p_name {line-height:17px;margin-bottom:10px;font-size:12px;}
+.order_product .shop_info .product_info .price {margin-bottom:10px;position:relative;}
+.order_product .shop_info .product_info .price .price01 {display:block;font-size: 11px; line-height:16px;}
+.order_product .shop_info .product_info .price .price02 {font-size:13px; line-height:18px; font-weight: 500; color: #00bab4; margin-right:2px;}
+.order_product .shop_info .product_info .price .sale_per {font-size:13px; line-height:18px; font-weight: 500; color: #00bab4; margin-right:2px;}
+.order_product .shop_info .product_info .price .btn_coupon {position:absolute;bottom:-8px;right:0;}
+.order_product .shop_info .product_info .price .btn_coupon button {position:relative;height:18px;padding-right:17px;font-size:12px;font-weight:500;color:#000000;
+	background:url('../images/common/arrow_down_01.svg') no-repeat right center;background-size:12px auto;}
+.order_product .shop_info .product_info .price .btn_coupon button:after {content:"";position:absolute;left:0;right:0px;bottom:3px;height:1px;background:#000000;}
+.order_product .shop_info .option {line-height:14px;}
+.order_product .shop_info .option a {display:block; color: #777777;line-height:14px;font-size:11px;cursor:pointer;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;margin-bottom:5px;}
+.order_product .shop_info .option a:last-child {margin-bottom:0;}
+.order_product .shop_info .option strong {font-weight:400;}
+.order_product .shop_info .non_count {display:block;color: #ff4600;font-size:11px;line-height:17px;}
+.order_product .shop_info .set_discount {margin-top:10px;position:relative;}
+.order_product .shop_info .set_discount .btn01 {display:inline-block;font-size:11px;border:1px solid #bbbbbb;line-height:18px;padding:0px 10px;min-width:40px;border-radius:10px;cursor:pointer;text-align:center;}
+.order_product .shop_info .set_discount .view_discount {position:absolute;top:30px;left:0px;right:0;border:1px solid #000000;padding:15px 43px 15px 15px;background:#ffffff;z-index:10;font-size:12px;line-height:16px;box-shadow: 0px 0px 10px rgba(0,0,0,0.1);display:none;}
+.order_product .shop_info .set_discount .view_discount .close01 {position:absolute;top:15px;right:10px;width:18px;height:16px;background:url('../images/common/ico_close_02.svg') no-repeat center center;background-size:8px auto;font-size:0;cursor:pointer;z-index:10;}
+.order_product .free_gift_list {margin-top:20px;padding:20px 0px 0px 30px;background:url('../images/common/line_dotted.png') repeat-x;background-size:auto 1px;}
+.order_product .free_gift_list .gift_box {position:relative;min-height:80px;margin-bottom:10px;padding-left:80px;}
+.order_product .free_gift_list .gift_box .img_box {width:60px;margin-right:20px;height:80px;position:absolute;top:0;left:0;}
+.order_product .free_gift_list .gift_box .img_box img {width:100%;}
+.order_product .free_gift_list .gift_box .gift_info {padding:10px 0px;}
+.order_product .free_gift_list .gift_box .gift_info .tag01 {display:inline-block;border:1px solid #bbbbbb;font-size:11px;font-weight:500;padding:0px 14px;line-height:18px;border-radius:10px;}
+.order_product .free_gift_list .gift_box .gift_name {font-size:11px;color:#777777;line-height:16px;}
+.order_product .option_change {position:relative;margin-top:20px;padding-right:85px;}
+.order_product .option_change .option_select {border:1px solid #dddddd;line-height:38px;padding:0px 50px 0px 15px;position:relative;cursor:pointer;}
+.order_product .option_change .option_select:after {content:"";position:absolute;top:0;right:4px;width:32px;height:38px;background:url('../images/common/arrow_down_01.svg') no-repeat center center;background-size:12px auto;}
+.order_product .option_change button {position:absolute;top:0;right:0;width:80px;}
+.order_product .option_change02 {position:relative;margin-top:20px;}
+.order_product .option_change02 .option_select {border:1px solid #dddddd;line-height:38px;padding:0px 50px 0px 15px;position:relative;cursor:pointer;}
+.order_product .option_change02 .option_select:after {content:"";position:absolute;top:0;right:4px;width:32px;height:38px;background:url('../images/common/arrow_down_01.svg') no-repeat center center;background-size:12px auto;}
+.order_product .option_change .change_box {margin-right: -85px;}
+.order_product .option_change.on > .option_select:after, .order_product .option_change02.on > .option_select:after {background:url('../images/common/arrow_up_01.svg') no-repeat center center;background-size:12px auto;}
+.order_product .option_change.on .change_box, .order_product .option_change02.on .change_box {display: block;}
+.order_product .change_box {display: none; margin: 10px 0px 0px 0px; padding: 20px; background: #f8f8f8;}
+.order_product .change_box .select_list {margin-bottom: 20px;}
+.order_product .change_box .select_list ~ .select_list {margin-top: 40px;}
+.order_product .change_box .select_list li:last-child {padding-bottom: 0;}
+.order_product .change_box .select_list li:after {display: none;}
+.order_product .change_box .select_list .set_option {margin-top: 0px; padding: 0px 0px 10px 85px;}
+.order_product .change_box .select_list .set_option .head01 {top: 0; left: 0;}
+.order_product .change_box .option_select {background: #ffffff;}
+.order_product .change_box .btn_3ea {display: flex;}
+.order_product .change_box .btn_3ea .count {position: relative; padding:0px 30px;width:100%;height:40px;border:1px solid #dddddd;background: #ffffff;}
+.order_product .change_box .btn_3ea .count .minus {position:absolute;top:0;left:0;width:28px;height:38px;font-size:0;background:url('../images/common/ico_minus.svg') no-repeat center center;background-size:11px auto;cursor:pointer;}
+.order_product .change_box .btn_3ea .count .plus {position:absolute;top:0;right:0;width:28px;height:38px;font-size:0;background:url('../images/common/ico_plus.svg') no-repeat center center;background-size:11px auto;cursor:pointer;}
+.order_product .change_box .btn_3ea .count input {border:0;height:38px;text-align:center;font-size:13px;font-weight:400;text-indent:0;padding-right: 0px;}
+.order_product .change_box .btn_3ea button {position: relative; margin-left: 5px; flex: 0 0 82px;}
+.order_product .set_option {position: relative;padding:20px 20px 20px 105px;background:#f8f8f8;margin-top:20px;}
+.order_product .set_option ~ .set_option {margin-top:10px;}
+.order_product .set_option .head01 {position: absolute; top:20px;left:20px; width: 80px;font-size:12px; line-height:18px; font-weight: 500;}
+.order_product .set_option .set_info {margin-right:20px;}
+.order_product .set_option .set_info .p_name {font-size:12px;color:#777777;line-height:18px;margin-bottom:10px;}
+.order_product .set_option .set_info .option {color: #777777;font-size:11px;line-height:17px;padding-left:28px;text-indent:-28px;}
+.order_product .set_option .set_info .non_count {color: #777777;font-size:11px;line-height:17px;}
+.order_product .set_option .set_info .non_count span {line-height: 16px; color: #ff4600;}
+.order_product .set_option .set_info + .op_change_text {margin-top:20px;}
+.order_product .btn_right01 {margin-top:20px;text-align:right;line-height:14px;}
+.order_product .btn_right01 span {display:inline-block;margin-left:17px;position:relative;font-size:11px;line-height:16px;cursor: pointer;}
+.order_product .btn_right01 span:after {content:"";position:absolute;left:0;right:0;bottom:0px;height:1px;background:#000000;}
+.order_product .op_change_text {margin-top:10px;font-size:11px;color:#00bab4;font-weight:500;line-height:14px;}
+
+/* 솔드아웃 케이스 01 */
+.order_product.sold_out {}
+.order_product.sold_out .img_box {opacity: 0.6;}
+.order_product.sold_out .img_box .sold_text {position: absolute; bottom: 5px; left: 10px; right: 10px; text-align: center; font-size: 10px; line-height: 20px; font-weight: 500; color: #ffffff; background: #000000;}
+
+/* 솔드아웃 케이스 02 */
+.order_product.sold_out02 {}
+.order_product.sold_out02 .img_box {}
+.order_product.sold_out02 .img_box a {display: block; opacity: 0.5;}
+.order_product.sold_out02 .img_box .sold_text {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); line-height: 20px; font-weight: 500; white-space: nowrap;}
+
+
+/* 주문서 */
+.order_bill {padding: 0px 15px;}
+
+/* 비회원 주문자 정보 */
+.order_bill .buyer_box {position: relative; margin-bottom: 60px;}
+.order_bill .buyer_box h3 {font-size: 15px; font-weight: 500; line-height: 30px; padding-bottom: 15px; border-bottom: 2px solid #000000; margin-bottom: 30px;}
+.order_bill .buyer_box ul {}
+.order_bill .buyer_box li ~ li {margin-top: 10px;}
+.order_bill .buyer_box li .input_box {position: relative;}
+
+/* 배송지 정보 */
+.order_bill .address_box {position: relative; margin-bottom: 60px;}
+.order_bill .address_box h3 {font-size: 15px; font-weight: 500; line-height: 30px; padding-bottom: 15px; border-bottom: 2px solid #000000; margin-bottom: 30px;}
+.order_bill .address_box .address_more {position: absolute; top:0; right: 0; padding: 0px 15px; min-width: 70px; font-size: 11px; text-align:center; color: #ffffff; background: #000000; border-radius: 15px; line-height:30px;}
+.order_bill .address_box .address_table .user_info {margin-bottom: 20px;}
+.order_bill .address_box .address_table .user_name {font-size: 12px; line-height: 18px; margin-bottom: 10px;}
+.order_bill .address_box .address_table .user_adress {font-size: 12px; line-height: 18px;}
+.order_bill .address_box .address_table .phone_num { font-size: 12px; line-height: 18px;}
+.order_bill .address_box .address_table .select_box {position: relative; padding-left: 15px; margin-bottom: 20px; line-height: 38px; border: 1px solid #dddddd; cursor: pointer;}
+.order_bill .address_box .address_table .select_box:after {content:"";position:absolute;top:0;right:4px;width:32px;height:38px;background:url('../images/common/arrow_down_01.svg') no-repeat center center;background-size:12px auto;}
+.order_bill .address_box .address_table .select_box + .input_box {margin:-10px 0px 20px 0px;}
+.order_bill .address_box .address_table .custom_code {position: relative; padding-top: 0px;} /* 22.05.23 수정 */
+.order_bill .address_box .address_table .custom_code .head01{position:relative; padding-right: 22px; display: inline-block; font-size: 12px; margin-bottom:8px; font-weight: 500; line-height: 20px;}
+.order_bill .address_box .address_table .custom_code .head01 .info01 {position:absolute;top:0px;right:-4px;height:20px;width:20px;cursor:pointer;background:url('../images/common/ico_notice_02.svg') no-repeat center center;background-size: 12px auto;font-size:0;}
+.order_bill .address_box .address_table .checkbox03 {position: absolute; top:0; right:0;}
+.order_bill .address_box .address_table .checkbox03 label {font-size: 12px; line-height: 20px; font-weight: 500; color: #000000;} 
+.order_bill .address_box .address_table .input_box {position:relative;}
+.order_bill .address_box .address_table .custom_code .info01_text {display: none; position:absolute; top: 25px;  right:0;padding: 15px 35px 15px 15px; background: #ffffff; border: 1px solid #000000; font-size: 12px; line-height: 18px; z-index: 10;  box-shadow: 0px 0px 10px rgba(0,0,0,0.1);}
+.order_bill .address_box .address_table .custom_code .info01_text .close01{position:absolute;top:15px;right:10px;width:18px;height:18px;background:url('../images/common/ico_close_02.svg') no-repeat center center;background-size:8px auto;font-size:0;cursor:pointer;z-index:10;}
+.order_bill .address_box .address_table .custom_code.on .info01_text {display: block;}
+
+.order_bill .address_box .address_table .input_list {}
+.order_bill .address_box .address_table .input_list li ~ li {margin-top: 10px;}
+.order_bill .address_box .address_table .input_list .input_box {position: relative;}
+.order_bill .address_box .address_table .input_list .zip_code {position: relative; margin-bottom: 10px;}
+.order_bill .address_box .address_table .input_list .zip_code span {display: block; margin-top: 10px;}
+.order_bill .address_box .address_table .input_list .zip_code span:first-child {margin-right: 113px;}
+.order_bill .address_box .address_table .input_list .zip_code .btn_black_s01 {position: absolute; top: 0; right: 0; width: 108px;}
+
+/* 주문 상품 */
+.order_bill .order_box {margin-bottom: 60px;}
+.order_bill .order_box h3 {font-size: 15px; font-weight: 500; line-height: 20px; padding-bottom: 20px; border-bottom: 2px solid #000000;}
+.order_bill .order_box li {display: none;}
+.order_bill .order_box li:first-child {display: block;}
+.order_bill .order_box li:first-child .order_product {padding-top: 30px;}
+.order_bill .order_box li:last-child .order_product {border-bottom: 2px solid #dddddd;}
+.order_bill .order_box .order_product {position: relative; padding: 40px 0px 30px 0px; margin-bottom: 0px; border-bottom: 1px solid #dddddd;}
+.order_bill .order_box .order_product .shop_info {margin:0 ;}
+.order_bill .order_box .order_product .product_info {position:relative;}
+/* .order_bill .order_box .order_product .delivery_fee {position: absolute; bottom:0px; right: 0px;  font-size: 11px; line-height: 14px;} */
+.order_bill .order_box .order_product .delivery_fee {margin-top: 10px; font-size: 11px; line-height: 14px; text-align: right;}
+.order_bill .order_box .order_product .delivery_fee > span {display:inline-block;margin-right:10px;position:relative;font-size:11px;line-height:16px;cursor: pointer;}
+.order_bill .order_box .order_product .delivery_fee > span:after {content:"";position:absolute;left:0;right:0;bottom:0px;height:1px;background:#000000;}
+.order_bill .order_box .view {margin-top: 30px; font-size: 12px;  font-weight: 500; line-height: 18px; text-align: center; padding-bottom: 15px; 
+	background: url('../images/common/arrow_down_01.svg') no-repeat bottom center;background-size:12px auto; cursor: pointer;}
+.order_bill .order_box .close {display: none; margin-top: 30px; font-size: 12px;  font-weight: 500; line-height: 18px; text-align: center; padding-bottom: 15px; 
+	background: url('../images/common/arrow_up_01.svg') no-repeat bottom center;background-size:12px auto; cursor: pointer;}
+
+.order_bill .order_box.on li {display: block;}
+.order_bill .order_box.on .view {display: none;}
+.order_bill .order_box.on .close {display: block;}
+
+/* 쿠폰/적립금 */
+.order_bill .coupon_box {position: relative; margin-bottom: 60px;}
+.order_bill .coupon_box h3 {position: relative; font-size: 15px; font-weight: 500; line-height: 20px; padding-bottom: 20px; border-bottom: 2px solid #000000; margin-bottom: 30px;}
+.order_bill .coupon_box h3 .info01 {position:absolute;top:0px;left:85px;height:20px;width:20px;cursor:pointer;background:url('../images/common/ico_notice_02.svg') no-repeat center center;background-size: 12px auto;font-size:0;}
+.order_bill .coupon_box .info01_text {display: none; position:absolute; top: 25px; right:0;padding: 20px 35px 20px 15px; background: #ffffff; border: 1px solid #000000; font-size: 12px; line-height: 18px; z-index: 10;  box-shadow: 0px 0px 10px rgba(0,0,0,0.1);}
+.order_bill .coupon_box .info01_text .close01{position:absolute;top:20px;right:10px;width:18px;height:18px;background:url('../images/common/ico_close_02.svg') no-repeat center center;background-size:8px auto;font-size:0;cursor:pointer;z-index:10;}
+.order_bill .coupon_box.on .info01_text {display: block;}
+
+.order_bill .coupon_box .coupon_table {}
+.order_bill .coupon_box .coupon_table li {position: relative; margin-bottom: 20px;}
+.order_bill .coupon_box .coupon_table .head01 {display: inline-block; font-size: 12px; font-weight: 500; line-height: 18px;  padding-right: 10px; margin-bottom: 10px;}
+.order_bill .coupon_box .coupon_table .point_info {position: relative; padding-left: 10px; font-size: 12px; line-height: 18px; color: #999999;}
+.order_bill .coupon_box .coupon_table .point_info::before {content: ''; position: absolute; top:2.5px; bottom: 2.5px; left: -2px; width: 1px; background: #eeeeee;}
+.order_bill .coupon_box .coupon_table .info_text01 {position:relative; padding-left: 10px; font-size: 12px; color: #999999; line-height: 18px;}
+.order_bill .coupon_box .coupon_table .info_text01::before {content: ''; position: absolute; top:2.5px; bottom: 2.5px; left: -2px; width: 1px; background: #eeeeee;}
+.order_bill .coupon_box .coupon_table .input_box {display: flex;}
+.order_bill .coupon_box .coupon_table .input_area {position:relative; margin-right: 5px; width: 100%;}
+.order_bill .coupon_box .coupon_table .input_area input {padding-right: 30px; text-align: right;}
+.order_bill .coupon_box .coupon_table .input_area .won {position: absolute; right: 15px; top: 11px; line-height: 18px;}
+.order_bill .coupon_box .coupon_table  button {flex: 0 0 82px;}
+.order_bill .coupon_box .coupon_table .info_text02 {position: absolute; top:0; right: 0; font-size: 12px; line-height: 18px; color: #999999;}
+.order_bill .coupon_box .coupon_table .info_text02 .num {font-weight: 500; color: #000000;}
+.order_bill .coupon_box .coupon_table .notice_text {display: block; margin: 0 auto; padding-left: 26px; width: 221px; line-height: 20px;
+	background:url('../images/common/ico_notice_02.svg') no-repeat left 2px;background-size: 16px auto;}
+
+/* 결제 수단 */
+.order_bill .pay_box {position: relative; margin-bottom: 60px;}
+.order_bill .pay_box h3 {font-size: 15px; font-weight: 500; line-height: 20px; padding-bottom: 20px; border-bottom: 2px solid #000000; margin-bottom: 30px;}
+.order_bill .pay_box .check_area {position: absolute; top:0; right: 0;}
+.order_bill .pay_box .check_area .checkbox03 label {color: #000000;}
+.order_bill .pay_box .payment_list {margin: 0px -2.5px 40px -2.5px;}
+.order_bill .pay_box .payment_list:after {content: ""; display: block; clear:both; overflow: hidden;}
+.order_bill .pay_box .payment_list li{float: left; width: 50%; padding: 0px 2.5px; margin-bottom: 5px;}
+.order_bill .pay_box .payment_list li span {position:relative; display:block; text-align: center; font-size: 12px; line-height: 38px; height: 38px;  border: 1px solid #bbbbbb; cursor: pointer;}
+.order_bill .pay_box .payment_list .naver span {font-size: 0; background: url('../images/order/img_payment_01.svg') no-repeat center center;background-size:auto 16px;}
+.order_bill .pay_box .payment_list .kakao span {font-size: 0; background: url('../images/order/img_payment_02.svg') no-repeat center center;background-size:auto 13px;}
+.order_bill .pay_box .payment_list .payco span {font-size: 0; background: url('../images/order/img_payment_03.svg') no-repeat center center;background-size:auto 12px;}
+.order_bill .pay_box .payment_list .samsung span {font-size: 0; background: url('../images/order/img_payment_04.svg') no-repeat center center;background-size:auto 13px;}
+.order_bill .pay_box .payment_list li.on span {border-color: #000000; background: #000000; color: #ffffff; font-weight: 500;}
+.order_bill .pay_box .payment_list .naver.on span {border-color: #00c73c;  background: #00c73c url('../images/order/img_payment_on01.svg') no-repeat center center;background-size:auto 16px;}
+.order_bill .pay_box .payment_list .kakao.on span {border-color: #ffdf00;  background: #ffdf00 url('../images/order/img_payment_02.svg') no-repeat center center;background-size:auto 13px;}
+.order_bill .pay_box .payment_list .payco.on span {border-color: #fa2828;  background: #fa2828 url('../images/order/img_payment_on03.svg') no-repeat center center;background-size:auto 13px;}
+.order_bill .pay_box .payment_list .samsung.on span {border-color: #0c4da2;  background: #0c4da2 url('../images/order/img_payment_on04.svg') no-repeat center center;background-size:auto 13px;}
+
+.order_bill .pay_box .payment_info {display: none;position: relative;}
+.order_bill .pay_box .payment_info .select_wrap {margin-bottom: 40px;}
+.order_bill .pay_box .payment_info .payment_toggle {padding: 0px 20px; margin-bottom: 60px; background: #f8f8f8;}
+.order_bill .pay_box .payment_info .payment_toggle h4 {padding: 20px 0px; position: relative;font-weight: 500; line-height: 18px;}
+.order_bill .pay_box .payment_info .payment_toggle h4:after {content: "";  position: absolute; top: 26px; right: 0px; width: 12px;  height: 6px; background: url('../images/common/arrow_down_01.svg') no-repeat; background-size: 100% auto;}
+.order_bill .pay_box .payment_info .payment_toggle .notice_common {display: none;}
+.order_bill .pay_box .payment_info .payment_toggle .notice_common li {color: #999999;}
+.order_bill .pay_box .payment_info .payment_toggle .notice_common li:before {background: #999999;}
+.order_bill .pay_box .payment_info .payment_toggle .notice_common li span {color: #000000;}
+
+/* 22.05.19 현급영수증 툴팁  */
+.order_bill .pay_box .payment_info .head01{position:relative; padding-right: 22px; display: inline-block; font-size: 12px; margin-bottom:8px; font-weight: 500; line-height: 20px;}
+.order_bill .pay_box .payment_info .head01 .info01 {position:absolute;top:0px;right:-4px;height:20px;width:20px;cursor:pointer;background:url('../images/common/ico_notice_02.svg') no-repeat center center;background-size: 12px auto;font-size:0;}
+.order_bill .pay_box .payment_info .info01_text {display: none; position:absolute; top: 25px; right:0;padding: 20px 35px 20px 15px; background: #ffffff; border: 1px solid #000000; font-size: 12px; line-height: 18px; z-index: 10;  box-shadow: 0px 0px 10px rgba(0,0,0,0.1);}
+.order_bill .pay_box .payment_info .info01_text .close01{position:absolute;top:20px;right:10px;width:18px;height:18px;background:url('../images/common/ico_close_02.svg') no-repeat center center;background-size:8px auto;font-size:0;cursor:pointer;z-index:10;}
+.order_bill .pay_box .payment_info.on .info01_text {display: block;}
+
+.order_bill .pay_box .payment_info .phone_num {margin-bottom: 40px;}
+.order_bill .pay_box .payment_info .select_box {position: relative; padding-left: 15px; margin-bottom: 10px; line-height: 38px; border: 1px solid #dddddd; cursor: pointer;}
+.order_bill .pay_box .payment_info .select_box:after {content:"";position:absolute;top:0;right:4px;width:32px;height:38px;background:url('../images/common/arrow_down_01.svg') no-repeat center center;background-size:12px auto;}
+.order_bill .pay_box .payment_info .phone_num {height: 40px;}
+.order_bill .pay_box .payment_info .phone_num .select_box {float:left; width:30%;}
+.order_bill .pay_box .payment_info .phone_num .select_box:after {content:"";position:absolute;top:0;right:4px;width:32px;height:38px;background:url('../images/common/arrow_down_01.svg') no-repeat center center;background-size:12px auto;}
+.order_bill .pay_box .payment_info .phone_num .input01 {position: relative; padding-left: 15px; width:35%; float: left;}
+.order_bill .pay_box .payment_info .phone_num .input01:after {content:"";position:absolute;top:19.5px;left:4.5px;width:6px;height:1px;background:#777777;}
+.order_bill .pay_box .payment_info .phone_num .input01 input {padding-right: 15px;}
+.order_bill .pay_box .payment_info .input_3ea {margin:0px 0px 40px -15px;height:40px;}
+.order_bill .pay_box .payment_info .input_3ea .input01 {position: relative; padding-left: 15px; width:33.33%; float: left;}
+.order_bill .pay_box .payment_info .input_3ea .input01:after {content:"";position:absolute;top:19.5px;left:4.5px;width:6px;height:1px;background:#777777;}
+.order_bill .pay_box .payment_info .input_3ea .input01:first-child:after {display:none;}
+.order_bill .pay_box .payment_info .input_3ea .input01 input {padding-right: 15px;}
+.order_bill .pay_box .payment_info .input_4ea {margin:0px 0px 40px -15px;height:40px;}
+.order_bill .pay_box .payment_info .input_4ea .input01 {position: relative; padding-left: 15px; width:25%; float: left;}
+.order_bill .pay_box .payment_info .input_4ea .input01:after {content:"";position:absolute;top:19.5px;left:4.5px;width:6px;height:1px;background:#777777;}
+.order_bill .pay_box .payment_info .input_4ea .input01:first-child:after {display:none;}
+.order_bill .pay_box .payment_info .input_4ea .input01 input {padding-right: 15px;}
+.order_bill .pay_box .payment_info .payment_toggle.on {padding-bottom: 30px;} 
+.order_bill .pay_box .payment_info .payment_toggle.on h4:after {background: url('../images/common/arrow_up_01.svg') no-repeat; background-size: 100% auto;}
+.order_bill .pay_box .payment_info .payment_toggle.on .notice_common {display: block;} 
+
+/* 총 결제 금액 */
+.order_bill .total_price02 {position: relative; margin-bottom: 60px;}
+.order_bill .total_price02 h3 {font-size: 15px; font-weight: 500; line-height: 20px; padding-bottom: 20px; border-bottom: 2px solid #000000; margin-bottom: 20px;}
+.order_bill .total_price02 .view {position: absolute; top: 0px; right: 0px; display: inline-block; padding-right: 17px; font-size: 12px; line-height: 20px;
+	background: url('../images/common/arrow_down_01.svg') no-repeat right center; background-size: 12px auto; cursor: pointer;}
+.order_bill .total_price02 .price_list {display: none; margin-bottom: 20px;}
+.order_bill .total_price02 .price_list li {margin-top: 20px;}
+.order_bill .total_price02 .price_list li:first-child {margin-top: 30px;}
+.order_bill .total_price02 .price_list .head01 {display: inline-block; font-size: 12px; font-weight: 500; line-height: 20px;}
+.order_bill .total_price02 .price_list .price01 {display: inline-block; float: right; font-size: 12px; line-height: 20px;}
+.order_bill .total_price02 .price_list .price01 span {font-Size: 15px; font-weight: 500;}
+.order_bill .total_price02 .result_price {height: 25px;}
+.order_bill .total_price02 .result_price .head01 {display: none; line-height: 25px; color: #00bab4;}
+.order_bill .total_price02 .result_price .price01 {display: inline-block; float: right; line-height: 25px; color: #00bab4;}
+.order_bill .total_price02 .result_price .price01 span {font-size: 19px; font-weight: 700;}
+.order_bill .total_price02.on .view {background: url('../images/common/arrow_up_01.svg') no-repeat right center; background-size: 12px auto; cursor: pointer;}
+.order_bill .total_price02.on .price_list {display: block;}
+.order_bill .total_price02.on .result_price .head01 {display: inline-block;}
+
+
+/* 결제 프로모션 */
+.order_bill .promotion_box {position: relative; margin-bottom: 40px;}
+.order_bill .promotion_box h3 {font-size: 15px; font-weight: 500; line-height: 20px; padding-bottom: 20px; border-bottom: 2px solid #000000; margin-bottom: 30px;}
+.order_bill .promotion_box .text01 {position: absolute; right: 0; top: 0; font-size: 12px; font-weight: 500; line-height: 20px;}
+.order_bill .promotion_box .text01 a {display:inline-block;padding-right:14px; background:url('../images/common/ico_plus.svg') no-repeat right center ;background-size: 9px 9px;}
+/* .order_bill .promotion_box .text01 .num {color: #00bab4; font-weight: 500;} */
+.order_bill .promotion_box .benefit_coupon {}
+.order_bill .promotion_box .benefit_coupon .swiper-slide {width: 235px;}
+.order_bill .promotion_box .benefit_coupon .benefit01 {padding: 17px 49px 16px 20px; background: #f3f3f3; font-size: 13px; line-height: 18px; font-weight: 500; position: relative;}
+.order_bill .promotion_box .benefit_coupon .benefit01::after {content: ''; position:absolute; right: 20px; top: 0px; bottom: 0px; width: 5px; background: url('../images/common/s_arrow_right_01.svg') no-repeat right center;background-size:5px auto;}
+.order_bill .promotion_box .benefit_coupon .benefit01 span{font-weight: 500; color: #ff4600;}
+
+/* 약관 동의 */
+.order_bill .agree_box {margin-bottom: 60px;}
+.order_bill .agree_box .check_area {margin-bottom: 30px; padding-bottom: 20px; border-bottom: 1px solid #dddddd;}
+.order_bill .agree_box .check_area .checkbox01 label {color: #000000; font-size: 12px; line-height: 18px;}
+.order_bill .agree_box .notice_common li {color: #999999;}
+.order_bill .agree_box .notice_common li::before {background: #999999;}
+
+/* 주문 완료 */
+.order_section {margin: 0px 15px 60px 15px;}
+.order_section .order_code_box {margin: 40px 0px;}
+.order_section .order_code_box .head01 {font-size: 15px; line-height: 20px; color: #999999; margin-bottom: 10px;}
+.order_section .order_code_box .order_code {font-size: 19px; line-height: 24px;}
+.order_section .order_code_box .order_code .num{position: relative; display: inline-block; font-size: 19px; line-height: 26px; color: #00bab4;}
+.order_section .order_code_box .order_code .num::after {content: ''; position: absolute; bottom: 0px; left: 0px; right: 0px; height: 1px; background: #00bab4;}
+.order_section .delivery_info .info03 {text-align: right; font-size:12px;line-height:20px;}
+.order_section li {position:relative;padding-left:105px;}
+.order_section li .head01 {position:absolute;top:0;left:0;font-size:12px;line-height:18px;}
+.order_section li .text01 {font-size:12px;line-height:18px;word-break:break-all;}
+.order_section li .text03 {font-size:12px;line-height:18px;color: #00bab4;word-break:break-all;}
+.order_section .buyer_info h3 {font-size:15px;font-weight:500;line-height:20px;padding-bottom:20px;border-bottom:2px solid #000000;position:relative;margin-bottom:30px;}
+.order_section .buyer_info li ~ li {margin-top: 20px;}
+.order_section .bank_deposit_info h3 {font-size: 13px; font-weight: 500; line-height: 20px; margin-bottom: 20px;}

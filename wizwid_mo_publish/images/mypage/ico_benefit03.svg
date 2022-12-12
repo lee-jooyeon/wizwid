@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 56 56">
+    <path data-name="사각형 2028" style="opacity:.5;fill:none" d="M0 0h56v56H0z"/>
+    <g data-name="그룹 1172" transform="translate(11.175 -.138)">
+        <g data-name="사각형 1673" transform="translate(1.191 2.081)" style="stroke-width:1.3px;stroke:#000;fill:none">
+            <rect width="28.401" height="49.268" rx="3" style="stroke:none"/>
+            <rect x=".65" y=".65" width="27.101" height="47.968" rx="2.35" style="fill:none"/>
+        </g>
+        <path data-name="사각형 1674" d="M1.191 8.672h28.401v1.192H1.191z"/>
+        <path data-name="사각형 1679" d="M1.191 42.87h28.401v1.192H1.191z"/>
+        <rect data-name="사각형 1676" width="2.033" height="1.739" rx=".869" transform="translate(14.374 46.348)"/>
+        <rect data-name="사각형 2022" width="3.623" height=".944" rx=".472" transform="translate(13.58 5.029)"/>
+    </g>
+    <path data-name="패스 1165" d="m29.671 23.021 3.517 3.688 7.151-6.8" transform="translate(-8.042 2.312)" style="stroke:#00bab4;stroke-miterlimit:10;stroke-width:1.8px;fill:none"/>
+    <g data-name="그룹 1560">
+        <path data-name="선 1049" transform="translate(5.112 19.424)" style="stroke-linecap:round;stroke-width:1.2px;stroke:#000;fill:none" d="m0 0 2.163 2.384"/>
+        <path data-name="선 1050" transform="translate(5.112 30.671)" style="stroke-linecap:round;stroke-width:1.2px;stroke:#000;fill:none" d="M0 2.384 2.163 0"/>
+        <path data-name="선 1051" transform="translate(3.523 26.239)" style="stroke-linecap:round;stroke-width:1.2px;stroke:#000;fill:none" d="M0 0h3.178"/>
+    </g>
+    <g data-name="그룹 1561">
+        <path data-name="선 1049" transform="translate(45.636 19.424)" style="stroke-linecap:round;stroke-width:1.2px;stroke:#000;fill:none" d="M2.163 0 0 2.384"/>
+        <path data-name="선 1050" transform="translate(45.636 30.671)" style="stroke-linecap:round;stroke-width:1.2px;stroke:#000;fill:none" d="M2.163 2.384 0 0"/>
+        <path data-name="선 1051" transform="translate(46.21 26.239)" style="stroke-linecap:round;stroke-width:1.2px;stroke:#000;fill:none" d="M3.178 0H0"/>
+    </g>
+</svg>

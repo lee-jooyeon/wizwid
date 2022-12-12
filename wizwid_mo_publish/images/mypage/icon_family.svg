@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="46" height="56" viewBox="0 0 46 56">
+    <g transform="translate(-54 -205)">
+        <rect data-name="사각형 1680" width="46" height="56" rx="4" transform="translate(54 205)" style="fill:#db8864"/>
+        <path data-name="패스 1323" d="M1020.126 74.683V60.808h11.021v2.953h-7.612v2.6h5.075v2.854h-5.075v5.471z" transform="translate(-949.126 175.876)" style="fill:#fff"/>
+        <g data-name="그룹 1765">
+            <path data-name="패스 1783" d="M0 0v4.9h.539V2.695h1.945v-.468H.539V.477h2.967V0z" style="fill:#fff" transform="translate(65 217)"/>
+            <path data-name="패스 1784" d="m5.48.5.966 2.4H4.514zM5.173 0l-2.03 4.9H3.7l.623-1.539h2.31L7.252 4.9h.588L5.823 0z" style="fill:#fff" transform="translate(65 217)"/>
+            <path data-name="패스 1785" d="m12.781 0-1.666 3.479L9.443 0h-.756v4.9h.5V.623l1.918 3.928L13.027.617V4.9h.511V0z" style="fill:#fff" transform="translate(65 217)"/>
+            <path data-name="사각형 2073" transform="translate(79.896 217)" style="fill:#fff" d="M0 0h.539v4.9H0z"/>
+            <path data-name="패스 1786" d="M16.792 0v4.9h3.458v-.483h-2.919V0z" style="fill:#fff" transform="translate(65 217)"/>
+            <path data-name="패스 1787" d="m23.561 0-1.6 2.43L20.362 0h-.63l1.945 2.9v2h.539V2.927L24.169 0z" style="fill:#fff" transform="translate(65 217)"/>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="130" height="90" viewBox="0 0 130 90">
+    <path data-name="Rectangle 1611" style="fill:#f8f8f8" d="M0 0h130v90H0z"/>
+    <path data-name="Rectangle 2030" transform="translate(32.001 13)" style="opacity:.5;fill:none" d="M0 0h65v65H0z"/>
+    <g data-name="Group 1585">
+        <path data-name="Line 1053" transform="translate(44.001 34)" style="stroke-width:1.3px;stroke:#00bab4;fill:none" d="M0 0h41"/>
+        <g data-name="Rectangle 2032" transform="translate(44.001 49.9)" style="stroke-width:1.3px;stroke:#00bab4;fill:none">
+            <rect width="8" height="8" rx="1" style="stroke:none"/>
+            <rect x=".65" y=".65" width="6.7" height="6.7" rx=".35" style="fill:none"/>
+        </g>
+        <g data-name="Group 1580">
+            <g data-name="Ellipse 448" transform="translate(74.001 46)" style="stroke:#000;stroke-width:1.3px;fill:none">
+                <circle cx="11.5" cy="11.5" r="11.5" style="stroke:none"/>
+                <circle cx="11.5" cy="11.5" r="10.85" style="fill:none"/>
+            </g>
+            <g data-name="Group 1584">
+                <path data-name="Path 1655" d="m80.761 370.511 2.131 6.881 2.635-6.881 2.406 6.881 2.183-6.881" transform="translate(.157 -316.317)" style="stroke-linejoin:round;stroke-linecap:round;stroke-width:1.1px;stroke:#000;fill:none"/>
+                <path data-name="Line 1054" transform="translate(80.24 56.889)" style="stroke-linecap:round;stroke-width:1.1px;stroke:#000;fill:none" d="M0 0h1.355"/>
+                <path data-name="Line 1055" transform="translate(89.595 56.889)" style="stroke-linecap:round;stroke-width:1.1px;stroke:#000;fill:none" d="M0 0h1.355"/>
+            </g>
+        </g>
+        <path data-name="Path 1654" d="M36.916 36.916H2.5a1.9 1.9 0 0 1-1.9-1.9V2.5A1.9 1.9 0 0 1 2.5.6h46.069a1.9 1.9 0 0 1 1.9 1.9v19.12" transform="translate(38.988 25.409)" style="stroke:#000;stroke-width:1.3px;fill:none"/>
+    </g>
+</svg>

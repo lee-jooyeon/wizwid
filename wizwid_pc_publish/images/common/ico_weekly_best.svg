@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50">
+  <defs>
+    <style>
+      .cls-1, .cls-2, .cls-4 {
+        fill: none;
+      }
+
+      .cls-1, .cls-2 {
+        stroke: #000;
+      }
+
+      .cls-2 {
+        stroke-miterlimit: 10;
+      }
+
+      .cls-3 {
+        stroke: none;
+      }
+    </style>
+  </defs>
+  <g id="_ic_best" data-name="*ic_best" transform="translate(-534 -1594)">
+    <g id="Ellipse_280" data-name="Ellipse 280" class="cls-1" transform="translate(534 1594)">
+      <circle class="cls-3" cx="25" cy="25" r="25"/>
+      <circle class="cls-4" cx="25" cy="25" r="24.5"/>
+    </g>
+    <path id="Path_1581" data-name="Path 1581" class="cls-2" d="M5.893,18.836h15.1v3.236H5.893ZM24.229,5.893a2.152,2.152,0,0,0-2.075,2.74c.659,2.255-6.856,4.388-7.966-1.73a2.4,2.4,0,0,1,.785-2.731,2.158,2.158,0,1,0-3.059,0A2.406,2.406,0,0,1,12.7,6.9c-1.11,6.121-8.624,3.984-7.966,1.73a2.156,2.156,0,1,0-1.781,1.554c1.763-.248,2.941,4.716,2.941,6.493h15.1c0-1.78,1.178-6.741,2.941-6.492a2.157,2.157,0,1,0,.294-4.294Z" transform="translate(545.557 1607.714)"/>
+  </g>
+</svg>

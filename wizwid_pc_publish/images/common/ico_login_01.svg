@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28">
+    <g data-name="*ic_header_logout">
+        <path data-name="Rectangle 2119" style="opacity:.5;fill:none" d="M0 0h28v28H0z"/>
+        <g data-name="Group 1783">
+            <path data-name="Path 1909" d="M10.045 19.068h-8.59a.456.456 0 0 1-.477-.432V1.364a.456.456 0 0 1 .477-.432h8.591V.5H1.455a.913.913 0 0 0-.955.864v17.272a.913.913 0 0 0 .955.864h8.591z" transform="translate(4.5 4)" style="stroke:#000;stroke-width:.8px;fill:none"/>
+            <path data-name="Path 1910" d="M184.909 125.769a.682.682 0 0 0 .682.682h12.321l-3.839 3.82a.682.682 0 1 0 .964.964l5-4.983a.683.683 0 0 0 0-.964l-5-4.959a.682.682 0 0 0-.964.964l3.839 3.795h-12.321a.682.682 0 0 0-.682.682z" transform="translate(-174.909 -111.778)" style="stroke:#fff;stroke-width:.2px"/>
+        </g>
+    </g>
+</svg>

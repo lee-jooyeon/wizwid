@@ -1,0 +1,8 @@
+body {font-size:12px;font-family:돋움;color:#7C7C7C;width:100%;line-height:16px;margin:0px;font-weight:normal;height:100%;}
+div, ul, li, table, th, td {margin:0px;padding:0px;font-size:12px;font-family:돋움;color:#7C7C7C;}
+ul {list-style:none;}
+table {border-collapse:collapse; word-break:break-all;}
+.u {text-decoration:underline;} .b {font-weight:bold;} .nb {font-weight:normal;}
+img {border:0; onfocus=blur();}
+a { color:#7C7C7C;text-decoration:none;} a:hover {color:#7C7C7C; text-decoration:underline;}
+a,img,input {selector-dummy: expression(this.hideFocus=true);}

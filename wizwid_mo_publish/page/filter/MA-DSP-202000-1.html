@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="utf-8">
+<head>
+	<title>WizWid</title>
+	<meta name="title" content="">
+	<meta name="keywords" content="WizWid">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=0,maximum-scale=1.0, user-scalable=0, viewport-fit=cover">
+	<meta name="format-detection" content="telephone=no, address=no, email=no" />
+	<meta name="HandheldFriendly" content="true">
+	<link rel="stylesheet" type="text/css" href="../../css/swiper.min.css" />
+	<link rel="stylesheet" type="text/css" href="../../css/common.css" />
+	<script type="text/javascript" src="../../js/jquery-2.0.3.min.js"></script>
+	<script type="text/javascript" src="../../js/swiper.min.js"></script>
+	<script type="text/javascript" src="../../js/vimeo.js"></script> <!-- 220613 추가 || 비메오js 추가 -->
+	<script type="text/javascript" src="../../js/pub.js"></script>
+</head>
+<body>
+<div id="wrap">
+	<!-- 컨텐츠 시작 -->
+	<div id="contents">
+		
+	</div>
+
+	<!-- 팝업 -->
+	<div class="normal_popup on">
+		<div class="head_box">
+			<h2>FILTER</h2>
+			<div class="close">창닫기</div>
+		</div>
+
+		<!-- 필터 -->
+		<div class="filter_section">
+			<div class="filter_box">
+				<h3 class="open_tab">CATEGORY <span class="count">3</span></h3>
+			</div>
+			
+			<div class="filter_box">
+				<h3 class="open_tab">BRAND</h3>
+			</div>
+
+			<div class="filter_box">
+				<h3 class="open_tab">COLOR</h3>
+			</div>
+
+			<div class="filter_box">
+				<h3>BENEFIT</h3>
+				<ul class="check_list">
+					<li><span class="checkbox01"><input type="checkbox" id="filter_porduct01" /><label for="filter_porduct01">지속가능한 상품</label></span></li>
+					<li><span class="checkbox01"><input type="checkbox" id="filter_porduct02" /><label for="filter_porduct02">펀딩 상품</label></span></li>
+					<li><span class="checkbox01"><input type="checkbox" id="filter_porduct03" /><label for="filter_porduct03">프리오더</label></span></li>
+					<li><span class="checkbox01"><input type="checkbox" id="filter_porduct04" /><label for="filter_porduct04">딜</label></span></li>
+					<li><span class="checkbox01"><input type="checkbox" id="filter_porduct05" /><label for="filter_porduct05">품절 상품 제외</label></span></li>
+					<li><span class="checkbox01"><input type="checkbox" id="filter_porduct06" /><label for="filter_porduct06">쿠폰</label></span></li>
+				</ul>
+			</div>
+
+			<div class="filter_box">
+				<h3>DELIVERY</h3>
+				<ul class="check_list">
+					<li><span class="checkbox01"><input type="checkbox" id="filter_delivery01" /><label for="filter_delivery01">해외배송 제외</label></span></li>
+					<li><span class="checkbox01"><input type="checkbox" id="filter_delivery02" checked /><label for="filter_delivery02">예약상품 제외</label></span></li>
+					<li><span class="checkbox01"><input type="checkbox" id="filter_delivery03" /><label for="filter_delivery03">당일배송</label></span></li>
+					<li><span class="checkbox01"><input type="checkbox" id="filter_delivery04" /><label for="filter_delivery04">무료배송</label></span></li>
+				</ul>
+			</div>
+
+			<div class="filter_box">
+				<h3>PRICE <span class="price01">2,800원 ~ 980,000원</span></h3>
+				<div class="bar_box">
+					<div class="js-range-slider"></div>
+				</div>
+			</div>
+			
+			<div class="filter_box">
+				<h3>DISCOUNT <span class="price01">5% ~ 60%</span></h3>
+				<div class="bar_box">
+					<div class="js-range-slider2"></div>
+				</div>
+			</div>
+
+			<div class="bottom_filter_fix">
+				<div class="filter_tag_list">
+					<ul>
+						<li>지속 가능한 상품 <span class="del01">삭제</span></li>
+						<li>예약상품 제외 <span class="del01">삭제</span></li>
+						<li>2,800원 ~ 960,000원 <span class="del01">삭제</span></li>
+					</ul>
+				</div>
+				<div class="btn_area">
+					<button class="btn_gray01">초기화</button>
+					<button class="btn_black01">적용</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<link rel="stylesheet" href="../../css/ion.rangeSlider.min.css"/>
+<script src="../../js/ion.rangeSlider.min.js"></script>	
+<script>
+	$(".js-range-slider").ionRangeSlider({
+		skin: "round",
+		type: "double",
+        min: 2800,
+        max: 2345000,
+		from: 0,
+		step: 1,
+		prettify_separator: ",",
+		postfix: "원"
+	});
+	$(".js-range-slider2").ionRangeSlider({
+		skin: "round",
+		type: "double",
+        min: 5,
+        max: 60,
+		from: 5,
+		step: 1
+    });
+</script>
+
+</body>
+</html>

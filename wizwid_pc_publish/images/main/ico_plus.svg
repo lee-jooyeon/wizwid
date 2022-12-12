@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="41" height="41" viewBox="0 0 41 41">
+    <defs>
+        <filter id="arehvecqha" x="0" y="0" width="41" height="41" filterUnits="userSpaceOnUse">
+            <feOffset dy="3"/>
+            <feGaussianBlur stdDeviation="3" result="blur"/>
+            <feFlood flood-opacity=".161"/>
+            <feComposite operator="in" in2="blur"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+    </defs>
+    <g data-name="그룹 298">
+        <g style="filter:url(#arehvecqha)">
+            <circle data-name="타원 6" cx="11.5" cy="11.5" r="11.5" transform="translate(9 6)" style="fill:rgba(255,255,255,.9)"/>
+        </g>
+        <g data-name="그룹 147">
+            <path data-name="사각형 68" d="M15 17h11v1H15z"/>
+            <path data-name="사각형 69" d="M21 12v11h-1V12z"/>
+        </g>
+    </g>
+</svg>

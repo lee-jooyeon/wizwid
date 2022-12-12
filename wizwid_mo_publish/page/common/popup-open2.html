@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="utf-8">
+<head>
+	<title>WizWid</title>
+	<meta name="title" content="">
+	<meta name="keywords" content="WizWid">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=0,maximum-scale=1.0, user-scalable=0, viewport-fit=cover">
+	<meta name="format-detection" content="telephone=no, address=no, email=no" />
+	<meta name="HandheldFriendly" content="true">
+	<link rel="stylesheet" type="text/css" href="../../css/swiper.min.css" />
+	<link rel="stylesheet" type="text/css" href="../../css/common.css" />
+	<script type="text/javascript" src="../../js/jquery-2.0.3.min.js"></script>
+	<script type="text/javascript" src="../../js/swiper.min.js"></script>
+	<script type="text/javascript" src="../../js/pub.js?2"></script>
+</head>
+<body>
+<div id="wrap">
+
+	<div style="padding:20px;margin-top:100px;">
+		<button class="open-popup btn_black01" data-target="full_test" style="margin-bottom:20px;">풀팝업 띄우기</button>
+		<button class="open-popup btn_black01" data-target="dialog_test" style="margin-bottom:20px;">dialog 팝업</button>
+		<button class="open-popup btn_black01" data-target="layer_test" style="margin-bottom:20px;">하단 레어어 팝업</button>
+	</div>
+
+	<!-- full 팝업 -->
+	<div id="full_test" class="normal_popup">
+		<div class="head_box">
+			<h2>상단 타이틀 영역</h2>
+			<div class="close">창닫기</div>
+		</div>
+		
+		<!-- 팝업 컨텐츠 -->
+		<div class="pop_cont">
+			컨텐츠 영역
+		</div>
+	</div>
+
+	<!--  dialog 팝업 -->
+	<div id="dialog_test" class="layer_md_popup">
+		<h3>팝업 타이틀</h3>
+		<div class="cont01">
+			컨텐츠 영역
+		</div>
+		<div class="btn_bottom">
+			<button class="btn_black01">확인</button>
+		</div>
+	</div>
+
+	<!-- 하단 레이어 팝업 -->  
+	<div id="layer_test" class="layer_b_popup">
+		<div class="close_pop">창닫기</div>
+		<div class="cont01">
+			<h3>팝업 타이틀</h3>
+			<p class="text01">컨텐츠영역</p>
+			<div class="btn_area">
+				<button class="btn_black01">확인</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script>
+	function custom_alert(obj,title,content,callback) {
+		var objName = obj, obj = $('#'+obj);
+		$("html").addClass("pop_open");
+		
+		// 내용 변경
+		obj.addClass("on");
+		obj.find('h3').text(title);
+		
+		(objName == "layer_test") ? (obj.find('.cont01 .text01').text(content)) : (obj.find('.cont01').text(content));
+
+		// // 닫기
+		obj.find(".close").on('click',function() {
+			popup_close();
+		});
+
+		// // 확인
+		obj.find(".btn_black01").on('click',function() {
+			popup_close();
+			if(callback) {callback();}
+		});
+
+		function popup_close(){
+			obj.removeClass("on");
+			$("html").removeClass("pop_open");
+		}
+	}
+
+	$(function(){
+		$('.open-popup').on('click',function(e){
+			var This = $(this), data_target = This.data('target');
+			e.preventDefault();
+			custom_alert(data_target, (data_target+'타이틀'), (data_target+'컨텐츠'),function(){
+				alert('확인버튼후 동작');
+			});
+		});
+	});
+</script>
+
+</body>
+</html>

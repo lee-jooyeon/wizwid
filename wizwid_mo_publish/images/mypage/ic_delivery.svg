@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60">
+    <path data-name="Rectangle 1841" transform="translate(.061)" style="fill:none;opacity:.4" d="M0 0h59.938v60H0z"/>
+    <path data-name="Path 1150" d="M56.163 36.54V14.6h13.722l7.181 10.635V36.54z" transform="translate(-17.925 8.33)" style="stroke:#000;stroke-width:1.5px;fill:#fff"/>
+    <path data-name="Rectangle 1874" transform="translate(7.145 13)" style="stroke:#000;stroke-width:1.5px;fill:#fff" d="M0 0h31.155v31.87H0z"/>
+    <path data-name="Path 1156" d="M31 48.237a4.5 4.5 0 1 1 4.5-4.5 4.5 4.5 0 0 1-4.5 4.5" transform="translate(-9.392 1.134)" style="stroke:#000;stroke-width:1.5px;fill:#fff"/>
+    <path data-name="Path 1180" d="M31 48.237a4.5 4.5 0 1 1 4.5-4.5 4.5 4.5 0 0 1-4.5 4.5" transform="translate(17.689 1.134)" style="stroke:#000;stroke-width:1.5px;fill:#fff"/>
+    <g data-name="Group 1212">
+        <path data-name="Rectangle 1875" transform="translate(0 17.768)" style="fill:#fff" d="M0 0h15.416v15.4H0z"/>
+        <path data-name="Rectangle 1876" transform="translate(0 19.768)" style="fill:#1bd9ba" d="M0 0h15.415v1.5H0z"/>
+        <path data-name="Rectangle 1877" transform="translate(2.265 24.568)" style="fill:#1bd9ba" d="M0 0h13.15v1.5H0z"/>
+        <path data-name="Rectangle 1878" transform="translate(5.547 29.367)" style="fill:#1bd9ba" d="M0 0h9.869v1.5H0z"/>
+    </g>
+</svg>

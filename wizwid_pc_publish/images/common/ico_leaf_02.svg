@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="10.814" height="15.559" viewBox="0 0 10.814 15.559">
+    <defs>
+        <clipPath id="pm0l8eb1oa">
+            <path data-name="Rectangle 1916" style="fill:none" d="M0 0h9.783v11.935H0z"/>
+        </clipPath>
+    </defs>
+    <g data-name="leaf icon">
+        <g data-name="Group 1556">
+            <g data-name="Group 1554" style="clip-path:url(#pm0l8eb1oa)" transform="translate(.636 .975)">
+                <path data-name="Path 1522" d="M10.415 8.771a6.066 6.066 0 0 1-2.792 3.268 10.734 10.734 0 0 1-3.563 1.2c-.386.068-.767.34-1.056.115-1.061-.828-3.525-2.837-.539-5.8 1.126-1.116 3.1-2.014 4.419-3.227a22.09 22.09 0 0 0 2.483-2.7s2.386 3.512 1.049 7.139" transform="translate(-1.012 -1.504)" style="fill:#89f374"/>
+            </g>
+        </g>
+        <path data-name="Path 1523" d="M10.257 7.805a7.2 7.2 0 0 1-2.82 3.743A14.76 14.76 0 0 1 2.9 13.073s-4.243-2.819-.916-6.557c1.151-1.147 2.756-1.738 4.11-2.983A25.717 25.717 0 0 0 8.735.686s2.896 3.39 1.522 7.119z" transform="translate(-.288 -.286)" style="stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:.8px;fill:none"/>
+        <path data-name="Path 1524" d="M6.225 10.438S1.8 13.91 4.043 17.81" transform="translate(-.744 -2.798)" style="stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:.8px;fill:none"/>
+    </g>
+</svg>

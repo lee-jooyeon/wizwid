@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="utf-8">
+<head>
+	<title>WizWid</title>
+	<meta name="title" content="">
+	<meta name="keywords" content="WizWid">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=0,maximum-scale=1.0, user-scalable=0, viewport-fit=cover">
+	<meta name="format-detection" content="telephone=no, address=no, email=no" />
+	<meta name="HandheldFriendly" content="true">
+	<link rel="stylesheet" type="text/css" href="../../css/swiper.min.css" />
+	<link rel="stylesheet" type="text/css" href="../../css/common.css" />
+	<script type="text/javascript" src="../../js/jquery-2.0.3.min.js"></script>
+	<script type="text/javascript" src="../../js/swiper.min.js"></script>
+	<script type="text/javascript" src="../../js/vimeo.js"></script> <!-- 220613 추가 || 비메오js 추가 -->
+	<script type="text/javascript" src="../../js/pub.js"></script>
+</head>
+<body>
+<div id="wrap">
+	<header class="mhead_01">
+		<div class="back_page">이전</div>
+		<div class="search_box">
+			<button>검색</button>
+		</div>
+		<div class="shopping_cart">
+			<span class="count">8</span>
+		</div>
+	</header>
+	
+	<!-- 컨텐츠 시작 -->
+	<div id="contents">
+
+        <!-- 프로모션 헤더 영역 -->
+        <div class="promotion_header">
+            <div class="date">2022.02.28 ~ 2022.03.30</div>
+            <div class="title_box">
+				<h3>WIZWID RENEWAL EVENT #3</h3>
+				<button class="btn_share">공유하기</button>
+			</div>
+        </div>
+
+        <div class="event-detail-wrap">
+			<!-- html영역 -->
+			<div class="event_jackpot">
+				<section>
+					<div class="img_box"><img src="../../images/promotion/jackpot_event_01.png" alt="매일매일 꽝 없이 100% 터지는 잭팟!" /></div>
+					<div class="jackpot_content_wrap">
+						<div class="jackpot_content test"></div>
+						<div class="btn_box">
+							<button class="jackpot_btn" onclick="eventJackpot();"><img src="../../images/promotion/event_jackpot_btn1.png" alt="잭팟 스타트 버튼" /></button>
+						</div>
+					</div>
+				</section>
+
+				<section>
+					<h3 class="blind">Notice</h3>
+					<ul class="jackpot_notice">
+						<li>ID당 1일 2회 참여 가능합니다.</li>
+						<li>쿠폰의 사용기간은 발급 후 당일 자정까지 입니다.</li>
+						<li>쿠폰은 위즈위드 APP에서만 사용 가능합니다.</li>
+						<li>7천원 / 5천원 / 3천원 쿠폰은 각 7만원 / 5만원 / 3만원 이상 구매시 사용 가능 합니다.</li>
+						<li>일부 상품에는 적용이 안되며, 쿠폰은 주문취소, 반품에 따른 재발행이 불가합니다.</li>
+						<li>본 이벤트는 당사의 사정에 따라 별도의 고지없이 변경 또는 종료될 수 있습니다.</li>
+					</ul>
+					<div class="img_box"><img src="../../images/promotion/jackpot_event_02.png" alt="Notice section bg" /></div>
+				</section>
+
+				<section>
+					<h3 class="blind">APP Download</h3>
+					<div class="btn_box">
+						<button onclick=""><img src="../../images/promotion/event_jackpot_btn2.png" alt="구글 플레이 스토어 설치하기" /></button>
+						<button onclick=""><img src="../../images/promotion/event_jackpot_btn3.png" alt="앱 스토어 설치하기" /></button>
+					</div>
+					<div class="img_box"><img src="../../images/promotion/jackpot_event_03.png" alt="APP Download section bg" /></div>
+				</section>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- 페이지 내 스크립트 -->
+<script>
+	$(function(){
+		// 잭팟클릭 이벤트 퍼블 확인용
+		const jackpotBtn = $('.jackpot_btn');
+		jackpotBtn.on('click', function(){
+			const item = $('.jackpot_content ul > li');
+			item.eq(2).on('transitionend',function(){jackpotBtn.css({'pointer-events':'auto'});});
+			jackpotBtn.css({'pointer-events':'none'});
+			setTimeout(function(){alert('당첨 되었습니다!!!!');},4100);
+		});
+	});
+</script>
+</body>
+</html>

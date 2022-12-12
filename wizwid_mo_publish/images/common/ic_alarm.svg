@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+    <g data-name="*ic_ring">
+        <path data-name="Rectangle 1715" style="fill:none" d="M0 0h24v24H0z"/>
+        <g data-name="Group 1529">
+            <path data-name="Path 1143" d="M12.408 28.989a2.862 2.862 0 0 0 2.584 2.788 2.869 2.869 0 0 0 2.592-2.788z" transform="translate(-2.912 -10.448)" style="stroke:#000;stroke-linecap:round;stroke-linejoin:round;fill:none"/>
+            <path data-name="Path 1144" d="M15.479 9.152h0V6.42a5.906 5.906 0 1 0-11.812 0v3.017C3.38 14.418.5 16.042.5 16.042h18.168s-3-1.678-3.189-6.89z" transform="translate(2.5 2.499)" style="stroke:#000;stroke-linecap:round;stroke-linejoin:round;fill:none"/>
+        </g>
+    </g>
+</svg>

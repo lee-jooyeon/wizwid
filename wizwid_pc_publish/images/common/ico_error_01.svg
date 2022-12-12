@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60">
+    <g data-name="*alert">
+        <g data-name="Ellipse 227" style="fill:#fff;stroke:#000;stroke-miterlimit:10;stroke-width:2px">
+            <circle cx="30" cy="30" r="30" style="stroke:none"/>
+            <circle cx="30" cy="30" r="29" style="fill:none"/>
+        </g>
+        <g data-name="!">
+            <path data-name="Path 1089" d="m27.87 17.726.836 18.637h2.582l.843-18.637z"/>
+            <path data-name="Rectangle 1671" d="M28.355 39.023h3.292v3.485h-3.292z"/>
+        </g>
+    </g>
+</svg>

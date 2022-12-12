@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20.3" height="17.781" viewBox="0 0 20.3 17.781">
+  <defs>
+    <style>
+      .cls-1 {
+        stroke: #000;
+        stroke-width: 0.3px;
+      }
+    </style>
+  </defs>
+  <g id="_ic_list_heart" data-name="*ic_list_heart" transform="translate(0.15 0.15)">
+    <path id="_ic_list_heart-2" data-name="*ic_list_heart" class="cls-1" d="M46.069,27.6l-.215-.215c-5.107-5.323-7.957-8.387-8.6-9.3a4.875,4.875,0,0,1-1.183-2.9,5.136,5.136,0,0,1,5.323-5c1.452,0,3.011.968,4.677,2.849,1.667-1.882,3.226-2.849,4.677-2.849a5.2,5.2,0,0,1,5.323,5,5.171,5.171,0,0,1-1.29,2.957c-.7.86-3.548,3.979-8.494,9.247Z" transform="translate(-36.069 -10.184)"/>
+  </g>
+</svg>

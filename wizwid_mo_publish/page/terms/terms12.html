@@ -1,0 +1,103 @@
+﻿<!DOCTYPE html>
+<html lang="utf-8">
+<head>
+	<title>WizWid</title>
+	<meta name="title" content="">
+	<meta name="keywords" content="WizWid">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=0,maximum-scale=1.0, user-scalable=0, viewport-fit=cover">
+	<meta name="format-detection" content="telephone=no, address=no, email=no" />
+	<meta name="HandheldFriendly" content="true">
+	<link rel="stylesheet" type="text/css" href="../../css/common.css" />
+	<script type="text/javascript" src="../../js/jquery-2.0.3.min.js"></script>
+	<script type="text/javascript" src="../../js/vimeo.js"></script> <!-- 220613 추가 || 비메오js 추가 -->
+	<script type="text/javascript" src="../../js/pub.js"></script>
+</head>
+<body>
+<div id="wrap">
+	<header class="mhead_02">
+		<h2>회원가입</h2> <!-- 220318 수정 || 타이틀 변경 (본인인증 -> 회원가입) -->
+		<div class="back_page">이전</div>
+	</header>
+	
+	<div id="contents">
+		<!-- 회원 -->
+		<div class="member">
+			<!-- 회원가입 본인인증 -->
+			<div class="join_step">
+				<!-- 간편 회원 가입일 경우 class(step) 영역 삭제 -->
+				<ul class="step">
+					<li class="on">step1</li>
+					<li>step2</li>
+					<li>step3</li>
+					<li>step4</li>
+				</ul>
+				<h3>휴대폰 본인인증을 진행해주세요.</h3>
+				
+				<div class="btn_area">
+					<button class="btn_black01">본인인증 하기</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<!-- 팝업 -->
+	<div class="normal_popup on">
+		<div class="head_box">
+			<h2>개인정보의 제3자 제공 동의</h2>
+			<div class="close">창닫기</div>
+		</div>
+		
+		<!-- 팝업 컨텐츠 -->
+		<div class="pop_cont">
+			<div class="terms_view">
+				<!-- 약관 시작 -->
+				<style>
+					/* .normal_popup .terms_view .terms_wrap li {padding-right: 10px;}
+					.normal_popup .terms_view .terms_wrap::-webkit-scrollbar { width:3px;}
+					.normal_popup .terms_view .terms_wrap::-webkit-scrollbar-track { background-color:transparent;} 
+					.normal_popup .terms_view .terms_wrap::-webkit-scrollbar-thumb {background:#aaaaaa;border-radius:2px;} */
+					.normal_popup .terms_view .terms_section .terms_wrap {margin-bottom: 30px;}
+					.normal_popup .terms_view .terms_section .terms_wrap:last-of-type {margin-bottom: 0;}
+					.normal_popup .terms_view .terms_section .terms_wrap li {color: #999; font-family:'Spoqa Han Sans Neo', 'sans-serif' !important; font-size: 13px; line-height: 22px;}
+					.normal_popup .terms_view .terms_section .terms_wrap li ~ li {margin-top: 0px;}
+					.normal_popup .terms_view .terms_section .terms_wrap.more_details {margin-top: -10px;}
+					.normal_popup .terms_view .terms_section .terms_wrap.more_details .sub_title {font-family: 'Spoqa Han Sans Neo', 'sans-serif' !important; font-weight: 500;}
+					.normal_popup .terms_view .terms_section h2 {margin-bottom: 10px; font-family:'Spoqa Han Sans Neo', 'sans-serif' !important; font-size: 15px; line-height: 19px; font-weight: 500; color: #999;}
+					.normal_popup .terms_view .terms_section .terms_wrap .sub_text {margin:0px 0px 5px 10px; line-height: 22px; color: #999; font-family:'Spoqa Han Sans Neo', 'sans-serif' !important;}
+
+					.normal_popup .terms_view .terms_section .terms_table {margin: -20px 0px 20px 0px}
+					.normal_popup .terms_view .terms_section .terms_table + h2 {margin-top: 30px;}
+					.normal_popup .terms_view .terms_section .terms_table table { border: 1px solid #ddd;}
+					.normal_popup .terms_view .terms_section .terms_table table thead th {height: 45px; color: #777; font-size: 12px; font-weight: 500; background: #eee; line-height: 16px; text-align: center; border-bottom: 1px solid #ddd; border-right: 1px solid #ddd; font-family:'Spoqa Han Sans Neo', 'sans-serif' !important;}
+					.normal_popup .terms_view .terms_section .terms_table table tbody tr > * {border-bottom: 1px solid #ddd;}
+					.normal_popup .terms_view .terms_section .terms_table table tbody th, .terms_section .terms_table table tbody td {padding: 10px 9px; color: #777; font-size: 12px; line-height: 18px; border-right: 1px solid #ddd; font-family:'Spoqa Han Sans Neo', 'sans-serif' !important;}
+					.normal_popup .terms_view .terms_section .terms_table table tbody th, .terms_section .terms_table table tbody td.txt_center {text-align: center;}
+				</style>
+				<div class="terms_section">
+					<ul class="terms_wrap">
+						<li>
+							① 당사는 아래와 같이 제휴사에 개인정보를 제공하고 있으며, 이를 위해 회원에게 동의를 구합니다.
+							<p class="sub_text">
+								제공업체 - 롯데카드<br>
+								이용목적 - 제휴카드 홍보TM, 이벤트 당첨자 매칭<br>
+								제공하는 개인정보의 항목 - 수집/이용에 동의하신 개인정보 , 성명, 로그인 ID, 자택 전화번호, 자택 주소, 휴대번호, 이메일, 결제승인정보<br>
+								보유 및 이용기간 - 제공일로부터 1년간 보유 및 활용 후 파기
+							</p>
+						</li>
+						<li>
+							② 회원은 개인정보 제3자 제공 동의를 거부할 권리가 있으며, 제3자 제공 동의 여부와 관계 없이 회원에 가입할 수 있습니다.<br>
+							단, 개인정보 제3자 제공 동의 거부 시 , 상기 이용목적에 명시된 서비스를 받을실 수 없습니다.
+						</li>
+					</ul>
+				</div>
+				<!-- 약관 끝 -->
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+</body>
+</html>

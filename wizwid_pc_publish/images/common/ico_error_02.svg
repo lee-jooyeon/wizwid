@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50">
+    <g data-name="*alert">
+        <g data-name="Ellipse 227" style="stroke:#000;stroke-width:2px;fill:#fff;stroke-miterlimit:10">
+            <circle cx="25" cy="25" r="25" style="stroke:none"/>
+            <circle cx="25" cy="25" r="24" style="fill:none"/>
+        </g>
+        <g data-name="!">
+            <path data-name="Path 757" d="m123.337 1672.271 7.46 7.015 12.54-12.825" transform="translate(-107.835 -1647.96)" style="stroke-linecap:round;fill:none;stroke:#000;stroke-width:2px"/>
+        </g>
+    </g>
+</svg>

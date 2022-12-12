@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="65" height="65" viewBox="0 0 65 65">
+    <path data-name="Rectangle 2030" style="opacity:.5;fill:none" d="M0 0h65v65H0z"/>
+    <path data-name="Path 1632" d="m189.857 43.684-.565-8.232a.608.608 0 0 0-.643-.643h-8.811v-2.637a9.776 9.776 0 1 0-19.551 0v2.637h-8.811a.608.608 0 0 0-.643.643l-.565 8.232-3.551 37.173a1.208 1.208 0 0 0 .129.515c.064.129.322.193.45.193h45.469a.5.5 0 0 0 .45-.193.7.7 0 0 0 .129-.515zm-28.284-11.512a8.489 8.489 0 0 1 16.979 0v2.638h-16.978zm-13.505 48.106 3.487-36.465.565-7.717h8.168v5.66a.65.65 0 1 0 1.286 0V36.1h16.979v5.66a.644.644 0 1 0 1.286 0V36.1h8.168l.565 7.717 3.487 36.465z" transform="translate(-138.038 -20.396)" style="stroke-width:.7px;stroke:#000"/>
+    <g data-name="Ellipse 309" transform="translate(20.5 20.582)" style="fill:#fff;stroke:#00bab4;stroke-width:1.5px">
+        <circle cx="2.5" cy="2.5" r="2.5" style="stroke:none"/>
+        <circle cx="2.5" cy="2.5" r="1.75" style="fill:none"/>
+    </g>
+    <g data-name="Ellipse 310" transform="translate(38.5 20.582)" style="fill:#fff;stroke:#00bab4;stroke-width:1.5px">
+        <circle cx="2.5" cy="2.5" r="2.5" style="stroke:none"/>
+        <circle cx="2.5" cy="2.5" r="1.75" style="fill:none"/>
+    </g>
+    <path data-name="Line 1052" transform="translate(9.5 52.5)" style="stroke-width:2px;stroke:#000;fill:none" d="M0 0h45"/>
+</svg>

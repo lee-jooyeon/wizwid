@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="utf-8">
+<head>
+	<title>WizWid</title>
+	<meta name="title" content="">
+	<meta name="keywords" content="WizWid">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=0,maximum-scale=1.0, user-scalable=0, viewport-fit=cover">
+	<meta name="format-detection" content="telephone=no, address=no, email=no" />
+	<meta name="HandheldFriendly" content="true">
+	<link rel="stylesheet" type="text/css" href="../../css/swiper.min.css" />
+	<link rel="stylesheet" type="text/css" href="../../css/common.css" />
+	<script type="text/javascript" src="../../js/jquery-2.0.3.min.js"></script>
+	<script type="text/javascript" src="../../js/swiper.min.js"></script>
+	<script type="text/javascript" src="../../js/vimeo.js"></script> <!-- 220613 추가 || 비메오js 추가 -->
+	<script type="text/javascript" src="../../js/pub.js"></script>
+</head>
+<body>
+<div id="wrap">
+	<header class="mhead_01 no_line">
+		<div class="back_page">이전</div>
+		<div class="title01">주문배송조회</div>
+		<div class="search_box">
+			<button>검색</button>
+		</div>
+		<div class="go_home">홈으로</div>
+	</header>
+	
+	<!-- 컨텐츠 시작 -->
+	<div id="contents">
+		<div class="my_delivery_section">
+			<!-- 기간 선택 조회 -->
+			<div class="my_period_select">
+				<div class="btn_month">
+					<button class="on">1개월</button>
+					<button>3개월</button>
+				</div>
+				<div class="period_select">기간선택조회</div>
+			</div>
+			
+			<!-- 진행중 리스트 -->
+			<div class="order_result_list">
+				<ul>
+					<li><a href="#none">입금대기<br/><strong>0</strong></a></li>
+					<li><a href="#none">결제완료<br/><strong>0</strong></a></li>
+					<li><a href="#none">상품준비중<br/><strong>0</strong></a></li>
+					<li><a href="#none">배송중<br/><strong>0</strong></a></li>
+					<li><a href="#none">배송완료<br/><strong>0</strong></a></li>
+				</ul>
+			</div>
+			
+			<!-- 배송 진행중 상품 리스트 -->
+			<div class="my_delivery_list">
+                <div class="non_notice">
+				    <h3>최근에 구매하신 내역이 없습니다.</h3>
+			    </div>
+			</div>
+			
+			<!-- 주문/ 배송 안내 -->
+			<div class="my_toggle_info">
+				<h4>주문/배송 안내</h4>
+				<ul class="notice_common">
+					<li>주문번호를 클릭하면 주문상세 내역을 확인하실 수 있습니다.</li>
+					<li>결제가 완료되었다 해도 재고부족 등의 사유로 주문이 취소될 수 있으니 이점 양해 부탁드립니다.</li>
+					<li>입금대기, 결제완료 상태에서는 결제수단 및 배송지 변경이 가능합니다.</li>
+					<li>결제완료 후 배송지 변경시 고객센터로 연락바랍니다.</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- 페이지 내 스크립트 -->
+<script>
+ 	sub.order_page_event();
+</script>
+
+</body>
+</html>

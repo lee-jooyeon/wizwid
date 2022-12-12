@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="utf-8">
+<head>
+	<title>WizWid</title>
+	<meta name="title" content="">
+	<meta name="keywords" content="WizWid">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=0,maximum-scale=1.0, user-scalable=0, viewport-fit=cover">
+	<meta name="format-detection" content="telephone=no, address=no, email=no" />
+	<meta name="HandheldFriendly" content="true">
+	<link rel="stylesheet" type="text/css" href="../../css/swiper.min.css" />
+	<link rel="stylesheet" type="text/css" href="../../css/common.css" />	
+	<script type="text/javascript" src="../../js/jquery-2.0.3.min.js"></script>
+	<script type="text/javascript" src="../../js/swiper.min.js"></script>
+	<script type="text/javascript" src="../../js/vimeo.js"></script> <!-- 22.06.09 추가 || 비메오 스크립트 추가 -->
+	<script type="text/javascript" src="../../js/pub.js"></script>
+</head>
+<body>
+<div id="wrap">
+	<header>
+		<div class="head_banner">
+			<div class="img01">
+				<a href="#none"><img src="../../images/common/top_banner_01.jpg" alt="" /></a>
+			</div>
+		</div>
+		<div class="header_box">
+			<h1><a href="#none"><span>로고</span></a></h1>
+			<div class="top_section">
+				<div class="search_box">
+					<input type="text" />
+					<button>검색</button>
+				</div>
+				<ul class="utility">
+					<li><a href="#none"><span class="login">로그인</span></a></li>
+					<li><a href="#none"><span class="mypage">마이페이지</span></a></li>
+					<li><a href="#none"><span class="history">최근본 상품</span></a></li>
+					<li><a href="#none"><span class="shopping_cart">장바구니<span class="num">8</span></span></a></li>
+				</ul>
+			</div>
+			
+			<!-- 메뉴 영역 -->
+			<div class="gnb_section">
+				<!-- 한글일경우 <span class="kor"> -->
+				<ul class="gnb_left">
+					<li><a href="#none">NEW</a></li>
+					<li><a href="#none">BEST</a></li>
+					<li><a href="#none">SALE</a></li>
+					<li><a href="#none">WOMEN</a></li>
+					<li><a href="#none">MEN</a></li>
+					<li><a href="#none">LIFE</a></li>
+					<li><a href="#none">ACTIVE</a></li>
+				</ul>
+				<ul class="gnb_right">
+					<li><a href="#none">GLOBAL</a></li>
+					<li><a href="#none">CLUB G</a></li>
+					<li>
+						<span class="more">더보기</span>
+						<ul>
+							<li><a href="#none">S PROJECT</a></li>
+							<li><a href="#none">EDITORIAL</a></li>
+							<li><a href="#none"><span class="kor">기획전</span></a></li>
+							<li><a href="#none"><span class="kor">브랜드</span></a></li>
+							<li><a href="#none"><span class="kor">리뷰</span></a></li>
+							<li><a href="#none"><span class="kor">혜택</span></a></li>
+						</ul>
+					</li>
+				</ul>
+				<div class="promotion"><a href="#none"><span class="kor">#발렌타인 기프트</span></a></div>
+				<!-- 한글일경우 <span class="kor"> end -->
+			</div>
+		</div>
+	</header>
+	
+	<!-- 컨텐츠 시작 -->
+	<div id="contents" class="contents_mypage">
+		<!-- 유저 정보 -->
+		<div class="user_section">
+			<div class="user_level vip">
+				<!-- <img src="../../images/mypage/ico_level_01.svg" alt="vip" /> -->
+				<span class="name"><span class="lv01">VIP</span>김영희님 </span>
+			</div>
+			<ul class="user_info">
+				<li>쿠폰<br/><strong>30</strong></li>
+				<li>적립금<br/><strong>65,000</strong></li>
+				<li>주문배송<br/><strong>6</strong></li>
+				<li>취소/교환/반품<br/><strong>30</strong></li>
+			</ul>
+		</div>
+
+		<!-- 마이페이지 레이아웃 -->
+		<div class="mypage_layout">
+			<div class="mypage_lnb">
+				<h2>MYPAGE</h2>
+				<h3>나의 쇼핑정보</h3>
+				<ul class="lnb">
+					<li class="on"><a href="#none">주문배송조회</a></li>
+					<li><a href="#none">취소/교환/반품 내역</a></li>
+					<li><a href="#none">재입고 알림신청</a></li>
+					<li><a href="#none">상품 리뷰</a></li>
+					<li><a href="#none">장바구니</a></li>
+					<li><a href="#none">관심상품</a></li>
+					<li><a href="#none">최근 본 상품</a></li>
+					<li><a href="#none">영수증 발행/조회</a></li>
+				</ul>
+
+				<h3>나의 계정정보</h3>
+				<ul class="lnb">
+					<li><a href="#none">회원정보 수정</a></li>
+					<li><a href="#none">회원혜택</a></li>
+					<li><a href="#none">적립금</a></li>
+					<li><a href="#none">쿠폰</a></li>
+					<li><a href="#none">이벤트 참여현황</a></li>
+				</ul>
+
+				<h3>고객센터</h3>
+				<ul class="lnb">
+					<li><a href="#none">1 : 1 문의</a></li>
+					<li><a href="#none">상품 Q&A</a></li>
+					<li><a href="#none">FAQ</a></li>
+					<li><a href="#none">공지사항</a></li>
+				</ul>
+			</div>
+
+			<div class="mypage_section">
+				<h3>반품신청</h3>
+
+				<!-- 상세 주문번호 -->
+				<div class="detail_oreder_num">
+					<ul>
+                        <li>주문일자  2022년 1월 10일</li>
+                        <li>주문번호  85789568763542</li>
+                    </ul>
+					<button class="one_qna">1:1문의</button>
+				</div>
+
+                <ul class="notice_common">
+                    <li>동일한 업체/브랜드의 상품만 동시에 반품신청을 하실 수 있습니다.</li>
+                    <li>이미 진행중인 반품건이 있는 경우, 해당 업체/브랜드의 상품은 진행중인 반품이 완료된 후 추가로 반품신청하실 수 있습니다.</li>
+                </ul>
+
+				<!-- 취소상품 리스트 -->
+				<div class="order_table">
+					<table>
+						<colgroup>
+							<col width="40px" />
+							<col width="*" />
+							<col width="40%" />
+						</colgroup>
+						<thead>
+							<tr>
+								<th></th>
+								<th>반품상품선택</th>
+								<th>사유</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr class="bundle">
+								<td><span class="checkbox01"><input type="checkbox" id="check06"/><label for="check06">선택체크</lable></span></td>
+								<td>
+									<div class="order_product">
+										<div class="shop_info">
+											<div class="img_box">
+												<a href="#none">
+													<img src="../../images/order/img_shopping_01.jpg" alt="">
+													<span class="flag">SET</span>
+												</a>
+											</div>
+											<div class="product_info">
+												<div class="brand"><a href="#none">KENTROYAL</a></div>
+												<div class="p_name"><a href="#none">[켄트로얄] 친환경 초극세모 칫솔 프로소프트 12개입 </a></div>
+												<div class="price">
+													<a href="#none">
+														<span class="price01">349,800<span>원</span></span>
+													</a>
+												</div>
+												<div class="option">
+													<a href="#none">옵션 : RED / EM LARGE <span>수량 : 1</span></a>
+												</div>
+												<div class="discount">
+													<a href="#none"><span>묶음할인혜택 : 5000원</span></a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</td>
+								<td>
+									<div class="select_box ms">
+										<select>
+											<option>반품사유 선택</option>
+											<option>주문한 상품과 다름</option>
+											<option>결함이 있는 아이템</option>
+											<option>기타 사유</option>
+										</select>
+										<div class="input_box">
+											<input type="text" placeholder="상세사유" /><span class="input_text_del">내용삭제</span>
+										</div>
+									</div>
+								</td>
+							</tr>
+							<tr class="bundle">
+								<td><span class="checkbox01"><input type="checkbox" id="check06" /><label for="check06">선택체크</lable></span></td>
+								<td>
+									<div class="order_product">
+										<div class="shop_info">
+											<div class="img_box">
+												<a href="#none">
+													<img src="../../images/order/img_shopping_01.jpg" alt="">
+													<span class="flag">SET</span>
+												</a>
+											</div>
+											<div class="product_info">
+												<div class="brand"><a href="#none">KENTROYAL</a></div>
+												<div class="p_name"><a href="#none">[켄트로얄] 친환경 초극세모 칫솔 프로소프트 12개입 </a></div>
+												<div class="price">
+													<a href="#none">
+														<span class="price01">349,800<span>원</span></span>
+													</a>
+												</div>
+											</div>
+										</div>				
+										<div class="set_option">
+											<div class="head01">세트구성 1</div>
+											<div class="set_info">
+												<div class="p_name">나이키 데이브레이크 4종</div>
+												<div class="option">옵션 : RED / EM LARGE (+5,000원)</div>
+											</div>
+										</div>
+									</div>
+								</td>
+								<td>
+									<div class="select_box ms">
+										<select>
+											<option>반품사유 선택</option>
+											<option>주문한 상품과 다름</option>
+											<option>결함이 있는 아이템</option>
+											<option>기타 사유</option>
+										</select>
+										<div class="input_box">
+											<input type="text" placeholder="상세사유" /><span class="input_text_del">내용삭제</span>
+										</div>
+									</div>
+								</td>
+							</tr>							
+							<tr>
+								<td><span class="checkbox01"><input type="checkbox" id="check06" /><label for="check06">선택체크</lable></span></td>
+								<td>
+									<div class="order_product">
+										<div class="shop_info">
+											<div class="img_box">
+												<a href="#none">
+													<img src="../../images/order/img_shopping_01.jpg" alt="">
+													<span class="flag">SET</span>
+												</a>
+											</div>
+											<div class="product_info">
+												<div class="brand"><a href="#none">KENTROYAL</a></div>
+												<div class="p_name"><a href="#none">[켄트로얄] 친환경 초극세모 칫솔 프로소프트 12개입 </a></div>
+												<div class="price">
+													<a href="#none">
+														<span class="price01">349,800<span>원</span></span>
+													</a>
+												</div>
+											</div>
+										</div>				
+										<div class="set_option">
+											<div class="head01">세트구성 2</div>
+											<div class="set_info">
+												<div class="p_name">나이키 데이브레이크 4종</div>
+												<div class="option">옵션 : RED / EM LARGE (+5,000원)</div>
+											</div>
+										</div>
+									</div>
+								</td>
+								<td rowspan="2">
+									<div class="select_box ms">
+										<select>
+											<option>반품사유 선택</option>
+											<option>주문한 상품과 다름</option>
+											<option>결함이 있는 아이템</option>
+											<option>기타 사유</option>
+										</select>
+										<div class="input_box">
+											<input type="text" placeholder="상세사유" /><span class="input_text_del">내용삭제</span>
+										</div>
+									</div>
+								</td>
+							</tr>
+                            <tr class="bundle">
+								<td><span class="checkbox01"><input type="checkbox" id="check06" /><label for="check06">선택체크</lable></span></td>
+								<td>
+									<div class="order_product">
+										<div class="shop_info">
+											<div class="img_box">
+												<a href="#none">
+													<img src="../../images/order/img_shopping_01.jpg" alt="">
+													<span class="flag">SET</span>
+												</a>
+											</div>
+											<div class="product_info">
+												<div class="brand"><a href="#none">KENTROYAL</a></div>
+												<div class="p_name"><a href="#none">[켄트로얄] 친환경 초극세모 칫솔 프로소프트 12개입 </a></div>
+												<div class="price">
+													<a href="#none">
+														<span class="price01">349,800<span>원</span></span>
+													</a>
+												</div>
+											</div>
+										</div>				
+										<div class="set_option">
+											<div class="head01">세트구성 2</div>
+											<div class="set_info">
+												<div class="p_name">나이키 데이브레이크 4종</div>
+												<div class="option">옵션 : RED / EM LARGE (+5,000원)</div>
+											</div>
+										</div>
+									</div>
+								</td>
+							</tr>													
+						</tbody>
+					</table>
+				</div>
+
+				<!-- 기존상품 수거지 -->
+				<div class="order_info_list">
+					<div class="info_area">
+						<div class="info_box">
+							<h3>기존상품 수거지</h3>
+							<button class="change_btn">수거지변경</button>
+
+							<ul>
+								<li>
+									<span class="head01">받는사람</span>
+									<div class="text01">홍길동</div>
+								</li>
+								<li>
+									<span class="head01">휴대폰번호</span>
+									<div class="text01">010-5645-5675</div>
+								</li>
+								<li>
+									<span class="head01">배송 주소</span>
+									<div class="text01">(09090) 서울시 강남구 영동대로 785  삼안빌딩 6F 215(09090) 서울시 강남구 영동대로 785  삼안빌딩 6F 215</div>
+								</li>
+								<li>
+									<span class="head01">배송요청사항</span>
+									<div class="text01">경비실에 맡겨주세요</div>
+								</li>
+							</ul>				
+						</div>
+					</div>
+				</div>
+
+                <!-- 추가비용 -->				
+				<div class="order_section">
+					<h3>추가비용</h3>
+					<div class="order_info_list">
+						<div class="info_area">
+							<div class="info_box price">
+								<div class="align-box space price-total"><strong>추가비용</strong><span>334,000</span>원</div>
+								<ul>
+									<li>
+										<div class="add_pay">
+											<span class="head01">반품 배송비</span>
+											<p>나이키 데이브레이크 균일가 4종</p>
+										</div>										
+										<div class="text02"><span class="num01">2,500</span> 원</div>
+									</li>
+									<li>
+										<div class="add_pay">
+											<span class="head01">반품 배송비</span>
+											<p>나이키 데이브레이크 균일가 4종</p>
+										</div>										
+										<div class="text02"><span class="num01">2,500</span> 원</div>
+									</li>
+								</ul>
+							</div>
+							<div class="info_box price">
+								<div class="align-box space price-total"><strong>무료 반품쿠폰 사용금액</strong><span>5,000</span>원</div>
+								<ul>
+									<li class="align-box space">
+										<div class="coupon_price">
+											<span class="head01">사용</span>
+										</div>										
+										<div class="coupon_btn">
+											<button>쿠폰변경</button>
+										</div>
+									</li>
+									<li class="align-box space">
+										<div class="coupon_price">
+											<span class="head02">미사용</span>
+										</div>										
+										<div class="coupon_btn">
+											<button>쿠폰적용</button>
+										</div>
+									</li>
+								</ul>
+							</div>
+							<div class="info_box price">
+								<div class="align-box space price-total orange_txt"><strong>추가 결제 금액</strong><span>329,000</span>원</div>
+								<ul>
+									<li class="add_pay">
+										<span class="head01">추가 금액 합계</span>
+										<div class="text02"><span class="num01">5000</span>원</div>
+									</li>
+									<li>
+										<span class="head01">배송비 쿠폰 사용 금액</span>
+										<div class="text02"><span class="num01">-2,500</span>원</div>
+									</li>
+									<div class="select_box">
+										<select>
+											<option>추가 금액 결제</option>
+											<option>01</option>
+											<option>02</option>
+										</select>
+										<div class="card_bank">
+											<span class="radio01"><input type="radio" id="coupon01" name="coupon" checked /><label for="coupon01">신용카드</lable></span>
+											<span class="radio01"><input type="radio" id="coupon02" name="coupon" /><label for="coupon02">실시간 계좌이체</lable></span>
+										</div>
+									</div>																		
+								</ul>
+							</div>
+						</div>						
+					</div>
+				</div>
+
+                <!-- 환불 정보 -->				
+				<div class="order_section">
+					<h3>환불 정보</h3>
+					<div class="order_info_list">
+						<div class="info_area">
+							<div class="info_box price">
+								<div class="align-box space price-total"><strong>결제금액</strong><span>334,000</span>원</div>
+								<ul>
+									<li>
+										<div class="add_pay">
+											<span class="head01">상품금액</span>
+										</div>										
+										<div class="text02"><span class="num01">374,000</span> 원</div>
+									</li>
+                                    <li>
+										<div class="add_pay">
+											<span class="head01">배송비</span>
+										</div>										
+										<div class="text02"><span class="num01">0</span> 원</div>
+									</li>
+                                    <li>
+										<div class="add_pay">
+											<span class="head01">쿠폰할인</span>
+										</div>										
+										<div class="text02"><span class="num01">-32,000</span> 원</div>
+									</li>
+                                    <li>
+										<div class="add_pay">
+											<span class="head01">적립금사용</span>
+										</div>										
+										<div class="text02"><span class="num01">-8,000</span> 원</div>
+									</li>
+								</ul>
+							</div>
+							<div class="info_box price">
+								<div class="align-box space price-total orange_txt"><strong>환불 예정 금액</strong><span>329,000</span>원</div>
+								<ul>
+									<li class="refund_pay">
+										<span class="head01">적립금 사용취소</span>
+										<div class="text02"><span class="num01">4,000</span> 원</div>
+									</li>
+                                    <li>
+										<span class="head01">추가 금액 결제</span>
+										<div class="text02">신용카드(롯데카드)</div>
+									</li>
+								</ul>
+							</div>
+						</div>						
+					</div>
+				</div>
+
+                <!-- 환불 계좌정보 -->				
+				<div class="order_section">
+					<h3>환불 계좌정보</h3>
+					<ul>
+						<li class="account_info">
+							<strong>예금주명</strong>
+							<span>홍길동</span>
+							<a href="#none">환불계좌등록안내</a>
+						</li>
+						<li class="refund_account">
+							<div class="select_box">
+								<select>
+									<option>은행선택</option>
+									<option>우리은행</option>
+									<option>신한은행</option>
+								</select>
+							</div>
+							<div class="input_box01">
+								<input type="text" placeholder="‘-’없이 숫자만 입력하세요"><span class="input_text_del">내용삭제</span>
+							</div>
+							<div class="btn_zipcode">
+								<button class="btn_black_s01">계좌인증</button>
+							</div>							
+						</li>						
+					</ul>
+				</div>
+
+				<div class="btn_order_detail">
+					<button class="btn_gray01">취소</button>
+					<button class="btn_black01">반품신청 완료하기</button>
+				</div>
+
+				<!-- 반품신청 안내 -->				
+				<div class="order_section">
+					<h3>반품신청 안내</h3>
+					<ul class="notice_common">						
+						<li>반품신청은 배송완료일부터 7일 이내까지 가능합니다.</li>
+						<li>주문 시 무료배송으로 받았다 할지라도 주문취소 또는 반품 시 최초 배송비가 부과될 수 있습니다. </li>
+						<li>환불 시 최초 배송비를 제외한 상품에 대한 금액만 환불이 되므로 실제 환불 금액과 일부 상이할 수 있습니다.</li>
+						<li>또한 쿠폰이나 적립금 사용으로 인해 금액의 차이가 발생 할 수 있으니 확인 바랍니다.</li>
+					</ul>
+				</div>
+
+				<!-- 교환/반품이 불가한 경우 -->				
+				<div class="order_section">
+					<h3>교환/반품이 불가한 경우</h3>
+					<ul class="notice_common">						
+						<li>단순변심으로 인한 교환/반품 요청이 상품 수령하신 날부터 7일을 경과한 경우</li>
+						<li>공정거래 표준약관 제 15조 2항에 의한 이용자의 사용 또는 일부 소비에 의하여 재화 등의 가치가 현저히 감소한 경우 <br/> (ex. 착용흔적이나 화장품, 향수, 세탁, 수선, 오염, 택 또는 라벨 제거 및 훼손)</li>
+						<li>신발, 잡화 등의 상품 포장, 케이스의 멸실 또는 훼손의 경우</li>
+						<li>무상 교환을 위해 고의로 상품을 불량으로 만드는 경우</li>
+                        <li>시간의 경과에 의해 재판매가 곤란한 경우</li>
+					</ul>
+				</div>
+
+                <!-- 환불계좌 등록 안내 -->				
+				<div class="order_section">
+					<h3>환불계좌 등록 안내</h3>
+					<ul class="notice_common">						
+						<li>현금결제 주문 취소/반품 시 환불처리를 위한 계좌입니다.</li>
+						<li>회원님께서 주문취소  또는 반품 시 등록하신 계좌번호로 환불금액이 입금되오니 정확하게 기입해 주시기 바랍니다.</li>
+						<li>환불계좌는 본인명의 계좌만 등록 가능합니다. 예금주명과 회원정보의 성명이 다른 경우는 등록되지 않습니다.</li>
+						<li>주문 시 결제수단에 따라 등록된 환불계좌로 환불처리가 우선 진행됩니다.</li>
+                        <li>최종 수정일로부터 1년간 환불 기록이 없을 경우, 금융정보 보호 정책에 따라 등록된 환불계좌 정보는 삭제 됩니다.</li>
+					</ul>
+				</div>
+
+			</div>
+		</div>
+	</div>
+	
+	<footer>
+		대기중
+	</footer>
+</div>
+
+<!-- 롤링 기본 이벤트 -->
+<script>
+	sub.swiper_normal01();
+</script>
+
+</body>
+</html>

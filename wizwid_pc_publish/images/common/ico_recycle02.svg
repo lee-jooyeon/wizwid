@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50">
+    <defs>
+        <clipPath id="0k8olyoqwa">
+            <path data-name="Rectangle 1924" style="fill:none" d="M0 0h31.129v30.628H0z"/>
+        </clipPath>
+    </defs>
+    <g data-name="*IC_ethical">
+        <g data-name="Ellipse 277" style="stroke:#000;fill:none">
+            <circle cx="25" cy="25" r="25" style="stroke:none"/>
+            <circle cx="25" cy="25" r="24.5" style="fill:none"/>
+        </g>
+        <g data-name="Group 1600">
+            <g data-name="Group 1582" style="clip-path:url(#0k8olyoqwa)" transform="translate(9.401 9.687)">
+                <path data-name="Path 1567" d="M27.469 26.666a9.988 9.988 0 0 1-5.577 3.324 14.263 14.263 0 0 1-5.977-.487s-3.576-6.253 3.31-9.4c2.054-.937 4.293-.74 6.636-1.7a19.849 19.849 0 0 0 4.683-2.81s.884 6.745-3.075 11.073z" style="stroke-linecap:round;stroke-linejoin:round;stroke:#000;fill:none"/>
+                <path data-name="Path 1568" d="M24.239 23.171s-5.734 7.6-12.289 6.508" style="stroke-linecap:round;stroke-linejoin:round;stroke:#000;fill:none"/>
+                <path data-name="Path 1569" d="M18.954 27.477a11.646 11.646 0 0 1-.032-3" style="stroke-linecap:round;stroke-linejoin:round;stroke:#000;fill:none"/>
+                <path data-name="Path 1570" d="M20.47 26.992a11.665 11.665 0 0 0 3-.132" style="stroke-linecap:round;stroke-linejoin:round;stroke:#000;fill:none"/>
+                <path data-name="Path 1571" d="M19.6.78a9.979 9.979 0 0 1 5.612 3.263 14.259 14.259 0 0 1 2.478 5.463s-3.731 6.16-9.82 1.665c-1.817-1.342-2.731-3.394-4.711-4.971A19.869 19.869 0 0 0 8.43 3.464S13.9-.581 19.6.78z" style="stroke-linecap:round;stroke-linejoin:round;stroke:#000;fill:none"/>
+                <path data-name="Path 1572" d="M18.114 5.3s9.424 1.327 11.654 7.587" style="stroke-linecap:round;stroke-linejoin:round;stroke:#000;fill:none"/>
+                <path data-name="Path 1573" d="M24.444 7.832a11.656 11.656 0 0 1-2.611 1.486" style="stroke-linecap:round;stroke-linejoin:round;stroke:#000;fill:none"/>
+                <path data-name="Path 1574" d="M23.285 6.742a11.677 11.677 0 0 0-1.572-2.56" style="stroke-linecap:round;stroke-linejoin:round;stroke:#000;fill:none"/>
+                <path data-name="Path 1575" d="M1.24 19.864a9.987 9.987 0 0 1-.346-6.483 14.26 14.26 0 0 1 3.213-5.064s7.2-.254 6.774 7.3c-.126 2.255-1.342 4.144-1.58 6.667a19.856 19.856 0 0 0 .307 5.452s-6.38-2.353-8.368-7.872z" style="stroke-linecap:round;stroke-linejoin:round;stroke:#000;fill:none"/>
+                <path data-name="Path 1576" d="M5.837 18.632S1.783 10.021 5.8 4.726" style="stroke-linecap:round;stroke-linejoin:round;stroke:#000;fill:none"/>
+                <path data-name="Path 1577" d="M4.485 11.95a11.649 11.649 0 0 1 2.674 1.37" style="stroke-linecap:round;stroke-linejoin:round;stroke:#000;fill:none"/>
+                <path data-name="Path 1578" d="M4.209 13.517a11.685 11.685 0 0 0-1.28 2.718" style="stroke-linecap:round;stroke-linejoin:round;stroke:#000;fill:none"/>
+            </g>
+        </g>
+    </g>
+</svg>

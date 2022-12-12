@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="utf-8">
+<head>
+	<title>WizWid</title>
+	<meta name="title" content="">
+	<meta name="keywords" content="WizWid">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=0,maximum-scale=1.0, user-scalable=0, viewport-fit=cover">
+	<meta name="format-detection" content="telephone=no, address=no, email=no" />
+	<meta name="HandheldFriendly" content="true">
+	<link rel="stylesheet" type="text/css" href="../../css/swiper.min.css" />
+	<link rel="stylesheet" type="text/css" href="../../css/common.css" />
+	<script type="text/javascript" src="../../js/jquery-2.0.3.min.js"></script>
+	<script type="text/javascript" src="../../js/swiper.min.js"></script>
+	<script type="text/javascript" src="../../js/vimeo.js"></script> <!-- 220613 추가 || 비메오js 추가 -->
+	<script type="text/javascript" src="../../js/pub.js"></script>
+</head>
+<body>
+<div id="wrap">
+	<!-- 컨텐츠 시작 -->
+	<div id="contents">
+		
+	</div>
+
+	<!-- 팝업 -->
+	<div class="normal_popup on">
+		<div class="head_box">
+			<h2>FILTER</h2>
+			<div class="close">창닫기</div>
+		</div>
+	
+		<!-- 필터 -->
+		<div class="filter_section">
+			<div class="filter_box">
+				<h3 class="open_tab on">CATEGORY <span class="count">3</span></h3>
+				<div class="filter_category">
+					<div class="category_list">
+						<h4><span class="title_on">WOMEN</span> (39,000) <span class="all_clear on">전체 선택해제</span></h4>
+						<div class="depth3 on">
+							<h5><span class="title_on">여성의류</span> (1,310) <span class="all_clear on">전체 선택해제</span></h5>
+							<ul class="on">
+								<li><span class="checkbox01"><input type="checkbox" id="category01_01" checked /><label for="category01_01">티셔츠 (1,310)</label></span></li>
+								<li><span class="checkbox01"><input type="checkbox" id="category01_02" /><label for="category01_02">셔츠/블라우스 (2,011)</label></span></li>
+								<li><span class="checkbox01"><input type="checkbox" id="category01_03" /><label for="category01_03">니트웨어 (258)</label></span></li>
+							</ul>
+
+							<h5><span>여성가방 </span> (195) <span class="all_clear">전체 선택해제</span></h5>
+							<ul>
+								<li><span class="checkbox01"><input type="checkbox" id="category02_01" /><label for="category02_01">티셔츠 (1,310)</label></span></li>
+								<li><span class="checkbox01"><input type="checkbox" id="category02_02" /><label for="category02_02">셔츠/블라우스 (2,011)</label></span></li>
+								<li><span class="checkbox01"><input type="checkbox" id="category02_03" /><label for="category02_03">니트웨어 (258)</label></span></li>
+							</ul>
+
+							<h5><span>여성슈즈 </span> (195) <span class="all_clear">전체 선택해제</span></h5>
+
+							<h5><span>주방 </span> (195) <span class="all_clear">전체 선택해제</span></h5>
+						</div>
+					</div>
+					<div class="category_list">
+						<h4>MEN (7,000) <span class="all_clear">전체 선택해제</span></h4>
+						<div class="depth3">
+							<h5>남성의류 (1,310) <span class="all_clear on">전체 선택해제</span></h5>
+							<ul>
+								<li><span class="checkbox01"><input type="checkbox" id="category03_01" /><label for="category03_01">티셔츠 (1,310)</label></span></li>
+								<li><span class="checkbox01"><input type="checkbox" id="category03_02" /><label for="category03_02">셔츠/블라우스 (2,011)</label></span></li>
+								<li><span class="checkbox01"><input type="checkbox" id="category03_03" /><label for="category03_03">니트웨어 (258)</label></span></li>
+							</ul>
+						</div>
+					</div>
+					<div class="category_list">
+						<h4>MEN (7,000) <span class="all_clear">전체 선택해제</span></h4>
+					</div>
+					<div class="category_list">
+						<h4>ACTIVE (23,000) <span class="all_clear">전체 선택해제</span></h4>
+					</div>
+				</div>
+			</div>
+
+			<div class="bottom_filter_fix">
+				<div class="filter_tag_list">
+					<ul>
+						<li>지속 가능한 상품 <span class="del01">삭제</span></li>
+						<li>예약상품 제외 <span class="del01">삭제</span></li>
+						<li>2,800원 ~ 960,000원 <span class="del01">삭제</span></li>
+						<li>WOMEN > 티셔츠 <span class="del01">삭제</span></li>
+					</ul>
+				</div>
+				<div class="btn_area">
+					<button class="btn_gray01">초기화</button>
+					<button class="btn_black01">적용</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<link rel="stylesheet" href="../../css/ion.rangeSlider.min.css"/>
+<script src="../../js/ion.rangeSlider.min.js"></script>	
+<script>
+	$(".js-range-slider").ionRangeSlider({
+		skin: "round",
+		type: "double",
+		min: 2800,
+		max: 2345000,
+		from: 0,
+		step: 1,
+		prettify_separator: ",",
+		postfix: "원"
+	});
+	$(".js-range-slider2").ionRangeSlider({
+		skin: "round",
+		type: "double",
+		min: 5,
+		max: 60,
+		from: 5,
+		step: 1
+	});
+</script>
+
+</body>
+</html>

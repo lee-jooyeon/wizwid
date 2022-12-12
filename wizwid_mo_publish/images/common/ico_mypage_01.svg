@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="17.95" height="20.5" viewBox="0 0 17.95 20.5">
+  <defs>
+    <style>
+      .cls-1 {
+        stroke: #000;
+        stroke-width: 0.5px;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <g id="_ic_header_my" data-name="*ic_header_my" transform="translate(0.25 0.25)">
+    <path id="Path_117" data-name="Path 117" class="cls-1" d="M232.578,39.3a5.106,5.106,0,1,0,5.078,5.106A5.1,5.1,0,0,0,232.578,39.3Zm0,.729a4.376,4.376,0,1,1-4.353,4.376A4.359,4.359,0,0,1,232.578,40.034Z" transform="translate(-223.853 -39.305)"/>
+    <path id="Path_118" data-name="Path 118" class="cls-1" d="M148.724,301.81A8.744,8.744,0,0,0,140,310.563a.364.364,0,1,0,.727,0,8,8,0,1,1,16,0,.364.364,0,1,0,.727,0A8.744,8.744,0,0,0,148.724,301.81Z" transform="translate(-139.999 -290.932)"/>
+  </g>
+</svg>

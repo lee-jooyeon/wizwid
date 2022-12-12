@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="utf-8">
+<head>
+	<title>WizWid</title>
+	<meta name="title" content="">
+	<meta name="keywords" content="WizWid">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=0,maximum-scale=1.0, user-scalable=0, viewport-fit=cover">
+	<meta name="format-detection" content="telephone=no, address=no, email=no" />
+	<meta name="HandheldFriendly" content="true">
+	<link rel="stylesheet" type="text/css" href="../../css/swiper.min.css" />
+	<link rel="stylesheet" type="text/css" href="../../css/common.css" />
+	<script type="text/javascript" src="../../js/jquery-2.0.3.min.js"></script>
+	<script type="text/javascript" src="../../js/swiper.min.js"></script>
+	<script type="text/javascript" src="../../js/vimeo.js"></script> <!-- 220613 추가 || 비메오js 추가 -->
+	<script type="text/javascript" src="../../js/pub.js"></script>
+</head>
+<body>
+<div id="wrap">
+	
+	<!-- 컨텐츠 시작 -->
+	<div id="contents">
+		<!-- ### 동영상 자동 재생 영역 : 메인A, B, C, 상품 상세 (parameter : background=1)-->
+		<div class="vimeo_area">
+			<!-- BO에 링크 등록된 경우 노출 -->
+			<a href="https://www.google.co.kr/"></a>
+
+			<iframe src="https://player.vimeo.com/video/709410155?background=1" frameborder="0" allow="autoplay; fullscreen" allowfullscreen=""></iframe>
+		</div>
+		
+		<!-- ### 서브 메인 영역의 코너 동영상(대카, 글로벌 등) (parameter : controls=0)-->
+		<div class="vimeo_area">
+			<!-- BO에 링크 등록된 경우 노출 -->
+			<a href="https://www.google.co.kr/"></a>
+			
+			<iframe src="https://player.vimeo.com/video/76979871?controls=0" frameborder="0" allow="autoplay; fullscreen" allowfullscreen=""></iframe>
+			
+			<!-- BO에 썸네일 등록된 경우 노출 -->
+			<div class="thumbnail_box">
+				<button class="play_btn">재생</button>
+				<img src="../../images/display/img_promo02.jpg" alt="video play">
+			</div>
+		</div>
+
+		<!-- ### 상품 리뷰 (고객이 직접 등록한 동영상) -->
+		<div class="vimeo_area">
+			<iframe src="https://player.vimeo.com/video/674305903" frameborder="0" allow="autoplay; fullscreen" allowfullscreen=""></iframe>
+			
+			<!-- BO에 썸네일 등록된 경우 노출 -->
+			<!-- <div class="thumbnail_box">
+				<button class="play_btn">재생</button>
+				<img src="../../images/display/img_promo01.jpg" alt="video play">
+			</div> -->
+		</div>
+
+	</div>
+
+</div>
+
+<script>
+	// 비메오 동영상 함수
+	initVimeo();
+</script>
+
+</body>
+</html>

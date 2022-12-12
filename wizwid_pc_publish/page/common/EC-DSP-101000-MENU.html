@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="utf-8">
+<head>
+	<title>WizWid</title>
+	<meta name="title" content="">
+	<meta name="keywords" content="WizWid">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=0,maximum-scale=1.0, user-scalable=0, viewport-fit=cover">
+	<meta name="format-detection" content="telephone=no, address=no, email=no" />
+	<meta name="HandheldFriendly" content="true">
+	<link rel="stylesheet" type="text/css" href="../../css/swiper.min.css" />
+	<link rel="stylesheet" type="text/css" href="../../css/common.css" />	
+	<script type="text/javascript" src="../../js/jquery-2.0.3.min.js"></script>
+	<script type="text/javascript" src="../../js/swiper.min.js"></script>
+	<script type="text/javascript" src="../../js/vimeo.js"></script> <!-- 22.06.09 추가 || 비메오 스크립트 추가 -->
+	<script type="text/javascript" src="../../js/pub.js"></script>
+</head>
+<body>
+<div id="wrap">
+	<header>
+		<!-- 띠베너 -->
+		<div class="head_banner">
+			<div class="banner_wrap">
+				<!-- 이미지 영역 -->
+				<div class="img01">
+					<a href="#none"><img src="../../images/common/top_banner_01.jpg" alt="" /></a>
+				</div>
+				<!-- 텍스트 영역 || 컬러 변경 가능 -->
+				<a href="#none" style="display:none;">
+					<div class="text01" style="color: #ffffff;">3월 가입하고 첫 구매시 20% 쿠폰 제공 !</div>
+				</a>
+				<!-- 닫기버튼 -->
+				<button class="btn_close">닫기</button>
+			</div>
+		</div>
+		<!-- //띠베너 -->
+		<div class="header_box">
+			<h1><a href="#none"><span>로고</span></a></h1>
+			<div class="top_section">
+				<div class="search_box">
+					<input type="text" readonly />
+					<button data-target="searchPop">검색</button>
+					<!-- 220603 추가 || 프로모션 롤링 추가 -->
+					<div class="rolling_list02">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<span>22S/S 신상품 PRE-OPEN 10% 쿠폰혜택!</span>
+								<a href="https://www.google.com/"></a>
+							</div>
+							<div class="swiper-slide">
+								<span>2222네이버CALVIN KLEIN JEANS 봄 맞이 데님 페스티벌 UP 2222네이버CALVIN KLEIN JEANS 봄 맞이 데님 페스티벌 UP</span>
+								<a href="https://www.naver.com/"></a>
+							</div>
+							<div class="swiper-slide">
+								<span>3333다음CALVIN KLEIN JEANS 봄 맞이 데님 페스티벌 UP</span>
+								<a href="https://www.daum.net/"></a>
+							</div>
+						</div>
+					</div>
+					<!-- //220603 추가 || 프로모션 롤링 추가 -->
+				</div>
+				<ul class="utility">
+					<li><a href="#none"><span class="login">로그인</span></a></li>
+					<!--<li><a href="#none"><span class="logout">로그아웃</span></a></li>-->
+					<li><a href="#none"><span class="mypage">마이페이지</span></a></li>
+					<li><a href="#none"><span class="history">최근본 상품</span></a></li>
+					<li><a href="#none"><span class="shopping_cart">장바구니<span class="num">8</span></span></a></li>
+				</ul>
+			</div>
+			
+			<!-- 메뉴 영역 -->
+			<div class="gnb_section">
+				<!-- 한글일경우 <span class="kor"> -->
+				<ul class="gnb_left">
+                    <li class="home"><a href="#none">홈</a></li>
+					<li><a href="#none">NEW</a></li>
+					<li><a href="#none">BEST</a></li>
+					<li><a href="#none">SALE</a></li>
+				</ul>
+				<ul class="gnb_left fix_list" id="gnbCtgryList">
+					<li><a href="#none" class="on">WOMEN</a></li>
+					<li><a href="#none">MEN</a></li>
+					<li><a href="#none">LIFE</a></li>
+					<li><a href="#none">ACTIVE</a></li>
+				</ul>
+				<ul class="gnb_right">
+					<li><a href="#none">GLOBAL</a></li>
+					<li><a href="#none">CLUB G</a></li>
+					<li>
+						<span class="more">더보기</span>
+						<ul>
+							<li><a href="#none">S PROJECT</a></li>
+							<li><a href="#none">EDITORIAL</a></li>
+							<li><a href="#none"><span class="kor">기획전</span></a></li>
+							<li><a href="#none"><span class="kor">브랜드</span></a></li>
+							<li><a href="#none"><span class="kor">리뷰</span></a></li>
+							<li><a href="#none"><span class="kor">혜택</span></a></li>
+						</ul>
+					</li>
+				</ul>
+				<div class="promotion"><a href="#none"><span class="kor">#발렌타인 기프트</span></a></div>
+				<!-- 한글일경우 <span class="kor"> end -->
+			</div>
+
+			<!-- 서브 메뉴 펼침 레이어 -->
+			<div class="sub_menu_layer">
+				<!-- 메뉴 리스트 -->
+				<div class="link_list">
+					<div class="sub_list01">
+						<h3><a href="#none">CLOTHING</a></h3>
+						<ul>
+							<li><a href="#none">티셔츠</a></li>
+							<li><a href="#none" class="on">셔츠/블라우스</a></li>
+							<!-- <li><a href="#none">니트웨어</a></li>
+							<li><a href="#none">팬츠</a></li>
+							<li><a href="#none">원피스</a></li>
+							<li><a href="#none">아우터</a></li>
+							<li><a href="#none">스커트</a></li>
+							<li><a href="#none">스웨트/후디</a></li>
+							<li><a href="#none">스윔웨어</a></li>
+							<li><a href="#none">라운지웨어</a></li>
+							<li><a href="#none">언더웨어</a></li> -->
+						</ul>
+					</div>
+					<div class="sub_list01">
+						<h3><a href="#none">BAG</a></h3>
+						<ul>
+							<li><a href="#none">숄더/토트백</a></li>
+							<!-- <li><a href="#none">클러치</a></li>
+							<li><a href="#none">백팩</a></li>
+							<li><a href="#none">패브릭백</a></li>
+							<li><a href="#none">웨이스트백</a></li>
+							<li><a href="#none">지갑/파우치</a></li>
+							<li><a href="#none">악세서리</a></li> -->
+						</ul>
+					</div>
+					<div class="sub_list01">
+						<h3><a href="#none">SHOES</a></h3>
+						<ul>
+							<li><a href="#none">샌들/뮬</a></li>
+							<!-- <li><a href="#none">플랫/로퍼</a></li>
+							<li><a href="#none">펌프스</a></li>
+							<li><a href="#none">스니커즈</a></li>
+							<li><a href="#none">부츠/워커</a></li> -->
+						</ul>
+					</div>
+					<div class="sub_list01">
+						<h3><a href="#none">ACC</a></h3>
+						<ul>
+							<li><a href="#none">시계</a></li>
+							<!-- <li><a href="#none"></a></li>
+							<li><a href="#none">아이웨어</a></li>
+							<li><a href="#none">주얼리</a></li>
+							<li><a href="#none">모자</a></li>
+							<li><a href="#none">머플러/스카프</a></li>
+							<li><a href="#none">패션악세서리</a></li> -->
+						</ul>
+					</div>
+					<div class="sub_list01 best">
+						<h3>인기브랜드</h3>
+						<ul>
+							<li><a href="#none">PURE CASHMERE NYC</a></li>
+							<!-- <li><a href="#none">DIAGONAL</a></li>
+							<li><a href="#none">MARGESHERWOOD</a></li>
+							<li><a href="#none">VOCAVFCD</a></li>
+							<li><a href="#none">YURT</a></li>
+							<li><a href="#none">RISA K</a></li>
+							<li><a href="#none">VINTAGE HOLLYWOOD</a></li>
+							<li><a href="#none">CLARKS</a></li>
+							<li><a href="#none">HVISK</a></li> -->
+						</ul>
+					</div>
+				</div>
+
+				<!-- 이미지 배너 -->
+				<div class="prd_banner">
+					<ul class="banner_list">
+						<li>
+							<div class="img_box"><a href="#none"><img src="../../images/common/img_head_01.jpg" alt="" /></a></div>
+							<div class="title01"><a href="#none">FITNESS WEAR</a></div>
+							<div class="text01"><a href="#none">나에게 딱맞는 운동웨어 브랜드</a></div>
+						</li>
+						<li>
+							<div class="img_box"><a href="#none"><img src="../../images/common/img_head_01.jpg" alt="" /></a></div>
+							<div class="title01"><a href="#none">FITNESS WEAR</a></div>
+							<div class="text01"><a href="#none">나에게 딱맞는 운동웨어 브랜드</a></div>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<!-- 서브 메뉴 펼침 레이어 -->
+			<div class="sub_menu_layer">
+				<!-- 메뉴 리스트 -->
+				<div class="link_list">
+					<div class="sub_list01">
+						<h3><a href="#none">CLOTHING2</a></h3>
+						<ul>
+							<li><a href="#none">티셔츠</a></li>
+							<li><a href="#none" class="on">셔츠/블라우스</a></li>
+							<li><a href="#none">니트웨어</a></li>
+							<li><a href="#none">팬츠</a></li>
+							<li><a href="#none">원피스</a></li>
+							<li><a href="#none">아우터</a></li>
+							<li><a href="#none">스커트</a></li>
+							<li><a href="#none">스웨트/후디</a></li>
+							<li><a href="#none">스윔웨어</a></li>
+							<li><a href="#none">라운지웨어</a></li>
+							<li><a href="#none">언더웨어</a></li>
+						</ul>
+					</div>
+					<div class="sub_list01">
+						<h3><a href="#none">BAG</a></h3>
+						<ul>
+							<li><a href="#none">숄더/토트백</a></li>
+							<li><a href="#none">클러치</a></li>
+							<li><a href="#none">백팩</a></li>
+							<li><a href="#none">패브릭백</a></li>
+							<li><a href="#none">웨이스트백</a></li>
+							<li><a href="#none">지갑/파우치</a></li>
+							<li><a href="#none">악세서리</a></li>
+						</ul>
+					</div>
+					<div class="sub_list01">
+						<h3><a href="#none">SHOES</a></h3>
+						<ul>
+							<li><a href="#none">샌들/뮬</a></li>
+							<li><a href="#none">플랫/로퍼</a></li>
+							<li><a href="#none">펌프스</a></li>
+							<li><a href="#none">스니커즈</a></li>
+							<li><a href="#none">부츠/워커</a></li>
+						</ul>
+					</div>
+					<div class="sub_list01">
+						<h3><a href="#none">ACC</a></h3>
+						<ul>
+							<li><a href="#none">시계</a></li>
+							<li><a href="#none"></a></li>
+							<li><a href="#none">아이웨어</a></li>
+							<li><a href="#none">주얼리</a></li>
+							<li><a href="#none">모자</a></li>
+							<li><a href="#none">머플러/스카프</a></li>
+							<li><a href="#none">패션악세서리</a></li>
+						</ul>
+					</div>
+					<div class="sub_list01 best">
+						<h3>인기브랜드</h3>
+						<ul>
+							<li><a href="#none">PURE CASHMERE NYC</a></li>
+							<li><a href="#none">DIAGONAL</a></li>
+							<li><a href="#none">MARGESHERWOOD</a></li>
+							<li><a href="#none">VOCAVFCD</a></li>
+							<li><a href="#none">YURT</a></li>
+							<li><a href="#none">RISA K</a></li>
+							<li><a href="#none">VINTAGE HOLLYWOOD</a></li>
+							<li><a href="#none">CLARKS</a></li>
+							<li><a href="#none">HVISK</a></li>
+						</ul>
+					</div>
+				</div>
+
+				<!-- 이미지 배너 -->
+				<div class="prd_banner">
+					<ul class="banner_list">
+						<li>
+							<div class="img_box"><a href="#none"><img src="../../images/common/img_head_01.jpg" alt="" /></a></div>
+							<div class="title01"><a href="#none">FITNESS WEAR</a></div>
+							<div class="text01"><a href="#none">나에게 딱맞는 운동웨어 브랜드</a></div>
+						</li>
+						<li>
+							<div class="img_box"><a href="#none"><img src="../../images/common/img_head_01.jpg" alt="" /></a></div>
+							<div class="title01"><a href="#none">FITNESS WEAR</a></div>
+							<div class="text01"><a href="#none">나에게 딱맞는 운동웨어 브랜드</a></div>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<!-- 서브 메뉴 펼침 레이어 -->
+			<div class="sub_menu_layer">
+				<!-- 메뉴 리스트 -->
+				<div class="link_list">
+					<div class="sub_list01">
+						<h3><a href="#none">CLOTHING3</a></h3>
+						<ul>
+							<li><a href="#none">티셔츠</a></li>
+							<li><a href="#none" class="on">셔츠/블라우스</a></li>
+							<li><a href="#none">니트웨어</a></li>
+							<li><a href="#none">팬츠</a></li>
+							<li><a href="#none">원피스</a></li>
+							<li><a href="#none">아우터</a></li>
+							<li><a href="#none">스커트</a></li>
+							<li><a href="#none">스웨트/후디</a></li>
+							<li><a href="#none">스윔웨어</a></li>
+							<li><a href="#none">라운지웨어</a></li>
+							<li><a href="#none">언더웨어</a></li>
+						</ul>
+					</div>
+					<div class="sub_list01">
+						<h3><a href="#none">BAG</a></h3>
+						<ul>
+							<li><a href="#none">숄더/토트백</a></li>
+							<li><a href="#none">클러치</a></li>
+							<li><a href="#none">백팩</a></li>
+							<li><a href="#none">패브릭백</a></li>
+							<li><a href="#none">웨이스트백</a></li>
+							<li><a href="#none">지갑/파우치</a></li>
+							<li><a href="#none">악세서리</a></li>
+						</ul>
+					</div>
+					<div class="sub_list01">
+						<h3><a href="#none">SHOES</a></h3>
+						<ul>
+							<li><a href="#none">샌들/뮬</a></li>
+							<li><a href="#none">플랫/로퍼</a></li>
+							<li><a href="#none">펌프스</a></li>
+							<li><a href="#none">스니커즈</a></li>
+							<li><a href="#none">부츠/워커</a></li>
+						</ul>
+					</div>
+					<div class="sub_list01">
+						<h3><a href="#none">ACC</a></h3>
+						<ul>
+							<li><a href="#none">시계</a></li>
+							<li><a href="#none"></a></li>
+							<li><a href="#none">아이웨어</a></li>
+							<li><a href="#none">주얼리</a></li>
+							<li><a href="#none">모자</a></li>
+							<li><a href="#none">머플러/스카프</a></li>
+							<li><a href="#none">패션악세서리</a></li>
+						</ul>
+					</div>
+					<div class="sub_list01 best">
+						<h3>인기브랜드</h3>
+						<ul>
+							<li><a href="#none">PURE CASHMERE NYC</a></li>
+							<li><a href="#none">DIAGONAL</a></li>
+							<li><a href="#none">MARGESHERWOOD</a></li>
+							<li><a href="#none">VOCAVFCD</a></li>
+							<li><a href="#none">YURT</a></li>
+							<li><a href="#none">RISA K</a></li>
+							<li><a href="#none">VINTAGE HOLLYWOOD</a></li>
+							<li><a href="#none">CLARKS</a></li>
+							<li><a href="#none">HVISK</a></li>
+						</ul>
+					</div>
+				</div>
+
+				<!-- 이미지 배너 -->
+				<div class="prd_banner">
+					<ul class="banner_list">
+						<li>
+							<div class="img_box"><a href="#none"><img src="../../images/common/img_head_01.jpg" alt="" /></a></div>
+							<div class="title01"><a href="#none">FITNESS WEAR</a></div>
+							<div class="text01"><a href="#none">나에게 딱맞는 운동웨어 브랜드</a></div>
+						</li>
+						<li>
+							<div class="img_box"><a href="#none"><img src="../../images/common/img_head_01.jpg" alt="" /></a></div>
+							<div class="title01"><a href="#none">FITNESS WEAR</a></div>
+							<div class="text01"><a href="#none">나에게 딱맞는 운동웨어 브랜드</a></div>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<!-- 서브 메뉴 펼침 레이어 -->
+			<div class="sub_menu_layer">
+				<!-- 메뉴 리스트 -->
+				<div class="link_list">
+					<div class="sub_list01">
+						<h3><a href="#none">CLOTHING4</a></h3>
+						<ul>
+							<li><a href="#none">티셔츠</a></li>
+							<li><a href="#none" class="on">셔츠/블라우스</a></li>
+							<li><a href="#none">니트웨어</a></li>
+							<li><a href="#none">팬츠</a></li>
+							<li><a href="#none">원피스</a></li>
+							<li><a href="#none">아우터</a></li>
+							<li><a href="#none">스커트</a></li>
+							<li><a href="#none">스웨트/후디</a></li>
+							<li><a href="#none">스윔웨어</a></li>
+							<li><a href="#none">라운지웨어</a></li>
+							<li><a href="#none">언더웨어</a></li>
+						</ul>
+					</div>
+					<div class="sub_list01">
+						<h3><a href="#none">BAG</a></h3>
+						<ul>
+							<li><a href="#none">숄더/토트백</a></li>
+							<li><a href="#none">클러치</a></li>
+							<li><a href="#none">백팩</a></li>
+							<li><a href="#none">패브릭백</a></li>
+							<li><a href="#none">웨이스트백</a></li>
+							<li><a href="#none">지갑/파우치</a></li>
+							<li><a href="#none">악세서리</a></li>
+						</ul>
+					</div>
+					<div class="sub_list01">
+						<h3><a href="#none">SHOES</a></h3>
+						<ul>
+							<li><a href="#none">샌들/뮬</a></li>
+							<li><a href="#none">플랫/로퍼</a></li>
+							<li><a href="#none">펌프스</a></li>
+							<li><a href="#none">스니커즈</a></li>
+							<li><a href="#none">부츠/워커</a></li>
+						</ul>
+					</div>
+					<div class="sub_list01">
+						<h3><a href="#none">ACC</a></h3>
+						<ul>
+							<li><a href="#none">시계</a></li>
+							<li><a href="#none"></a></li>
+							<li><a href="#none">아이웨어</a></li>
+							<li><a href="#none">주얼리</a></li>
+							<li><a href="#none">모자</a></li>
+							<li><a href="#none">머플러/스카프</a></li>
+							<li><a href="#none">패션악세서리</a></li>
+						</ul>
+					</div>
+					<div class="sub_list01 best">
+						<h3>인기브랜드</h3>
+						<ul>
+							<li><a href="#none">PURE CASHMERE NYC</a></li>
+							<li><a href="#none">DIAGONAL</a></li>
+							<li><a href="#none">MARGESHERWOOD</a></li>
+							<li><a href="#none">VOCAVFCD</a></li>
+							<li><a href="#none">YURT</a></li>
+							<li><a href="#none">RISA K</a></li>
+							<li><a href="#none">VINTAGE HOLLYWOOD</a></li>
+							<li><a href="#none">CLARKS</a></li>
+							<li><a href="#none">HVISK</a></li>
+						</ul>
+					</div>
+				</div>
+
+				<!-- 이미지 배너 -->
+				<div class="prd_banner">
+					<ul class="banner_list">
+						<li>
+							<div class="img_box"><a href="#none"><img src="../../images/common/img_head_01.jpg" alt="" /></a></div>
+							<div class="title01"><a href="#none">FITNESS WEAR</a></div>
+							<div class="text01"><a href="#none">나에게 딱맞는 운동웨어 브랜드</a></div>
+						</li>
+						<li>
+							<div class="img_box"><a href="#none"><img src="../../images/common/img_head_01.jpg" alt="" /></a></div>
+							<div class="title01"><a href="#none">FITNESS WEAR</a></div>
+							<div class="text01"><a href="#none">나에게 딱맞는 운동웨어 브랜드</a></div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</header>
+	
+	<div id="contents" style="height:2000px;text-align:center;background:#eeeeee;">
+		컨텐츠 
+	</div>
+	
+
+	<!-- 검색 레이어 팝업 영역 -->
+	<div id="searchPop" class="normal_popup">
+		<div class="content_wrap">
+			<div class="close_pop">창닫기</div>
+			<!-- 검색 인풋 -->
+			<div class="content_search">
+				<div class="search_box"  style="overflow: hidden;">
+					<input type="text" class="search_input02 on"><span class="input_text_del search_del">내용삭제</span>
+					<button>검색</button>
+					<div class="rolling_list">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<span>22S/S 신상품 PRE-OPEN 10% 쿠폰혜택!</span>
+								<a href="https://www.google.com/"></a>
+							</div>
+							<div class="swiper-slide">
+								<span>2222네이버CALVIN KLEIN JEANS 봄 맞이 데님 페스티벌 UP 2222네이버CALVIN KLEIN JEANS 봄 맞이 데님 페스티벌 UP</span>
+								<a href="https://www.naver.com/"></a>
+							</div>
+							<div class="swiper-slide">
+								<span>3333다음CALVIN KLEIN JEANS 봄 맞이 데님 페스티벌 UP</span>
+								<a href="https://www.daum.net/"></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- 검색어 영역 -->
+			<div class="search_section">
+				<div class="current_search">
+					<h3>최근검색어</h3>
+					<div class="delet_all">모두삭제</div>
+					<ul>
+						<li>
+							<span>티셔츠</span>
+							<button class="btn_del"></button>
+						</li>
+						<li>
+							<span>오버핏 램스킨 싱글 자켓 니트웨어 오리지널 오버핏 램스킨 싱글 자켓 니트웨어 오리지널</span>
+							<button class="btn_del"></button>
+						</li>
+						<li>
+							<span>팬츠</span>
+							<button class="btn_del"></button>
+						</li>
+						<li>
+							<span>원피스</span>
+							<button class="btn_del"></button>
+						</li>
+						<li>
+							<span>스트라이프 자켓</span>
+							<button class="btn_del"></button>
+						</li>
+					</ul>
+				</div>
+				<div class="rank_search">
+					<h3>인기검색어</h3>
+					<ul>
+						<li><a href="#none"><span class="num">01</span> 스튜디오톰보이</a></li>
+						<li><a href="#none"><span class="num">02</span> 바이레</a></li>
+						<li><a href="#none"><span class="num">03</span> 산타마리아노벨라</a></li>
+						<li><a href="#none"><span class="num">04</span> ALPHABET 미니미 체크 스트링 3단 지갑 ALPHABET 미니미 체크 스트링 3단 지갑</a></li>
+						<li><a href="#none"><span class="num">05</span> 딥디끄</a></li>
+						<li><a href="#none"><span class="num">06</span> 쥬시꾸뛰르</a></li>
+						<li><a href="#none"><span class="num">07</span> 머플러</a></li>
+						<li><a href="#none"><span class="num">08</span> 캐시미어니트</a></li>
+						<li><a href="#none"><span class="num">09</span> 폭스무스탕</a></li>
+						<li><a href="#none"><span class="num">10</span> 매거진포커스</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //검색 레이어 팝업 영역 -->
+</div>
+<script>
+	sub.rolling_list02();
+	// popup.openPopup("searchPop");
+	sub.rolling_list(); // 마케팅 문구 롤링
+	search.input_event(); // 검색 인풋 이벤트
+</script>
+</body>
+</html>

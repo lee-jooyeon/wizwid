@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+    <defs>
+        <clipPath id="0snisr7rsa">
+            <path data-name="Rectangle 1861" style="fill:none" d="M0 0h16.051v18.845H0z"/>
+        </clipPath>
+    </defs>
+    <g data-name="*ic_shopping" transform="translate(3.848 2.155)" style="clip-path:url(#0snisr7rsa)">
+        <path data-name="Path 1411" d="M15.053 18.781H1.076a.547.547 0 0 1-.576-.565L1.611 5.634a.557.557 0 0 1 .573-.482h11.76a.558.558 0 0 1 .574.482l1.109 12.582a.547.547 0 0 1-.574.565z" transform="translate(-.039 -.397)" style="stroke:#fff;stroke-linecap:round;stroke-linejoin:round;fill:none"/>
+        <path data-name="Path 1412" d="M5.179 6.429V1.921A1.375 1.375 0 0 1 6.5.5h3.845a1.375 1.375 0 0 1 1.324 1.421v4.508" transform="translate(-.4 .805)" style="stroke:#fff;stroke-linecap:round;stroke-linejoin:round;fill:none"/>
+    </g>
+</svg>

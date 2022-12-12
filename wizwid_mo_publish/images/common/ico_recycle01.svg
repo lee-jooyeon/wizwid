@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="75" height="75" viewBox="0 0 75 75">
+    <defs>
+        <clipPath id="uj9l7nundb">
+            <path data-name="사각형 1921" style="fill:none" d="M0 0h31.072v25.684H0z"/>
+        </clipPath>
+        <filter id="v8e7woauqa" x="0" y="0" width="75" height="75" filterUnits="userSpaceOnUse">
+            <feOffset/>
+            <feGaussianBlur stdDeviation="5" result="blur"/>
+            <feFlood flood-opacity=".102"/>
+            <feComposite operator="in" in2="blur"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+    </defs>
+    <g data-name="*ic_recycleing">
+        <g style="filter:url(#v8e7woauqa)">
+            <circle data-name="타원 273" cx="22.5" cy="22.5" r="22.5" transform="translate(15 15)" style="fill:#fff"/>
+        </g>
+        <g data-name="그룹 1597">
+            <g data-name="그룹 1576" transform="translate(22.131 25.277)" style="clip-path:url(#uj9l7nundb)">
+                <path data-name="패스 1550" d="M24.249 13.832V10.3l2.689 2.689 3.909-4.674-7.455-7.42L19.138.5h-.115a3.411 3.411 0 0 1-3.349 2.769A3.411 3.411 0 0 1 12.325.5h-.115L7.955.895.5 8.315l3.909 4.675L7.1 10.3v3.532" transform="translate(-.138 -.138)" style="stroke:#000;stroke-linecap:round;stroke-linejoin:round;fill:none"/>
+                <path data-name="패스 1551" d="M32.827 18.128h1.333l-.666 1.155-.667 1.155-.667-1.155-.666-1.155z" transform="translate(-8.682 -4.998)" style="fill-rule:evenodd"/>
+                <path data-name="패스 1552" d="M22.164 33.111v1.333l-1.155-.666-1.155-.667 1.155-.667 1.155-.666z" transform="translate(-5.473 -8.76)" style="fill-rule:evenodd"/>
+                <path data-name="패스 1553" d="M30.261 25.086V31.4h-8.077" transform="translate(-6.116 -6.916)" style="stroke:#000;stroke-linecap:round;stroke-linejoin:round;fill:none"/>
+                <path data-name="패스 1554" d="M9.234 23.814H7.9l.666-1.155.668-1.159.666 1.159.666 1.155z" transform="translate(-2.178 -5.928)" style="fill-rule:evenodd"/>
+                <path data-name="패스 1555" d="M14.368 31.27H9.741v-7.194" transform="translate(-2.685 -6.637)" style="stroke:#000;stroke-linecap:round;stroke-linejoin:round;fill:none"/>
+            </g>
+        </g>
+    </g>
+</svg>

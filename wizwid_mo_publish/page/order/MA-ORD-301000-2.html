@@ -1,0 +1,156 @@
+﻿
+<!DOCTYPE html>
+<html lang="utf-8">
+<head>
+	<title>WizWid</title>
+	<meta name="title" content="">
+	<meta name="keywords" content="WizWid">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=0,maximum-scale=1.0, user-scalable=0, viewport-fit=cover">
+	<meta name="format-detection" content="telephone=no, address=no, email=no" />
+	<meta name="HandheldFriendly" content="true">
+	<link rel="stylesheet" type="text/css" href="../../css/swiper.min.css" />
+	<link rel="stylesheet" type="text/css" href="../../css/common.css" />
+	<script type="text/javascript" src="../../js/jquery-2.0.3.min.js"></script>
+	<script type="text/javascript" src="../../js/swiper.min.js"></script>
+	<script type="text/javascript" src="../../js/vimeo.js"></script> <!-- 220613 추가 || 비메오js 추가 -->
+	<script type="text/javascript" src="../../js/pub.js"></script>
+</head>
+<body>
+<div id="wrap">
+	<header class="mhead_01 no_line">
+		<div class="back_page">이전</div>
+		<div class="search_box">
+			<button>검색</button>
+		</div>
+		<div class="go_home">홈으로</div>
+	</header>
+	
+	<!-- 컨텐츠 시작 -->
+	<div id="contents">
+		<!-- 쇼핑 리스트 -->
+		<div class="order_table">
+			<div class="total_box">
+				<div class="input_area">
+					<span class="checkbox01"><input type="checkbox" id="check_all" /><label for="check_all">전체상품(0)</lable></span>
+				</div>
+			</div>
+			
+			<!-- 상품 없음 -->
+			<div class="non_product">
+				<h3>로그인을 하시면 장바구니에 담긴 상품을<br/>나중에도 확인하실 수 있습니다.</h3>
+				<div class="btn_area02">
+					<button class="btn_black_r01">로그인</button>
+				</div>
+			</div>
+		</div>
+		
+		<!-- 상품 추천 영역 -->
+		<div class="product_section01">
+			<h4 class="section_title">실시간 BEST</h4> <!-- 22.04.12 추가 || class(section_title) 추가 -->
+			<!-- 상품 리스트 타입01 -->
+			<div class="product_list01">
+				<!-- 상품 리스트 -->
+				<div class="swiper_normal01 section_p_list3">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<a href="#none">
+								<div class="img_box">
+									<img src="../../images/main/img_product_01.jpg" alt="" />
+									<span class="like">좋아요</span>
+								</div>
+							</a>
+							<div class="product_info">
+								<div class="brand"><a href="#none">RAG & BONE </a></div>
+								<div class="p_name"><a href="#none">Willow Fair Isle wool sweater</a></div>
+								<div class="price">
+									<a href="#none">
+										<span class="price01">246,800</span>
+										<span class="price03">24%</span>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<a href="#none">
+								<div class="img_box">
+									<img src="../../images/main/img_product_01.jpg" alt="" />
+									<span class="like">좋아요</span>
+								</div>
+							</a>
+							<div class="product_info">
+								<div class="brand"><a href="#none">RAG & BONE </a></div>
+								<div class="p_name"><a href="#none">Willow Fair Isle wool sweater</a></div>
+								<div class="price">
+									<a href="#none">
+										<span class="price01">246,800</span>
+										<span class="price03">24%</span>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<a href="#none">
+								<div class="img_box">
+									<img src="../../images/main/img_product_01.jpg" alt="" />
+									<span class="like">좋아요</span>
+								</div>
+							</a>
+							<div class="product_info">
+								<div class="brand"><a href="#none">RAG & BONE </a></div>
+								<div class="p_name"><a href="#none">Willow Fair Isle wool sweater</a></div>
+								<div class="price">
+									<a href="#none">
+										<span class="price01">246,800</span>
+										<span class="price03">24%</span>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<a href="#none">
+								<div class="img_box">
+									<img src="../../images/main/img_product_01.jpg" alt="" />
+									<span class="like">좋아요</span>
+								</div>
+							</a>
+							<div class="product_info">
+								<div class="brand"><a href="#none">RAG & BONE </a></div>
+								<div class="p_name"><a href="#none">Willow Fair Isle wool sweater</a></div>
+								<div class="price">
+									<a href="#none">
+										<span class="price01">246,800</span>
+										<span class="price03">24%</span>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- 상품 리스트 end -->
+			</div>			
+		</div>
+		
+		
+	</div>
+	
+	
+	<!-- 하단 고정 버튼 -->
+	<div class="bottom_fix_box">
+		<div class="btn_round">
+			<button class="btn_black01">
+				<span class="total_count">총 <strong>0</strong>개</span>
+				<span class="price"><strong>0</strong>원 주문하기</span>
+			</button>
+		</div>
+	</div>
+	
+</div>
+
+<!-- 페이지 내 스크립트 -->
+<script>
+ 	sub.swiper_normal();	
+ 	sub.order_page_event();
+</script>
+</body>
+</html>

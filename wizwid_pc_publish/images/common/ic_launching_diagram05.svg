@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 70 70">
+    <g data-name="계약체결 icon">
+        <path data-name="Rectangle 2082" style="opacity:.5;fill:none" d="M0 0h70v70H0z"/>
+        <g data-name="Group 1751">
+            <g data-name="Group 1679">
+                <g data-name="Group 1633" transform="translate(11.999 12.975)">
+                    <circle data-name="Ellipse 236" cx="8.669" cy="8.669" transform="translate(11.935)" style="stroke-width:2px;stroke-linecap:round;stroke-linejoin:round;stroke:#161615;fill:none" r="8.669"/>
+                    <path data-name="Path 1619" d="M40.542 31.6v-.456c0-12.333-9.008-22.423-20.019-22.423S.5 18.813.5 31.146v.454" transform="translate(-.5 13.504)" style="stroke-width:2px;stroke-linecap:round;stroke-linejoin:round;stroke:#161615;fill:none"/>
+                </g>
+            </g>
+            <g data-name="Group 1681">
+                <path data-name="Path 1703" d="M25.584 10.987A12.412 12.412 0 1 1 13.41 1a12.34 12.34 0 0 1 6.333 1.735" transform="translate(38.631 29.395)" style="stroke:#00bab4;fill:#fff;stroke-width:2px"/>
+                <path data-name="Path 1704" d="M25.584 10.987A12.412 12.412 0 1 1 13.41 1a12.34 12.34 0 0 1 6.333 1.735" transform="translate(38.631 29.395)" style="stroke:#00bab4;stroke-width:2px;stroke-linecap:round;stroke-linejoin:round;fill:none"/>
+                <path data-name="Path 1705" d="m5.431 9.782 5.969 6.374L23.279 3.341" transform="translate(40.667 30.471)" style="stroke:#00bab4;stroke-width:2px;stroke-linecap:round;stroke-linejoin:round;fill:none"/>
+            </g>
+        </g>
+    </g>
+</svg>

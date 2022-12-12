@@ -1,0 +1,103 @@
+﻿<!DOCTYPE html>
+<html lang="utf-8">
+<head>
+	<title>WizWid</title>
+	<meta name="title" content="">
+	<meta name="keywords" content="WizWid">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=0,maximum-scale=1.0, user-scalable=0, viewport-fit=cover">
+	<meta name="format-detection" content="telephone=no, address=no, email=no" />
+	<meta name="HandheldFriendly" content="true">
+	<link rel="stylesheet" type="text/css" href="../../css/swiper.min.css" />
+	<link rel="stylesheet" type="text/css" href="../../css/common.css" />
+	<script type="text/javascript" src="../../js/jquery-2.0.3.min.js"></script>
+	<script type="text/javascript" src="../../js/swiper.min.js"></script>
+	<script type="text/javascript" src="../../js/vimeo.js"></script> <!-- 220613 추가 || 비메오js 추가 -->
+	<script type="text/javascript" src="../../js/pub.js"></script>
+</head>
+<body>
+<div id="wrap">
+	
+	<!-- 팝업 -->
+	<div class="layer_md_popup on">
+		<h3>김위드님의 쿠폰별 최대 할인가격 제안</h3>
+		<!-- <div class="cont01">
+			<div class="sale_price">
+				<h4>판매가 <span class="price01">200,000</span></h4>
+				<ul class="discount_list">
+					<li>
+						<span class="head01">상품할인 15%</span>
+						<span class="discount01">-30,000</span>
+					</li>
+					<li>
+						<span class="head01">VIP 쿠폰 15%</span>
+						<span class="discount01">-30,000</span>
+					</li>
+					<li>
+						<span class="head01">VIP 더블쿠폰 15%</span>
+						<span class="discount01">-30,000</span>
+					</li>
+					
+				</ul>
+				<h4>할인가 <span class="price01">140,000</span></h4>
+			</div>
+			<ul class="notice_list">
+				<li>적립금을 제외한 최대 할인 가격입니다.</li>
+				<li>상품 1개 기준으로 적용된 금액이며, 장바구니에 다른 상품과 함께 적용시 변경될 수 있습니다.</li>
+			</ul>
+		</div> -->
+
+		<!-- 220516 수정 -->
+		<div class="prd_coupon scroll_box">
+			<!-- <h4>쿠폰별 최대 할인 가격 제안</h4> // 220715 삭제 -->
+
+			<ul class="coupon_list">
+				<li>
+					<div class="coupon_head">
+						<span class="type">상품쿠폰</span>
+						<span class="title">봄맞이 나들이 착장룩 10% 쿠폰</span>
+					</div>
+					<div class="coupon_info">
+						<div class="title">쿠폰 적용가</div>
+						<div class="price">270,000<span>원</span> <span class="discount">(3,000원 할인)</span></div>
+					</div>
+				</li>
+				<li>
+					<div class="coupon_head">
+						<span class="type">더블쿠폰</span>
+						<span class="title">WIZWID BIRTHDAY 20주년 회원 전용 5% 쿠폰</span>
+					</div>
+					<div class="coupon_info">
+						<div class="title">쿠폰 적용가</div>
+						<div class="price">270,000<span>원</span> <span class="discount">(3,000원 할인)</span></div>
+					</div>
+				</li>
+				<li>
+					<div class="coupon_head">
+						<span class="type">장바구니 쿠폰</span>
+						<span class="title">VIP 전용 15% 쿠폰</span>
+					</div>
+					<div class="coupon_info">
+						<div class="title">쿠폰 적용가</div>
+						<div class="price">270,000<span>원</span> <span class="discount">(3,000원 할인)</span></div>
+					</div>
+				</li>
+			</ul>
+			<ul class="notice_common">
+				<li>
+					다운로드 후 사용가능한 쿠폰은 주문 전에 다운로드 해주세요. 장바구니에서 다른 상품과 함께 적용 시 변경 될 수 있습니다. 
+				</li>
+			</ul>
+		</div>
+		<div class="btn_bottom">
+			<button class="btn_black01">확인</button>
+			<button class="btn_gray01 on">쿠폰모두받기</button> <!-- 활성화시 class(on) 추가 -->
+		</div>
+		<!--// 220516 수정 -->
+	</div>
+</div>
+<script>
+	sub.dialog_height_func(); // 팝업 높이 scrollheight 계산 함수 || 220713
+</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="147" height="96" viewBox="0 0 147 96">
+    <g data-name="coupon img">
+        <g data-name="Group 1154">
+            <g data-name="Subtraction 15" style="fill:#fff">
+                <path d="M146.5 82.5H.5V.5h146v32.368c-4.604.246-8.269 3.85-8.269 8.244 0 4.395 3.666 7.998 8.269 8.243V82.5z" style="stroke:none" transform="translate(0 13)"/>
+                <path d="M146 82V49.817c-4.642-.473-8.269-4.197-8.269-8.706 0-4.509 3.627-8.233 8.269-8.706V1H1v81h145m1 1H0V0h147v33.355c-4.56 0-8.269 3.48-8.269 7.757 0 4.277 3.71 7.757 8.269 7.757V83z" style="fill:#000;stroke:none" transform="translate(0 13)"/>
+            </g>
+        </g>
+        <text data-name="앱 설치 후 첫 로그인" transform="translate(74 34)" style="font-size:9px;font-family:SpoqaHanSansNeo-Regular,Spoqa Han Sans Neo"><tspan x="-37.152" y="0">앱 설치 후 첫 로그인</tspan></text>
+        <g data-name="Group 1192">
+            <text transform="translate(22.999 74)" style="font-size:23px;font-family:RedHatDisplay-Bold,Red Hat Display;font-weight:700;letter-spacing:-.02em" data-name="Group 1300"><tspan x="0" y="0">COUPON</tspan></text>
+        </g>
+        <g data-name="Group 1301" transform="translate(113.999)">
+            <circle data-name="Ellipse 447" cx="13" cy="13" r="13" style="fill:#00bab4"/>
+            <g data-name="Group 1223">
+                <path data-name="Line 473" transform="translate(9.001 17)" style="fill:none;stroke:#fff;stroke-miterlimit:10" d="M0 0h8"/>
+                <path data-name="Line 472" transform="translate(12.83 6.268)" style="fill:none;stroke:#fff;stroke-miterlimit:10" d="M0 8.842V0"/>
+                <path data-name="Path 1055" d="m2.375 10.688 3.847 3.206 3.847-3.206" transform="translate(6.608 1.217)" style="fill:none;stroke:#fff;stroke-miterlimit:10"/>
+            </g>
+        </g>
+        <path data-name="Rectangle 1693" transform="translate(18.999 42)" style="fill:#eee" d="M0 0h109v1H0z"/>
+    </g>
+</svg>

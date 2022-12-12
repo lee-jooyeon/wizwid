@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="utf-8">
+<head>
+	<title>WizWid</title>
+	<meta name="title" content="">
+	<meta name="keywords" content="WizWid">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=0,maximum-scale=1.0, user-scalable=0, viewport-fit=cover">
+	<meta name="format-detection" content="telephone=no, address=no, email=no" />
+	<meta name="HandheldFriendly" content="true">
+	<link rel="stylesheet" type="text/css" href="../../css/common.css" />
+	<script type="text/javascript" src="../../js/jquery-2.0.3.min.js"></script>
+	<script type="text/javascript" src="../../js/vimeo.js"></script> <!-- 220613 추가 || 비메오js 추가 -->
+	<script type="text/javascript" src="../../js/pub.js"></script>
+</head>
+<body>
+<div id="wrap">
+	<!-- 팝업 -->
+	<div class="normal_popup on">
+		<div class="head_box">
+			<h2>배송지 변경</h2>
+			<div class="close">창닫기</div>
+		</div>
+		
+		<!-- 팝업 컨텐츠 -->
+		<div class="pop_cont">
+			<div class="delivery_tab">
+				<ul class="step tab2">
+					<li><span>나의 배송지</span></li>
+					<li><span class="on">직접 입력</span></li>
+				</ul>
+			</div>
+
+			<div class="address_table">
+				<span class="checkbox03"><input type="checkbox" id="check_agree" /><label for="check_agree">회원정보와 동일</lable></span>
+				<ul class="input_list">
+					<li>
+						<div class="input_box">
+							<input type="text" placeholder="받으시는 분"/> <span class="input_text_del">내용삭제</span>
+						</div>
+					</li>
+					<li>
+						<div class="input_box">
+							<input type="text" placeholder="휴대폰번호"/> <span class="input_text_del">내용삭제</span>
+						</div>
+					</li>
+					<li>
+						<div class="zip_code">
+							<span><input type="text" value="우편번호" disabled /></span> <button class="btn_black_s01">우편번호 찾기</button>
+							<span><input type="text" value="" disabled /></span>
+						</div>
+						<div class="input_box">
+							<input type="text" placeholder="상세 주소 입력" /> <span class="input_text_del">내용삭제</span>
+						</div>
+					</li>
+					<li>
+						<div class="select_box">배송시 유의사항</div>
+						<!-- 직접입력시 인풋 박스 노출 -->
+						<div class="input_box">
+							<input type="text" /> <span class="input_text_del">내용삭제</span>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="custom_code">
+				<span class="head01">개인통관고유부호 <span class="info01">알림</span></span>
+				<div class="info01_text">
+					<ul class="notice_common">
+						<li>받으시는 분(수취인)의 개인통관고유부호를 입력해주세요.</li>
+						<li>수취인 정보(이름, 전화번호, 주소)를 사실과 다르게 작성하시는 경우 관세법에 따라 과태료가 부과될 수 있습니다. </li>
+						<li>이로 인한 통관지연, 배송지연 등의 문제가 발생할 수 있으니 작성 시 주의 부탁드립니다. (관세법 제 254조의 2, 제277조 제 2항)</li>
+					</ul>
+					<span class="close01">닫기</span>
+				</div>
+				<div class="input_box">
+					<input type="text" placeholder="개인통관 고유부호 (P로 시작하는 13자리)" value="P123456789012" /> <span class="input_text_del">내용삭제</span>
+				</div>
+			</div>
+		</div>
+
+		<!-- 하단 버튼 -->
+		<div class="btn_bottom">
+			<div class="btn_box">
+				<button class="btn_gray01">취소</button>
+				<button class="btn_black01">수정</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- 페이지 내 스크립트 -->
+<script>
+	sub.order_page_event();
+</script>
+
+</body>
+</html>
